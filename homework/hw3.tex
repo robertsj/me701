@@ -1,0 +1,172 @@
+\documentclass[11pt]{article}
+\usepackage{mathtools,hyperref,booktabs,fullpage, txfonts}
+\usepackage[amssymb,cdot]{SIunits}
+\usepackage[utopia]{mathdesign}     
+
+\usepackage[table]{xcolor}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{fullpage}
+ 
+\definecolor{lightgray}{gray}{0.93}
+
+\pagestyle{empty}
+\setlength\parindent{0pt}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+ 
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                  {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                  {2.3ex \@plus.2ex}%
+                                  {\normalfont\bfseries}}
+\makeatother
+
+
+\begin{document}
+
+{\large
+  \begin{center}
+    {\bf ME 701 -- Development of Computer Applications In Mechanical Engineering \\ 
+         Homework 3 -- Due 9/22/2017}         
+  \end{center}
+}
+ 
+Instructions:  Your solutions to the following should be contained in
+one file named {\tt lastname\_firstname\_hw3.py} and uploaded to Canvas.
+
+
+\section*{Problem 1 -- Some Python \texttt{str} Basics}
+
+\begin{enumerate}
+\item Let \texttt{a = ``hello''} and \texttt{b = ``world''}.  Use 
+      \texttt{a} and  \texttt{b} to produce \texttt{c = ``hello world''}.
+\item Figure out how to define \texttt{d = ``Hello World''} starting with 
+      \texttt{c}.
+\item From \texttt{d}, define \texttt{e = ``Hello''} and  \texttt{f = ``World''}
+      in a single line of code.
+\item Let  \texttt{g = 123; h = 3.141592653589793; i = 6.022e23}.  Using those 
+      values, produce \\ \texttt{j = '123|3.1416| 6.02e+23'} in just one line.
+\item Let \texttt{j = 5} (or some other integer).  Use that to produce 
+      \texttt{k =  '0..1..2..3..4'} in just one line.
+\end{enumerate} 
+
+\section*{Problem 2 -- A Python Oddity}
+
+Consider the following code and output
+\begin{verbatim}
+>>> a = [1, 2, 3]
+>>> b = a
+>>> a[0] = 99
+>>> a
+[99, 2, 3]
+>>> b
+[99, 2, 3]
+\end{verbatim}
+In other words, a change in \texttt{a} leads to
+a change in \texttt{b}.  This can confuse Python
+newbies.  
+\begin{enumerate}
+ \item Explain, in your own words, why this happens.
+ \item Offer {\bf two} ways by which one could 
+       produce a second list \texttt{b} with the same 
+       values as \texttt{a}.  At least {\bf one} of 
+       these should require no more than one 
+       expression.  For reference, an expression is 
+       just a composition of arithmetic or other operations, e.g.,
+       \texttt{sin(a**2)/4.0+1}.
+\end{enumerate}
+
+
+
+\section*{Problem 3 -- List Comprehension}
+
+List comprehension is a uniquely Pythonic way to construct lists
+without using explicit loops.  Rewrite the following using list 
+comprehension:
+
+\begin{enumerate}
+ \item 
+  \begin{verbatim}
+  # compute first 20 powers of 2
+  i = 0
+  powers = []
+  while i < 20:
+      p = 2 ** i
+      powers.append(p)
+      i = i + 1
+  \end{verbatim}
+ \item 
+  \begin{verbatim}
+  # Generate all (x, y, z) coordinates from three lists
+  xpoints = [1, 2, -1]
+  ypoints = [8, 4, 3, 0]
+  zpoints = [0, -1]
+  points = []
+  for x in xpoints:
+      for y in ypoints:
+	  for z in zpoints:
+	      points.append((x, y, z))
+  \end{verbatim}
+  
+\end{enumerate}
+  
+\section*{Problem 4 -- Binary Fun}
+
+In class, we covered some basics of floating-point numbers, showing,
+for example, that $0.1$ (in base-10) can only be represented 
+in the base-2 (binary) system using an infinite number of bits.
+In other words, $0.1$ cannot be represented on our computers.  Your 
+job is to write a function that computes the closest binary
+representation of a given base-10 number using a fixed number of 
+bits for the fractional part (i.e., the stuff to the right of 
+the floating point).  In essence, you are extending 
+the built-in {\tt bin} function. \\
+
+{\bf Deliverables}:
+\begin{enumerate}
+ \item Implement a function named {\tt decimal\_to\_binary(x, n)} 
+       that accepts a floating-point number $n$ and an integer 
+       $n$, and returns the binary representation of that 
+       number using at most $n$ bits to the right of the 
+       floating point.  For simplicity, return the 
+       result as a string.  Example: for $x = 123.625_{10}$ and $n = 4$, you 
+       should return {\tt '1111011.1010'}. 
+ \item Implement a second function {\tt binary\_to\_decimal(i, f)} that 
+       takes a binary number of the form  {\tt '1111011.1010'} and returns
+       it in base-10 as a standard float.  
+\end{enumerate}
+
+\section*{Problem 5 -- Conservation of Numbers?}
+
+Summing up the elements of an array is easy:
+\begin{verbatim}
+# option 1
+s = 0   
+for i in len(a):
+   s += a[i]
+\end{verbatim}
+However, one could also do this:
+\begin{verbatim}
+# option 2
+s = 0   
+a = sorted(a)
+for i in len(a):
+   s += a[i]
+\end{verbatim}
+Or even this:
+\begin{verbatim}
+# option 3
+def sumr(a):
+    if len(a) <= 2:
+        return sum(a)
+    else:
+        return sumr(a[:len(a)//2]) + sumr(a[len(a)//2:])
+s = sumr(a)
+\end{verbatim}
+By using {\tt a = np.random.rand(n)} and the {\tt Decimal} module, perform a numerical experiment that shows (1) which of these approaches is most accurate, (2) how these compare to the built-in {\tt sum} and {\tt np.sum} functions, and (3) how the error in the sum varies with the number of elements {\tt n} of the array {\tt a} being summed. \\
+
+I hope that this problem highlights a basic fact: even the simplest of numerical computing tasks results in observable error!
+
+
+\end{document}
