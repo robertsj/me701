@@ -3,12 +3,34 @@
 \usepackage[amssymb,cdot]{SIunits}
 \usepackage[utopia]{mathdesign}     
 
-\usepackage[table]{xcolor}
+%\usepackage[table]{xcolor}
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{longtable}
 \usepackage{fullpage}
  
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{lightgray}{rgb}{0.9,0.9,0.9}
+\lstset{language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
 \definecolor{lightgray}{gray}{0.93}
 
 \pagestyle{empty}
@@ -87,7 +109,7 @@ comprehension:
 
 \begin{enumerate}
  \item 
-  \begin{verbatim}
+  \begin{lstlisting}
   # compute first 20 powers of 2
   i = 0
   powers = []
@@ -95,9 +117,9 @@ comprehension:
       p = 2 ** i
       powers.append(p)
       i = i + 1
-  \end{verbatim}
+  \end{lstlisting}
  \item 
-  \begin{verbatim}
+  \begin{lstlisting}
   # Generate all (x, y, z) coordinates from three lists
   xpoints = [1, 2, -1]
   ypoints = [8, 4, 3, 0]
@@ -105,9 +127,9 @@ comprehension:
   points = []
   for x in xpoints:
       for y in ypoints:
-	  for z in zpoints:
-	      points.append((x, y, z))
-  \end{verbatim}
+	        for z in zpoints:
+	            points.append((x, y, z))
+  \end{lstlisting}
   
 \end{enumerate}
   
@@ -140,22 +162,22 @@ the built-in {\tt bin} function. \\
 \section*{Problem 5 -- Conservation of Numbers?}
 
 Summing up the elements of an array is easy:
-\begin{verbatim}
+\begin{lstlisting}
 # option 1
 s = 0   
 for i in range(len(a)):
    s += a[i]
-\end{verbatim}
+\end{lstlisting}
 However, one could also do this:
-\begin{verbatim}
+\begin{lstlisting}
 # option 2
 s = 0   
 a = sorted(a)
 for i in range(len(a)):
    s += a[i]
-\end{verbatim}
+\end{lstlisting}
 Or even this:
-\begin{verbatim}
+\begin{lstlisting}
 # option 3
 def sumr(a):
     if len(a) <= 2:
@@ -163,7 +185,7 @@ def sumr(a):
     else:
         return sumr(a[:len(a)//2]) + sumr(a[len(a)//2:])
 s = sumr(a)
-\end{verbatim}
+\end{lstlisting}
 By using {\tt a = np.random.rand(n)} and the {\tt Decimal} module, perform a numerical experiment that shows (1) which of these approaches is most accurate, (2) how these compare to the built-in {\tt sum} and {\tt np.sum} functions, and (3) how the error in the sum varies with the number of elements {\tt n} of the array {\tt a} being summed. \\
 
 I hope that this problem highlights a basic fact: even the simplest of numerical computing tasks results in observable error!

@@ -1,0 +1,359 @@
+          Code Name & Version = MCNP6, 1.0
+  
+     _/      _/        _/_/_/       _/      _/       _/_/_/         _/_/_/
+    _/_/  _/_/      _/             _/_/    _/       _/    _/     _/       
+   _/  _/  _/      _/             _/  _/  _/       _/_/_/       _/_/_/    
+  _/      _/      _/             _/    _/_/       _/           _/    _/   
+ _/      _/        _/_/_/       _/      _/       _/             _/_/      
+  
+  +---------------------------------------------------------------------+
+  | Copyright 2008. Los Alamos National Security, LLC.  All rights      |
+  | reserved.                                                           |
+  |   This material was produced under U.S. Government contract         |
+  | DE-AC52-06NA25396 for Los Alamos National Laboratory, which is      |
+  | operated by Los Alamos National Security, LLC, for the U.S.         |
+  | Department of Energy. The Government is granted for itself and      |
+  | others acting on its behalf a paid-up, nonexclusive, irrevocable    |
+  | worldwide license in this material to reproduce, prepare derivative |
+  | works, and perform publicly and display publicly. Beginning five    |
+  | (5) years after 2008, subject to additional five-year worldwide     |
+  | renewals, the Government is granted for itself and others acting on |
+  | its behalf a paid-up, nonexclusive, irrevocable worldwide license   |
+  | in this material to reproduce, prepare derivative works, distribute |
+  | copies to the public, perform publicly and display publicly, and to |
+  | permit others to do so. NEITHER THE UNITED STATES NOR THE UNITED    |
+  | STATES DEPARTMENT OF ENERGY, NOR LOS ALAMOS NATIONAL SECURITY, LLC, |
+  | NOR ANY OF THEIR EMPLOYEES, MAKES ANY WARRANTY, EXPRESS OR IMPLIED, |
+  | OR ASSUMES ANY LEGAL LIABILITY OR RESPONSIBILITY FOR THE ACCURACY,  |
+  | COMPLETENESS, OR USEFULNESS OF ANY INFORMATION, APPARATUS, PRODUCT, |
+  | OR PROCESS DISCLOSED, OR REPRESENTS THAT ITS USE WOULD NOT INFRINGE |
+  | PRIVATELY OWNED RIGHTS.                                             |
+  +---------------------------------------------------------------------+
+  
+1mcnp     version 6     ld=05/08/13                     06/23/16 13:33:37 
+ *************************************************************************                 probid =  06/23/16 13:33:37 
+ i=92235_t20.0_w10.0_f350.0_38090.i o=92235_t20.0_w10.0_f350.0_38090.o ru=92235_t
+
+ 
+  warning.  Physics models enabled.
+         1-        trench optimization for fission fragment                                       
+         2-       10  2 -2.329  (1 -2 3 -4 5 -6):(1 -2 3 -4 7 -8) vol=7.00000000e-05 $ Sidewall   
+         3-       11  1 -8.00000000e+00  1 -2 3 -4 6 -7 vol=1.40000000e-04 $ Trench               
+         4-       99  0 -1:2:-3:4:-5:8 $ OUTSIDE WORLD                                            
+         5-                                                                                       
+         6-       1  px 0.0                                                                       
+         7-       2  px 3.50000000e-02 $ trench depth                                             
+         8-       3  py 0.0                                                                       
+         9-       4  py 2.0                                                     
+        10-       *5  pz 0.000                                                                    
+        11-       6  pz 5.00000000e-04                                                            
+        12-       7  pz 2.50000000e-03                                                            
+        13-       *8  pz 3.00000000e-03                                                           
+        14-                                                                                       
+        15-       MODE #                                                                          
+        16-       IMP:# 1 1 0                                                                     
+        17-       M1 $ reactant                                                                   
+        18-            92235   -1.00000                                                           
+        19-       M2 $ NATURAL SILICON, RHO = 2.3290                                              
+        20-            14028  -9.2223E-01                                                         
+        21-            14029   -4.6850E-02                                                        
+        22-            14030  -3.0920E-02                                                         
+        23-       PHYS:# 200                                                                      
+        24-       SDEF POS=0 0 0 X=D1 Y=D2 Z=D3 PAR=38090 ERG=1.12000000e+02                      
+        25-       SI1   0.0000 3.50000000e-02    $ x-axis sampling range.                         
+        26-       SP1   0 1            $ x-axis sampling weight: constant.                        
+        27-       SI2   0.00 2.00      $ y-axis sampling range.                                   
+        28-       SP2   0 1            $ y-axis sampling weight: constant.                        
+        29-       SI3   5.00000000e-04 2.50000000e-03      $ z-axis sampling range.               
+        30-       SP3   0 1            $ z-axis sampling weight: constant.                        
+        31-       C --- EFFICIENCY ----------- $ This spits out efficiency at 300 keV LLD.        
+        32-       F18:#    10                  $ Second energy binning tally.                     
+        33-       E18   0   0.3  200             $ Two bins; below 300 keV, don't count.          
+        34-       fc18   GOOD COUNTS                                                              
+        35-       C --- EFFICIENCY ----------- $ This spits out efficiency at 300 keV LLD.        
+        36-       F28:#    11                  $ Second energy binning tally.                     
+        37-       E28   0   0.3  200           $ Two bins; below 300 keV, don't count.            
+        38-       fc28   BAD COUNTS                                                               
+        39-       C ======================================================================        
+        40-       C Problem Stuff                                                                 
+        41-       C ======================================================================        
+        42-       nps 1E4                                                                         
+
+
+1LAHET physics options:                                                                                 print table 41
+
+ lca    ielas   ipreq  iexisa  ichoic   jcoul  nexite   npidk   noact    icem    ilaq nevtype
+ lca        2       1       1      23       1       1       0       1       1       0      66
+
+ lcb    flenb(i),i=1,6                                                               ctofe       flim0
+ lcb    3.4900E+03  3.4900E+03  2.4900E+03  2.4900E+03  8.0000E+02  8.0000E+02 -1.0000E+00 -1.0000E+00
+
+ lea     ipht     icc  nobalc  nobale   ifbrk  ilvden   ievap   nofis
+ lea        1       4       1       0       1       0       0       1
+
+ leb         yzere       bzere       yzero       bzero
+ leb    1.5000E+00  8.0000E+00  1.5000E+00  1.0000E+01
+
+  comment.   nevtype for CEM set to  66
+1cells                                                                                                  print table 60
+
+                               atom        gram                                            heavyion                                    
+              cell      mat   density     density     volume       mass            pieces importance                                   
+
+        1       10        2  4.99475E-02 2.32900E+00 7.00000E-05 1.63030E-04           0  1.0000E+00                                   
+        2       11        1  2.04967E-02 8.00000E+00 1.40000E-04 1.12000E-03           0  1.0000E+00                                   
+        3       99        0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00           0  0.0000E+00                                   
+
+ total                                               2.10000E-04 1.28303E-03
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+
+          1 warning message so far.
+
+1particles and energy limits                                                                            print table 101
+
+                         particle      maximum       smallest      largest       always        always
+                         cutoff        particle      table         table         use table     use model
+   particle type         energy        energy        maximum       maximum       below         above
+
+   37  #    heavyion    5.0000E+00    2.0000E+02    0.0000E+00    0.0000E+00    0.0000E+00    0.0000E+00
+ 
+
+ ***********************************************************************************************************************
+
+ dump no.    1 on file 92235_t20.0_w10.0_f350.0_38090.runtpe     nps =           0     coll =              0     ctm =  
+      0.00   nrn =                 0
+
+          1 warning message so far.
+1problem summary                                                                                                           
+
+      run terminated when       10000  particle histories were done.
++                                                                                                    06/23/16 13:33:41 
+       trench optimization for fission fragment                                            probid =  06/23/16 13:33:37 
+
+ heavyion creation   tracks      weight        energy            heavyion loss       tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source               10000    1.0000E+00    1.1200E+02          escape                 168    1.6800E-02    8.5231E-01
+ nucl. interaction        0    0.            0.                  energy cutoff         9832    9.8320E-01    4.9160E+00
+ particle decay           0    0.            0.                  time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ tabular sampling         0    0.            0.                  coll. energy loss        0    0.            1.0623E+02
+ photonuclear             0    0.            0.                  nucl. interaction        0    0.            0.        
+ elastic recoil           0    0.            0.                  elastic scatter          0    0.            0.        
+                                                                 particle decay           0    0.            0.        
+                                                                 capture                  0    0.            0.        
+ (gamma,xcharged)         0    0.            0.                  tabular sampling         0    0.            0.        
+                                                                 cosy aperture hit        0    0.            0.        
+                                                                 cosy faults              0    0.            0.        
+     total            10000    1.0000E+00    1.1200E+02              total            10000    1.0000E+00    1.1200E+02
+
+   number of heavyions banked                      0                                              cutoffs
+   heavyion tracks per source particle    1.0000E+00                                                tco   1.0000E+33
+   collisons/substeps per source particle 4.4467E+02                                                eco   5.0000E+00
+                                                                                                    wc1   0.0000E+00
+                                                                                                    wc2   0.0000E+00
+
+ computer time so far in this run     0.08 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.05 minutes            bank overflows to backup file       0
+ source particles per minute            1.9582E+05
+ random numbers generated                 29331458            most random numbers used was        3669 in history        7358
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1heavyion activity in each cell                                                                         print table 126
+
+                       tracks     population    substeps     substeps      number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight    substep 
+                                                          (per history)    energy       energy     (relative)      (cm)
+
+        1       10        3355         3352       382222    3.8222E+01   2.4464E+01   3.2835E+01   1.0000E+00   7.1512E-06
+        2       11       10165        10000      4064497    4.0645E+02   3.9337E+01   5.2115E+01   1.0000E+00   3.2897E-06
+
+           total         13520        13352      4446719    4.4467E+02
+
+1tally       18        nps =       10000
++                                     GOOD COUNTS                                                              
+           tally type 8    pulse height distribution.                   units   number         
+           particle(s): heavyions
+ 
+ cell  10                                                                                                                              
+      energy   
+    0.0000E+00   0.00000E+00 0.0000
+    3.0000E-01   0.00000E+00 0.0000
+    2.0000E+02   3.35200E-01 0.0141
+      total      3.35200E-01 0.0141
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       18
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.01      yes          yes            0.00      yes         yes            constant    random      10.00
+ passed?        yes          yes      yes          yes             yes      yes         yes               yes        yes         yes
+
+ ===================================================================================================================================
+
+
+ this tally meets the statistical criteria used to form confidence intervals: check the tally fluctuation chart to verify.
+ the results in other bins associated with this tally may not meet these statistical criteria.
+
+ ----- estimated confidence intervals:  -----
+
+ estimated asymmetric confidence interval(1,2,3 sigma): 3.3050E-01 to 3.3994E-01; 3.2577E-01 to 3.4466E-01; 3.2105E-01 to 3.4938E-01
+ estimated  symmetric confidence interval(1,2,3 sigma): 3.3048E-01 to 3.3992E-01; 3.2576E-01 to 3.4464E-01; 3.2104E-01 to 3.4936E-01
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally       18 with nps =       10000  print table 160
+
+
+ normed average tally per history  = 3.35200E-01          unnormed average tally per history  = 3.35200E-01
+ estimated tally relative error    = 0.0141               estimated variance of the variance  = 0.0000
+ relative error from zero tallies  = 0.0141               relative error from nonzero scores  = 0.0000
+
+ number of nonzero history tallies =        3352          efficiency for the nonzero tallies  = 0.3352
+ history number of largest  tally  =           1          largest  unnormalized history tally = 1.00000E+00
+ (largest  tally)/(average tally)  = 2.98329E+00          (largest  tally)/(avg nonzero tally)= 1.00000E+00
+
+ (confidence interval shift)/mean  = 0.0000               shifted confidence interval center  = 3.35216E-01
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            3.35200E-01             3.35266E-01                     0.000198
+      relative error                  1.40829E-02             1.40801E-02                    -0.000199
+      variance of the variance        4.87505E-05             4.87016E-05                    -0.001005
+      shifted center                  3.35216E-01             3.35216E-01                     0.000000
+      figure of merit                 9.87360E+04             9.87753E+04                     0.000398
+
+ the 100 largest  history tallies appear to have a  maximum value of about 1.00000E+00
+ the large score tail of the empirical history score probability density function appears to have no unsampled regions.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (1.958E+05)*( 7.101E-01)**2 = (1.958E+05)*(5.042E-01) = 9.874E+04
+
+1tally       28        nps =       10000
++                                     BAD COUNTS                                                               
+           tally type 8    pulse height distribution.                   units   number         
+           particle(s): heavyions
+ 
+ cell  11                                                                                                                              
+      energy   
+    0.0000E+00   0.00000E+00 0.0000
+    3.0000E-01   7.00000E-04 0.3778
+    2.0000E+02   9.99300E-01 0.0003
+      total      1.00000E+00 0.0000
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       28
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed    constant       0.00      yes          yes            0.00      yes         yes            constant    random      10.00
+ passed?        yes          yes      yes          yes             yes      yes         yes               yes        yes         yes
+
+ ===================================================================================================================================
+
+
+ this tally meets the statistical criteria used to form confidence intervals: check the tally fluctuation chart to verify.
+ the results in other bins associated with this tally may not meet these statistical criteria.
+
+ ----- estimated confidence intervals:  -----
+
+ estimated asymmetric confidence interval(1,2,3 sigma): 1.0000E+00 to 1.0000E+00; 1.0000E+00 to 1.0000E+00; 1.0000E+00 to 1.0000E+00
+ estimated  symmetric confidence interval(1,2,3 sigma): 1.0000E+00 to 1.0000E+00; 1.0000E+00 to 1.0000E+00; 1.0000E+00 to 1.0000E+00
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally       28 with nps =       10000  print table 160
+
+
+ normed average tally per history  = 1.00000E+00          unnormed average tally per history  = 1.00000E+00
+ estimated tally relative error    = 0.0000               estimated variance of the variance  = 0.0000
+ relative error from zero tallies  = 0.0000               relative error from nonzero scores  = 0.0000
+
+ number of nonzero history tallies =       10000          efficiency for the nonzero tallies  = 1.0000
+ history number of largest  tally  =           1          largest  unnormalized history tally = 1.00000E+00
+ (largest  tally)/(average tally)  = 1.00000E+00          (largest  tally)/(avg nonzero tally)= 1.00000E+00
+
+ (confidence interval shift)/mean  = 0.0000               shifted confidence interval center  = 1.00000E+00
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            1.00000E+00             1.00000E+00                     0.000000
+      relative error                  0.00000E+00             0.00000E+00                     0.000000
+      variance of the variance        0.00000E+00             0.00000E+00                     0.000000
+      shifted center                  1.00000E+00             1.00000E+00                     0.000000
+      figure of merit                 1.00000E+30             1.00000E+30                     0.000000
+
+ the 100 largest  history tallies appear to have a  maximum value of about 1.00000E+00
+ the large score tail of the empirical history score probability density function appears to have no unsampled regions.
+
+ relative error is 0! fom and f(x) signal-to-noise ratio are both undefined. histories/minute = 1.958E+05
+
+1status of the statistical checks used to form confidence intervals for the mean for each tally bin
+
+
+ tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
+
+       18   passed the 10 statistical checks for the tally fluctuation chart bin result               
+         passed all bin error check:     4 tally bins had     2 bins with zeros and     0 bins with relative errors exceeding 0.10
+
+       28   passed the 10 statistical checks for the tally fluctuation chart bin result               
+         missed all bin error check:     4 tally bins had     1 bins with zeros and     1 bins with relative errors exceeding 0.10
+
+
+ the 10 statistical checks are only for the tally fluctuation chart bin and do not apply to other tally bins.
+
+ the tally bins with zeros may or may not be correct: compare the source, cutoffs, multipliers, et cetera with the tally bins.
+
+ warning.       1 of the     2 tallies had bins with relative errors greater than recommended.
+1tally fluctuation charts                              
+
+                            tally       18                          tally       28
+          nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom
+         1000   3.3200E-01 0.0449 0.0005  0.0   95578   1.0000E+00 0.0000 0.0000 10.0 1.0E+30
+         2000   3.3650E-01 0.0314 0.0002 10.0   98797   1.0000E+00 0.0000 0.0000 10.0 1.0E+30
+         3000   3.2933E-01 0.0261 0.0002 10.0   95660   1.0000E+00 0.0000 0.0000 10.0 1.0E+30
+         4000   3.3525E-01 0.0223 0.0001 10.0   98565   1.0000E+00 0.0000 0.0000 10.0 1.0E+30
+         5000   3.3220E-01 0.0201 0.0001 10.0   97159   1.0000E+00 0.0000 0.0000 10.0 1.0E+30
+         6000   3.3567E-01 0.0182 0.0001 10.0   98857   1.0000E+00 0.0000 0.0000 10.0 1.0E+30
+         7000   3.3871E-01 0.0167 0.0001 10.0  100339   1.0000E+00 0.0000 0.0000 10.0 1.0E+30
+         8000   3.3600E-01 0.0157 0.0001 10.0   99059   1.0000E+00 0.0000 0.0000 10.0 1.0E+30
+         9000   3.3544E-01 0.0148 0.0001 10.0   98902   1.0000E+00 0.0000 0.0000 10.0 1.0E+30
+        10000   3.3520E-01 0.0141 0.0000 10.0   98736   1.0000E+00 0.0000 0.0000 10.0 1.0E+30
+
+ ***********************************************************************************************************************
+
+ dump no.    2 on file 92235_t20.0_w10.0_f350.0_38090.runtpe     nps =       10000     coll =        4446719     ctm =  
+      0.05   nrn =          29331458
+
+         2 warning messages so far.
+
+
+ run terminated when       10000  particle histories were done.
+
+ computer time =    0.08 minutes
+
+ mcnp     version 6     05/08/13                     06/23/16 13:33:41                     probid =  06/23/16 13:33:37 
