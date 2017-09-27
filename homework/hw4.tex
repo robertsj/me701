@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+\usepackage{mathtools,hyperref,booktabs,fullpage, txfonts}
+\usepackage[amssymb,cdot]{SIunits}
+\usepackage[utopia]{mathdesign}     
+
+%\usepackage[table]{xcolor}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{fullpage}
+ 
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{lightgray}{rgb}{0.9,0.9,0.9}
+\lstset{language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\definecolor{lightgray}{gray}{0.93}
+
+\pagestyle{empty}
+\setlength\parindent{0pt}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+ 
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                  {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                  {2.3ex \@plus.2ex}%
+                                  {\normalfont\bfseries}}
+\makeatother
+
+
+\begin{document}
+
+{\large
+  \begin{center}
+    {\bf ME 701 -- Development of Computer Applications In Mechanical Engineering \\ 
+         Homework 4 -- Due 10/6/2017}         
+  \end{center}
+}
+ 
+Instructions:  Your solutions to the following should be contained in
+one file named {\tt lastname\_firstname\_hw3.py} and uploaded to Canvas.
+
+
+\section*{Problem 1 -- Basic Regular Expressions}
+
+Define a regular expression that matches all of the items 
+in the left column but none in the right column:
+\begin{tabular}{ll}
+ pit  & pt\\
+ spot & Pot\\
+ spate & peat\\
+ slap two & part\\
+ respite &
+\end{tabular}
+
+\section*{Problem 2 -- More Complex Regex}
+
+Consider the file {\tt regex\_sample\_mcnp.txt} (in the examples folder).  There are two blocks of text in that file that look like
+\begin{verbatim}
+ 1tally       18        nps =       10000
++                                     GOOD COUNTS                                                              
+           tally type 8    pulse height distribution.                   units   number         
+           particle(s): heavyions
+ 
+ cell  10                                                                                                                              
+      energy   
+    0.0000E+00   0.00000E+00 0.0000
+    3.0000E-01   0.00000E+00 0.0000
+    2.0000E+02   3.35200E-01 0.0141
+      total      3.35200E-01 0.0141
+\end{verbatim}
+Use regex to process the file and produce a dictionary of the form 
+  \begin{lstlisting}
+  d{18: {'energy': [0, 3e-1, 2e2], 'value': [0, 0, 3.352e-1], 'sigma'=[0.0, 0.0, 0.0141]},
+    28: {... so on and so forth
+  \end{lstlisting}
+Here, 18 and 28 are integer identifiers for particular results of interest (called a ``tally'').  The energy, value, and uncertainty arrays are the corresponding numerical data.
+
+\section*{Problem 3 -- Regression}
+
+Go out and find some interesting data for which a suitable model has been (or could be) defined.  Use that data and the tools presented in class to determine the coefficients to that model that produce the (1) least-squares and (2) minimax fit.  \\
+
+Note, you are all smart engineers, so I assume you can find interesting data.  If you can't, some possible options are
+\begin{itemize}
+ \item Getting atomic mass data and generating the coefficients to the semi-empirical mass formula.
+ \item Acquiring (maybe even from an MNE faculty member) some measured thermal-hydraulic measurements used to define a correlation (like Dittus-Boelter, etc.)
+\end{itemize}
+These models can be linear or nonlinear, but they should not be trivial.
+
+
+
+
+\section*{Problem 4 -- ODEs}
+
+Use SciPy to solve the following:
+\begin{enumerate}
+ \item $y' = y + 1$ for $y(0) = 1$ and $t \in [0, 10]$.
+ \item $y''' = y - y'$ for $y(0)=y'(0)=y''(0)=1$ and $t \in [0, 10]$.
+ \item $y' = 1000 y + 1$ and $z' = 0.0001 z + 1000 y$ for $y(0) = z(0) = 1$ and $t \in [0, 10]$.
+ \item $y' = y^2 + 1$ for $y(0) = 1$ and $t \in [0, 10]$.  How would you apply good-old Euler's method to this problem?  Do it!
+ \item $-y'' + y = 1$ for $y(0) = y(10) = 1$.  This is a BVP!  Look up the ``shooting method'' or {\tt bvp\_solver}. 
+\end{enumerate}
+
+
+\end{document}
