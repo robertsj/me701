@@ -197,7 +197,7 @@ class TestCSG(unittest.TestCase) :
         self.assertTrue(region.node.contains(Point(1.5, 0)))
   
         region = self.get_region_2()
-        print region.node.contains(Point(0.5, 0.5))
+        print(region.node.contains(Point(0.5, 0.5)))
 
     def testRegion_intersections(self) :
         
