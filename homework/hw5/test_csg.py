@@ -125,7 +125,7 @@ class TestCSG(unittest.TestCase) :
     def testUnion_surface(self) :
         c0, c1 = self.get_circles()
         self.assertTrue(c0.f(Point(1.5, 0)) > 0.0)
-        self.assertTrue(c1.f(Point(1.5, 0)) > 0.0)
+        self.assertTrue(c1.f(Point(1.5, 0)) < 0.0)
         
     def testUnion_contains(self) :
         c0, c1 = self.get_circles()
