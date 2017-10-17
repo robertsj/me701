@@ -204,6 +204,7 @@ class TestCSG(unittest.TestCase) :
         region = self.get_region()
         ray = Ray(Point(-3, 0), Point(1, 0))        
         ints = region.intersections(ray)
+        ints.sort(key = lambda p: p.x)
         self.assertAlmostEqual(ints[0].x, -2)
         self.assertAlmostEqual(ints[1].x, -1)
         self.assertAlmostEqual(ints[2].x,  1)
