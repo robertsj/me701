@@ -1,0 +1,104 @@
+\documentclass[11pt]{article}
+\usepackage{mathtools,hyperref,booktabs,fullpage}
+%\usepackage[amssymb,cdot]{SIunits}
+%\usepackage[utopia]{mathdesign}     
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{fullpage}
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+%\definecolor{lightgray}{gray}{0.93}
+
+\pagestyle{empty}
+\setlength\parindent{0pt}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+ 
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                  {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                  {2.3ex \@plus.2ex}%
+                                  {\normalfont\bfseries}}
+\makeatother
+
+
+\begin{document}
+
+{\large
+  \begin{center}
+    {\bf ME 701 -- Development of Computer Applications In Mechanical Engineering \\ 
+         Homework 8  -- Due 11/1/2016 \\
+         \vspace{12pt}
+         \textcolor{purple}{Last updated: \today}
+    }
+  \end{center}
+
+\setlength{\unitlength}{1in}
+
+}
+
+
+\fbox{
+  \parbox{0.95\textwidth}{
+\textcolor{purple}{{\bf Instructions}}:   In class, we are using a pretty straightforward idea---a function evaluator---to
+motivate several features of GUI's and PyQt.  Your job is to expand/modify the in-class 
+exercises as specified below. 
+  }
+}
+
+\vspace{12pt}
+
+\fbox{
+  \parbox{0.95\textwidth}{
+\textcolor{purple}{{\bf Deliverables}}: 
+  One TAR file  {\tt lastname\_firstname.tar} that contains a 
+  Python file named {\tt lastname\_firstname.pyw} and a summary 
+  file {\tt lastname\_firstname.pdf}.  All of the features request by
+  Problems 1--3 should be implemented in {\tt lastname\_firstname.pyw}. )
+  }
+}
+
+
+
+% Chapters 1,2,3
+
+
+
+\section*{Problem 1}
+
+During the first day, we developed a function/value/output 
+GUI.  Replace the function box with a drop-down box of at least
+three built-in functions, the first of which should be $\sin(x)$.
+A fourth option should be an editable option so that the user may
+still define a custom function.
+
+
+\section*{Problem 2}
+
+The original GUI allowed for a function $f(x)$ to be evaluated at a single
+point $x$.  Extend the GUI to handle array-valued inputs.  Specifically, 
+allow the users to enter 
+\textcolor{purple}{{\tt 0, 1, 2, 3}} or 
+\textcolor{purple}{{\tt np.linspace(0, 1, 4)}}
+for $x$.  Moreover, you should provide a {\tt save as} feature that
+saves the $x$ and $f(x)$ data to file.  
+
+
+
+\section*{Problem 3}
+
+During the third day, we saw how to plug into matplotlib in order to 
+embed plots in our GUI.  Your job is to create a function plotter by
+combining the results from the three lectures in class.  You should 
+ensure that plots can be refreshed for new $f$ or $x$ values.  
+Include a screenshot of the GUI for 
+$\sin(x)$ over $x \in [0, \pi/2]$ using 100 points in your PDF.
+
+
+
+
+
+\end{document}
