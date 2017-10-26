@@ -1,0 +1,216 @@
+%\documentclass{beamer}
+\documentclass[10pt]{beamer}
+%\include{mit-beamer-template}
+%\titleimage{fortrancomic}
+
+\usepackage{amsmath,amssymb,enumerate,calc,color,ifthen,capt-of,booktabs,graphicx,listings,algorithm2e,palatino,amsbsy,subfigure}
+
+\usefonttheme{serif}
+ 
+\definecolor{light-gray}{gray}{0.95}
+\lstset{basicstyle=\footnotesize\ttfamily,
+        %numbers=left,
+        %backgroundcolor=\color{light-gray},
+        frame=single, 
+        %rulesepcolor=\color{red},
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        stringstyle=\color[rgb]{0.627,0.126,0.941},
+        captionpos=b,
+        title=\lstname,
+        showstringspaces=false
+       }
+
+
+%---TITLE AND AUTHOR INFORMATION
+\title % (optional, use only with long paper titles)
+[C++ and Fortran]{Introduction to C++ and Modern Fortran}
+\author[Roberts]{Prof.~Jeremy Roberts}
+% \institute[22.213] % (optional, but mostly needed)
+%  {}
+% - Keep it simple, no one is interested in your street address.
+\date
+%[CFP 2003] % (optional, should be abbreviation of conference name)
+{Fall 2017}
+
+
+\begin{document}
+
+% TITLE PAGE
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% TABLE OF CONTENTS
+\begin{frame}{Outline}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+% What are the realities of full core, time-dependent simulations?
+
+
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Hello World}
+
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{hello_world.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{hello_world.f90}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Compiling Your First Program}
+
+For C++, use (in the command line)
+\begin{equation*}
+ \overbrace{\tt g\!+\!+}^{\text{compiler}}~
+   \underbrace{\tt{hello\_world.cc}}_{\text{file to compile}}~
+     \overbrace{\tt{-o}}^{\text{output as}}~
+       \underbrace{\tt{hello\_world}}_{\text{this executable}} 
+\end{equation*}
+\vfill 
+
+For Fortran, use
+\begin{equation*}
+ \overbrace{\tt gfortran}^{\text{compiler}}~
+   \underbrace{\tt{hello\_world.f90}}_{\text{file to compile}}~
+     \overbrace{\tt{-o}}^{\text{output as}}~
+       \underbrace{\tt{hello\_world}}_{\text{this executable}} 
+\end{equation*}
+
+\vfill 
+Use {\tt sudo apt-get install g++ gfortran} to get them.
+{\bf Now try them!}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Compiler Options}
+
+{\tt g++} and {\tt gfortran} are part of the GNU compiler set and share 
+several key compiler options that may (or may not) work with compilers from
+other vendors; these include:
+\begin{itemize}
+ \item {\tt -Wall} -- warn us of anything unexpected but make the executable
+ \item {\tt -Werror} -- turn any warning into an error
+ \item {\tt -O} -- (that's an ``Oh'') use optimization (or {\tt -ON} for $N=0,1,2,3$ for 
+       various levels of optimization)
+ \item {\tt -g} -- produce debugging information
+ \item {\tt -pg} -- produce profiling information
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Declaring Variables}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{declaring.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{declaring.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Simple Math}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{simple_math.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{simple_math.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Control of Program Flow -- If's}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{control.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{control.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Control of Program Flow -- Switches}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{control2.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{control2.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Loops}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{loops.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{loops.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Functions}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{functions.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{functions.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Eclipse with C++ and Fortran}
+
+\begin{itemize}
+ \item Go to \url{eclipse.org} and download the Eclipse installer
+ \item Install Eclipse for Parallel Application Developers
+\end{itemize}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Command Line Arguments}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{cl.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{cl.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------------------%
+\begin{frame}{File I/O}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{file_io.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{file_io.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+
+
+\end{document}

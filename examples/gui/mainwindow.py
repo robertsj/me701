@@ -10,7 +10,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
         
-        # # Create the File menu
+        # Create the File menu
         self.menuFile = self.menuBar().addMenu("&File")
         self.actionSaveAs = QAction("&Save As", self)
         self.actionSaveAs.triggered.connect(self.saveas)
