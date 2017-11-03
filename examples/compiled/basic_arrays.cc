@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
     // How to pass arrays?
     passing_dumb_arrays(a, n);
     passing_dumb_arrays(b, n);
-    passing_dumb_arrays(&c[0], n); // depends on a dumb pointer under the hood!
+    passing_dumb_arrays(&c[0], n); // dumb pointer under the hood!
 
     // How about vectors?
     std::printf("           original value of c[1]: %6.2f\n", c[1]);
@@ -36,7 +36,25 @@ int main(int argc, char* argv[])
     std::printf("  value of c[1] after pass by ref: %6.2f\n", c[1]);
     pass_vector_by_pointer(&c);
     std::printf("  value of c[1] after pass by ptr: %6.2f\n", c[1]);
-    return 0;
+
+    // what about 2-D arrays?
+    double a2[3][3] = {{1,2,3}, {4,5,6}, {7,8,9}}; 
+    std::printf("  a2[1][1] is %6.2f\n", a2[1][1]);
+    double **b2;
+    b2 = new double*[3]; // an array of pointers;
+    int k = 1;
+    for (int i = 0; i < 3; ++i)
+    {
+      b2[i] = new double[3];
+      for (int j = 0; j < 3; ++j)
+      {
+        b2[i][j] = ++k; // 6? what if k++?
+      }
+    }
+    std::printf("  b2[1][1] is %6.2f\n", b2[1][1]); 
+    
+    // are we forgetting something?
+    return 0;   
 }
 
 

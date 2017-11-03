@@ -1,0 +1,9 @@
+# Make a program all at once
+basic_arrays_cc:
+	$(CXX) -o $@  basic_arrays_functions.cc basic_arrays.cc
+
+# Or do it with dependencies
+basic_arrays_cc:
+	$(CXX) -o $@  basic_arrays_functions.cc basic_arrays.cc
+
+
