@@ -1,15 +1,15 @@
 %\documentclass{beamer}
 \documentclass[10pt]{beamer}
-%\include{mit-beamer-template}
-%\titleimage{fortrancomic}
 
 \usepackage{amsmath,amssymb,enumerate,calc,color,ifthen,capt-of,booktabs,graphicx,listings,algorithm2e,palatino,amsbsy,subfigure}
 
 \usefonttheme{serif}
  
 \definecolor{light-gray}{gray}{0.95}
-\lstset{basicstyle=\footnotesize\ttfamily,
-        %numbers=left,
+\lstset{basicstyle=\fontsize{7}{8}\selectfont\ttfamily,
+        numbers=left,
+        numberstyle=\fontsize{5}{6}\selectfont\ttfamily,
+        numbersep=5pt,                  
         %backgroundcolor=\color{light-gray},
         frame=single, 
         %rulesepcolor=\color{red},
@@ -47,9 +47,9 @@
   % You might wish to add the option [pausesections]
 \end{frame}
 
-% What are the realities of full core, time-dependent simulations?
+%==============================================================================%
 
-
+\section{C++ and Fortran Overview}
 
 %------------------------------------------------------------------------------%
 \begin{frame}{Hello World}
@@ -211,6 +211,82 @@ other vendors; these include:
 \end{columns}
 \end{frame}
 
+%------------------------------------------------------------------------------%
+\begin{frame}{File I/O}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{file_io.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{file_io.f90}
+  \end{column}
+\end{columns}
+\end{frame}
 
+%==============================================================================%
+\section{C++ Arrays}
+%==============================================================================%
+
+%------------------------------------------------------------------------------%
+\begin{frame}[allowframebreaks]{C++ Arrays - Main Program}
+ \lstinputlisting[language=C++]{basic_arrays.cc }
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}[allowframebreaks]{C++ Arrays - Function Header}
+ \lstinputlisting[language=C++]{basic_arrays_functions.hh}
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}[allowframebreaks]{C++ Arrays - Function Definitions}
+ \lstinputlisting[language=C++]{basic_arrays_functions.cc}
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Compiling}
+
+ Go ahead, try {\tt g++ basic\_array.cc}.
+
+ \pause
+ 
+ \vfill
+ The error is a {\bf linking error}.  
+ 
+ \pause 
+ 
+ \vfill
+ Comment out the {\tt \#include "basic\_arrays\_functions.hh"} line 
+ in {\tt basic\_array.cc} and try compiling again.
+ 
+ \pause 
+ \vfill
+ The error is a {\bf syntactical error}---all names, including 
+ functions, need to be defined before use.
+ 
+ \pause 
+ \vfill
+ The right way (after uncommenting the {\tt .hh} file): \\
+ 
+ {\tt g++ basic\_array\_functions.cc basic\_array.cc}\\
+ 
+ (where the order matters!)
+ 
+ 
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Compiling with {\tt make}}
+  \lstinputlisting[language=make]{make_basic_arrays}
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}[allowframebreaks]{Fortran Arrays - Main Program}
+ \lstinputlisting[language=Fortran]{basic_arrays.f90}
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}[allowframebreaks]{Fortran Arrays - Functions Module}
+ \lstinputlisting[language=Fortran]{basic_arrays_module.f90}
+\end{frame}
 
 \end{document}

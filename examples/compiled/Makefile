@@ -8,6 +8,13 @@ say_hello:
 # ^^^ 
 # TAB! Not whitespace.  Won't work!
 
+# We can use it to automate LaTeX
+slides:
+	pdflatex cpp_fortran.tex
+	pdflatex cpp_fortran.tex
+
+
+
 # Make a program all at once
 declaring_cc:
 	$(CXX) -o declaring_cc declaring.cc

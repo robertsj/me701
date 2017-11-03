@@ -3,8 +3,8 @@
 #include <cstdio>
 
 // Demonstrate how to pass dumb arrays.  Note, prefer to "const" all 
-// incoming scalars (ints, floats, etc.) that are not to change inside the
-// function.  Pedantic, but "defensive"
+// incoming scalars (ints, floats, etc.) that are not to change inside 
+// the function.  Pedantic, but "defensive"
 void passing_dumb_arrays(double *a, const int n)
 {
     // do something with the array
