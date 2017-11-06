@@ -5,5 +5,7 @@ a = np.array([1.0, 1.0, 1.0])
 
 module_f90_demo.polynomial.initialize(a)
 
+print(module_f90_demo.polynomial.eval(1.0))
+
 module_f90_demo.polynomial.finalize()
 

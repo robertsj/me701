@@ -1,14 +1,6 @@
 SWIG_INCLUDES=-I/home/robertsj/opt/miniconda3/include/python3.6m -I/home/robertsj/opt/miniconda3/lib/python3.6/site-packages/numpy/core/include
 
-all: test_f90_demo test_cpp_demo f2py_demo swig_demo 
-
-# Fortran demonstration
-test_f90_demo:
-	gfortran f90_demo.f90 test_f90_demo.f90 -o $@ 
-
-# C++ demonstration
-test_cpp_demo:
-	g++ cpp_demo.cc test_cpp_demo.cc -o $@ 
+all: f2py_demo f2py_demo2 swig_demo swig_demo2
 
 # F2PY demonstration
 f2py_demo:
@@ -29,7 +21,7 @@ swig_demo2:
 
 # Remove objects, module files, and exectables
 clean:
-	@rm -f *.o *.mod *-x *wrap.cxx *.so *.pyc cpp_demo.py
+	@rm -f *.o *.mod *-x *wrap.cxx *.so *.pyc
 
 # Same, but leave the shared objects
 neat:

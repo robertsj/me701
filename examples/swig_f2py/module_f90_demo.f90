@@ -8,7 +8,8 @@ integer :: n_
 contains
 
 subroutine initialize(a, n)
-    double precision, intent(in) :: a
+    implicit none
+    double precision, intent(in) :: a(n)
     integer, intent(in) :: n
     allocate(a_(n))
     a_ = a 
@@ -22,7 +23,7 @@ subroutine finalize()
 end subroutine finalize
 
 double precision function eval(x)
-    double precision, intent(in) :: x
+    integer, intent(in) :: x
     integer :: i
     eval = 0_8
     do i = 1, n_

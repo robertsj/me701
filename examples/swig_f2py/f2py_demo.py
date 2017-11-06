@@ -13,20 +13,3 @@ print(simple_f90_demo.norm(a, 2))
 # testing range
 print(simple_f90_demo.range(5, 5))
 
-
-# Option One -- Using std::vector
-# T = cpp_demo.vec_dbl(10, 0.0)
-# cpp_demo.compute_temperature_vector(T)
-# print T
-# print np.asarray(T)
-
-# Option Two -- Using array (enclosed in a class)
-"""
-D = cpp_demo.ProblemData()
-cpp_demo.initialize(D, 10)
-cpp_demo.compute_temperature_array(D)
-a = cpp_demo.numpy_temp(D)
-print(D.T)
-print(a)
-cpp_demo.finalize(D)
-"""
