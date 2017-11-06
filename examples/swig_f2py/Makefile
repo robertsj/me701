@@ -13,11 +13,18 @@ test_cpp_demo:
 # F2PY demonstration
 f2py_demo:
 	f2py -c -m simple_f90_demo simple_f90_demo.f90
+f2py_demo2:
+	f2py -c -m module_f90_demo module_f90_demo.f90
 
 swig_demo:
 	swig -python -c++ simple_cpp_demo.i
 	g++ -fPIC -c simple_cpp_demo.cc simple_cpp_demo_wrap.cxx ${SWIG_INCLUDES}
 	g++ -shared simple_cpp_demo.o simple_cpp_demo_wrap.o ${SWIG_INCLUDES} -o _simple_cpp_demo.so 
+
+swig_demo2:
+	swig -python -c++ class_cpp_demo.i
+	g++ -fPIC -c class_cpp_demo.cc class_cpp_demo_wrap.cxx ${SWIG_INCLUDES}
+	g++ -shared class_cpp_demo.o class_cpp_demo_wrap.o ${SWIG_INCLUDES} -o _class_cpp_demo.so 
 
 
 # Remove objects, module files, and exectables
