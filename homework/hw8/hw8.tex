@@ -1,0 +1,166 @@
+\documentclass[11pt]{article}
+\usepackage{mathtools,hyperref,booktabs,fullpage}
+%\usepackage[amssymb,cdot]{SIunits}
+%\usepackage[utopia]{mathdesign}     
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{fullpage}
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+%\definecolor{lightgray}{gray}{0.93}
+
+\pagestyle{empty}
+\setlength\parindent{0pt}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+ 
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                  {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                  {2.3ex \@plus.2ex}%
+                                  {\normalfont\bfseries}}
+\makeatother
+
+
+\begin{document}
+
+{\large
+  \begin{center}
+    {\bf ME 701 -- Development of Computer Applications In Mechanical Engineering \\ 
+         Homework 8 --Due 11/15/2017 \\
+    }
+  \end{center}
+
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){7.35}}         
+\end{picture}
+}
+
+{\bf Instructions}:  All source code should be placed in a single 
+TAR file of the form {\tt lastname\_firstname\_hw8.tar}.  All 
+code should be compiled with a Makefile, as specified in Problem 3.
+
+\section*{Problem 1 -- Arrays and Matrices}
+
+Consider the (unimplemented) functions:
+\begin{verbatim}
+// C++
+double interpolate(double x_new, double *x, double *y, int n, int order)
+{
+  /* ... */
+}
+! Fortran
+double precision function interpolate(x_new, x, y, n, order)
+    double precision, intent(in) :: x_new
+    double precision, dimension(:), intent(in) :: x, y
+    integer, intent(in) :: n, order
+    ! ...
+end function interpolate
+\end{verbatim}
+The functions should return the value of {\tt y\_new} at {\tt x\_new} 
+interpolated from the points {\tt x} and {\tt y}.  The interpolation 
+should be of the order given by {\tt order} (first is linear, second 
+is quadratic, etc.). The number of points used is {\tt n}. 
+
+
+Your tasks:
+\begin{enumerate}
+ \item Implement these functions in C++ and Fortran.
+ \item Produce corresponding Python modules using SWIG and f2py.  
+       Note, think carefully about the interpolate function and its 
+       signature.
+ \item Produce a Makefile that automates all of the compilation.
+       Make sure that any system-dependent paths are {\it easily changed}
+       by modifying a variable in your Makefile (e.g., for the Python
+       path needed for SWIG).
+\end{enumerate}
+
+
+
+
+
+
+\section*{Problem 2 -- Monte Carlo}
+
+Monte Carlo integration really shines for multidimensional problems, which is
+why it works so well for integrating the 6-dimensional phase space of 
+time-independent neutron transport problems.  In this problem, we'll use a 
+very simple test case to illustrate the power of Monte Carlo integration and 
+assess the performance of C++ and Fortran using a variety of 
+compiler options.  For this problem, use the language you did not 
+use for Problem 1. \\
+
+{\bf Background}:  We've done numerical quadrature using pre-defined 
+abscissa with corresponding weights.  Monte Carlo is good at solving integrals
+by simulation.  For example, consider a unit square with a concentric circle that 
+touches the center of each of the square's for sides.  If you threw 
+100 darts, the number of darts inside the circle divided by 100 would 
+be pretty close to $\pi/4$ (think about that if it's not obvious!).  
+We can use this approach to solve a variety of integrals.  Consider any 
+integrand of $n$ variables $f(\mathbf{x})$ where $\mathbf{x} \in \mathbb{R}^n$.
+For simplicity, assume each component $x_i$ of $\mathbf{x}$ is 
+restricted to $x_i \in [0, 1]$, and also assume that $f \in [0, 1]$.  
+Then we proceed as follows:
+\begin{enumerate}
+ \item Generate random samples for each $x_i$, e.g., $x_i = \tt{rand}()$, where 
+       $\tt{rand}$ is the random number generator in your language of choice.
+       Call the resulting vector of samples $\mathbf{x}'$.
+ \item Generate a random ``rejection'' sample $a = \tt{rand}$.
+ \item If $a < f(\mathbf{x}')$, add 1 to the ``in the circle'' bin (i.e., it's 
+       under the curve)
+ \item Otherwise, do another sample until we've done as many as we want.
+\end{enumerate}
+
+Consider the integral
+\begin{equation}
+ I_n = \int^1_0 dx_1 \int^1_0 dx_2 \ldots \int^1_0 dx_n 
+      (x_1 + x_2 + \ldots + x_n)^2 \, .
+\end{equation}
+We want to integrate this function  using 
+\begin{enumerate}
+ \item the midpoint rule (i.e., use the centers of multidimensional boxes)
+ \item Monte Carlo
+\end{enumerate}
+It seems weird that the use of random numbers could ever be beneficial for 
+this, but it turns out to be wickedly good for high-dimensional problems.
+
+\vspace{11pt}
+\textcolor{purple}{{\bf Deliverables}}: 
+\begin{enumerate}
+ \item Write a program in C++ {\bf or} Fortran to compute 
+       the integral and the {\it relative, absolute error} (i.e.,
+       $|I^{appx}-I^{ref}|/|I^{ref}|$
+       with both 
+       quadratures for arbitrary $n$ and an $m$, where 
+       $m^n$ is the number of 
+       of evaluations of the integrand.  (For the midpoint rule, 
+       $m$ defines the number of divisions along a given axis.)
+       I have provided template files for you to start with in 
+       both languages.
+       The main program should accept $n$ and $m$ as command line
+       arguments.  It should output a file named {\tt output.txt} 
+       that contains one 
+       line of the following form: {\tt I I\_mp I\_mc}, where
+       I, I\_mp, and I\_mc are the reference, midpoint, and Monte 
+       Carlo values. 
+ \item Plot the  {\it relative, absolute error} for
+       $n = 1$, $3$, and $10$.  Use enough integrand evaluations 
+       to obtain an absolute relative error of
+       0.001 or less, and use a log-log scale.  You should use Python 
+       for running your program, reading the output file, and 
+       plotting the results. Name that file {\tt hw4p2.py}.  
+ \item For the largest $n$ and $m$ values you needed, time your 
+       Monte Carlo routine for the case of (1) no optimization and (2) 
+       ``-O3'' optimization and report the result in your summary PDF file.
+       This could take some time (for the unoptimized case), so 
+       plan accordingly.
+\end{enumerate}
+
+
+
+\end{document}
