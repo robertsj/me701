@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+\usepackage{mathtools,hyperref,booktabs,fullpage}
+%\usepackage[amssymb,cdot]{SIunits}
+%\usepackage[utopia]{mathdesign}     
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{fullpage}
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+%\definecolor{lightgray}{gray}{0.93}
+
+\pagestyle{empty}
+\setlength\parindent{0pt}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+ 
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                  {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                  {2.3ex \@plus.2ex}%
+                                  {\normalfont\bfseries}}
+\makeatother
+
+
+\begin{document}
+
+{\large
+  \begin{center}
+    {\bf ME 701 -- Development of Computer Applications In Mechanical Engineering \\ 
+         Homework 9 --Due 11/27/2017 \\
+    }
+  \end{center}
+
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){7.35}}         
+\end{picture}
+}
+
+{\bf Instructions}:  All source code should be placed in a single 
+TAR file of the form {\tt lastname\_firstname\_hw8.tar}.  All 
+code should be compiled with a Makefile, as specified in Problem 3.
+
+\section*{Problem 1 -- Just One!}
+
+Consider the equation
+\begin{equation}
+  \frac{d}{dx} a(x) \frac{d y}{dx} + b(x) y(x) = c(x) 
+\end{equation}
+subject to $y(L) = y_L$ and $y(R) = y_R$.  Here, $a$, $b$, and $c$ are
+arbitrary functions of $x$ provided in {\it tabulated} format. For simplicity,
+assume that $a$, $b$, and $c$ are defined for the same values of $x$.\\
+
+Write a
+function or subroutine in C++ or Fortran with the following signature
+\begin{verbatim}
+void solve(int n, double L, double R, double y_L, double y_R, 
+           int m, double *a, double *b, double *c,
+           int option=0, double tol = 1e-8, int maxit = 100);
+// similar for fortran
+\end{verbatim}
+where {\tt n} is the number of equally spaced $x$ points at which $y(x)$ is 
+to be evaluated, $L$ and $R$ are
+the left and right boundaries, $y_L$ and $y_R$ are the left and right
+boundary conditions, and {\tt a}, {\tt b}, and {\tt c} are double arrays
+evaluated at {\tt m} equally spaced points from {\tt L} to {\tt R}.
+The argument {\tt option} is an integer for which {\tt 0} means
+use tridiagonal elimination, {\tt 1} means use Jacobi,  {\tt 2} means use
+Gauss-Seidel, and {\tt 3} means use any other iterative method of your 
+choice (+1/2 point).  Finally, {\tt tol} and {\tt maxit} define the tolerance
+and maximum number of iterations for options 1, 2, and 3.  \\
+
+You may wish to produce a {\tt main.cc} for testing, or to couple this
+with Python via {\tt f2py} or {\tt swig}.  All I want is your function
+or subroutine code (include a header if doing C++).\\
+
+{\bf Note!!!} I strongly encourage you to work out the finite difference 
+(or any other approximation you want to use) before lecture on 11/17 so that
+I can tell you if you're on the right track.\\
+
+{\bf Hint!!!} Have a reference solution handy for debugging and method
+verification!  (Solve, e.g., $y'' = 1$ with $y(0) = y(1) = 0$, etc.).
+
+\end{document}
