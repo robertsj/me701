@@ -10,8 +10,13 @@ program test_elim
       if (i > 1) A(i, i-1) = -1.0_8
       if (i < n) A(i, i+1) = -1.0_8
   end do
-  call dgetrs('0', n, 1, A, n, ipiv, b, n, info)
-  do i = 1, n
-     print '(f8.4)', b(i)
-  end do
+  print *, 'A before solve:'
+  print '(5f8.4)', A
+  print *, 'b before solve:'
+  print '(5f8.4)', b
+  call dgesv(n, 1, A, n, ipiv, b, n, info)
+  print *, 'A before solve:'
+  print '(5f8.4)', A
+  print *, 'b after solve:'
+  print '(5f8.4)', b
 end program test_elim
