@@ -25,6 +25,7 @@ program test_matrix_vector
       y = 0.0
       call dgemv('n', m, n, alpha, A, lda, x, incx, beta, y, incy)
     end do
+    if (y(1) .ne. n) stop "bad result. stop."
     t2 = omp_get_wtime()-t
     ! we should subtract m for our own implementation, since
     ! we don't do y = Ax-y, just y = Ax
@@ -32,7 +33,7 @@ program test_matrix_vector
 !    print *, "elapsed time = ", t2, " seconds."
 !    print *, "# ops e6     = ", flops / dble(1e6)
 !    print *, "MFLOPS       = ",
-    print *, m,  flops / dble(1e6) / t2
+    print '(i4, f12.4)', m,  flops / dble(1e6) / t2
     deallocate(A, x, y)
   end do
 end program test_matrix_vector
