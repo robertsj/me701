@@ -1,36 +1,13 @@
-# We can define things like the compiler
-CXX=g++
 F90=gfortran
+OPT=-O3
 
-# Basic goal: make a target
-say_hello:
-	echo "Hello world"
-# ^^^ 
-# TAB! Not whitespace.  Won't work!
+triad:
+	gcc $(OPT) -c timing.c dummy.c
+	$(F90) -O3 -c triad.f90
+	gfortran -O3 -o triadx triad.o dummy.o timing.o
 
-# We can use it to automate LaTeX
-slides:
-	pdflatex cpp_fortran.tex
-	pdflatex cpp_fortran.tex
-
-
-
-# Make a program all at once
-declaring_cc:
-	$(CXX) -o declaring_cc declaring.cc
-
-# Make a program with dependencies
-control.o: control.cc
-	$(CXX) -c control.cc
-control_cc: control.o
-	$(CXX) -o control_cc control.o
-
-# Some special characters:
-#   $@ - target name
-#   $< - name of the first dependency
-#   $^ - names of all dependencies
-# Could use to do, e.g.,
-# 
-# control_cc: control.o
-# 	$(CXX) -o $@ 
+triad_tuned:
+	gcc $(OPT) -c timing.c dummy.c
+	$(F90) -O3 -mtune=native -c triad.f90
+	gfortran -O3 -mtune=native -o triadx_tuned triad.o dummy.o timing.o
 

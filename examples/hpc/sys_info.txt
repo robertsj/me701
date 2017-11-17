@@ -1,0 +1,20 @@
+Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+  L1 CACHE
+  16 x 32KB Instruction
+  16 x 32KB Data
+  L2 CACHE
+  16 x 256KB
+  L3 CACHE
+  1 x 40MB
+
+AMD Opteron(tm) Processor 6380 
+  Level 1 cache size  ? 	8 x 64 KB 2-way set associative shared instruction caches
+  16 x 16 KB 4-way set associative data caches
+  Level 2 cache size  ? 	8 x 2 MB 16-way set associative shared exclusive caches
+  Level 3 cache size	2 x 8 MB shared caches
+
+Intel(R) Xeon(R) CPU E5-2687W 0 @ 3.10GHz
+  Level 1 cache size  ? 	8 x 32 KB 8-way set associative instruction caches
+  8 x 32 KB 8-way set associative data caches
+  Level 2 cache size  ? 	8 x 256 KB 8-way set associative caches
+  Level 3 cache size	20 MB 20-way set associative shared cache
