@@ -30,3 +30,13 @@ void range(int *a, int n, int start)
 }
 
 
+double add_ab(double *a, int m, double *b, int n)
+{
+   double s = 0;
+   for (int i = 0; i < m; ++i)
+      s += a[i];
+   for (int i = 0; i < n; ++i)
+      s += b[i];
+   return s;
+}
+

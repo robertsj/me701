@@ -23,6 +23,10 @@
 // This is what we want for input arrays that should not get changed
 %apply (double* INPLACE_ARRAY1, int DIM1) {(double* a, int n)}
 
+// This is what we want for input arrays that should not get changed
+%apply (double* INPLACE_ARRAY1, int DIM1) {(double* a, int m)}
+%apply (double* INPLACE_ARRAY1, int DIM1) {(double* b, int n)}
+
 // This is what we want for an array produced by the function.
 %apply (int* ARGOUT_ARRAY1, int DIM1) {(int* a, int n)}
 
