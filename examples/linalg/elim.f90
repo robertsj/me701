@@ -1,9 +1,8 @@
 ! gaussian elimination
 
 ! Solve Ax = b using very simple gaussian elimination 
-subroutine dgetrs(trans, n, nrhs, A, lda, ipiv, b, ldb, info)
+subroutine dgesv(n, nrhs, A, lda, ipiv, b, ldb, info)
   ! Inputs:
-  !    trans    - n/a
   !        n    - system size
   !     nrhs    - n/a
   !        A    - n x n array 
@@ -12,9 +11,8 @@ subroutine dgetrs(trans, n, nrhs, A, lda, ipiv, b, ldb, info)
   !      ldb    - n/a
   !     info    - n/a
   implicit none
-  character, intent(in) :: trans	
-  integer, intent(in) :: n, nrhs, lda, ipiv(n), ldb
-  integer, intent(out) :: info
+  integer, intent(in) :: n, nrhs, lda, ldb
+  integer, intent(out) :: info, ipiv(n)
   double precision, dimension(:, :), intent(inout) :: A(n, n)
   double precision, dimension(:), intent(inout) :: b(n)
   ! Local Variables:
@@ -42,6 +40,6 @@ subroutine dgetrs(trans, n, nrhs, A, lda, ipiv, b, ldb, info)
           end do         
       b(i) = temp / A(i, i)      
   end do
-end subroutine dgetrs
+end subroutine dgesv
   
   
