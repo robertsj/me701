@@ -50,7 +50,6 @@
 \end{frame}
 
 %==============================================================================%
-
 \section{Overview of Modern Computer Architectures}
 
 %------------------------------------------------------------------------------%
@@ -133,23 +132,62 @@ Multiplication actually requires 5 cycles to complete!
 \end{frame}
 
 
-%\section{Elements of Single-Core Optimization}
-
 
 %------------------------------------------------------------------------------%
-\begin{frame}{Single-Core Performance}
+\begin{frame}[fragile]{Single-Core Performance}
 
 $P_{\text{peak}} = n_{\text{super}}  \times n_{\text{FMA}} \times n_{\text{SIMD}} \times f$
 
 \vfill 
 
-What are FMA and SIMD?
+What are FMA and SIMD?  
+
+\pause 
+
+Fused Multiplication and Addition;  Single-Instruction, Multiple-Data
+
+\vfill 
+
+\begin{verbatim}
+SCALAR             SIMD
+  A0         A0     A1     A2     A3
+   +                    +
+  B0         B0     B1     B2     B3
+ A0+B0     A0+B0  A1+B1  A2+B2  A3+B3
+\end{verbatim}
+
+
 
 \end{frame}
 
 
+%------------------------------------------------------------------------------%
+\begin{frame}[fragile]{Vectorized Arithmetic}
 
-%\section{Beyond Single-Core: Parallel Computing}
+\begin{tabular}{cccc}
+ name     & year & \# instructions & vector length \\
+ \hline
+ SSE$^*$  & 1999 &  70             & 128-bit (single precision) \\
+ SSE2     & 2001 &  +144            & 128-bit (double precision) \\
+ SSE3     & 2004 &  +13             & 128-bit (within register ops) \\
+ AVX$^+$  & 2008 &  $>200$         & 256-bit  \\
+ AVX2     & 2011? &                & 256-bit + new ops (FMA $c = a*b+c$) \\
+ AVX-512  & 2013 &                 & 512-bit 
+\end{tabular}
+
+\vfill 
+
+Generally, {\it hope the compiler does it}!  Sometimes, need a flag, 
+e.g., {\tt -mavx}.
+
+\vfill
+$^*$ Streaming SIMD Extensions \\
+$^+$ Advanced Vector Extensions 
+\end{frame}
+
+
+
+\section{Beyond Single-Core: Parallel Computing}
 
 
 %------------------------------------------------------------------------------%
@@ -162,9 +200,48 @@ What are FMA and SIMD?
  \item MIMD (multiple instruction streams, multiple data streams)
 \end{enumerate}
 
+\end{frame}
+
+
+
+%------------------------------------------------------------------------------%
+\begin{frame}[allowframebreaks]{Threaded Parallelism via OpenMP}
+
+\includegraphics[width=0.8\textwidth]{omp1.png}
+
+{\tiny From OpenMP 4.0 in a Nutshell, M. Klemm}
+
+
+\includegraphics[width=0.8\textwidth]{omp2.png}
+
+
+\includegraphics[width=0.8\textwidth]{omp3.png}
 
 \end{frame}
 
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Good Resource}
+
+\includegraphics[width=0.5\textwidth]{omp_cheat.png}
+
+{\tiny OpenMP 4.0 API Fortran(/C/C++) Syntax Quick Reference Card}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Hello World}
+
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{../omp/hello_omp.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{../omp/hello_omp.f90}
+  \end{column}
+\end{columns}
+
+\end{frame}
 
 
 \end{document}
