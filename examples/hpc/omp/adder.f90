@@ -3,7 +3,8 @@ use omp_lib
 implicit none
 integer :: i, n
 real(8) :: s, s_tmp
-!$omp parallel private(i, s_tmp) shared(s)
+!$omp parallel private(i, s_tmp) &
+!$omp   shared(s)
 s = 0.0_8
 s_tmp = 0.0_8
 n = 2e7
