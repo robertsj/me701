@@ -1,18 +1,15 @@
 #include <omp.h>
 #include <cstdio>
-
 using std::printf;
-
 int main()
 {
-  int i, n;
-  double s, s_tmp;
+  int n = 2e7;
+  double s = 0.0, s_tmp;
+  double t0 = omp_get_wtime(), te;
 #pragma omp parallel \
-   private(i, s_tmp) shared(s)
+   private(s_tmp) shared(n, s)
 {
-  s = 0.0;
   s_tmp = 0.0;
-  n = 2e7;
 #pragma omp for
   for (int i = 0; i < n; ++i)
   {
@@ -21,8 +18,7 @@ int main()
 #pragma omp atomic
   s = s + s_tmp;
 } // end parallel
-
-printf("%16.0f\n", s);
-
+te = omp_get_wtime() - t0;
+printf("%16.0f, et=%10.2e\n", s, te);
 return 0;
 }

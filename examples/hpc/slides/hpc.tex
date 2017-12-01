@@ -259,4 +259,62 @@ $^+$ Advanced Vector Extensions
 \end{frame}
 
 
+%------------------------------------------------------------------------------%
+\begin{frame}{Watch Out For Race Conditions!}
+
+\lstinputlisting[language=C++]{../omp/adder_race.cc}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Watch Out For Terrible Performance!}
+
+\lstinputlisting[language=C++]{../omp/adder_slow.cc}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Parallel Computing using MPI}
+
+OpenMP (and the threading model) good for {\it shared-memory} machines, but
+wow to use Beocat (or other clusters)? The {\tt message passing interface} (MPI).
+\vfill 
+
+OpenMP:
+\begin{itemize}
+ \item Pros: easy(ish) to program; incremental parallelization; often works in serial with no problems (outside of OpenMP function use)
+ \item Cons: limited to shared-memory machines (single, multi-core workstation); best for loop-level parallelism
+\end{itemize}
+
+MPI:
+\begin{itemize}
+ \item Pros: scalable to 100k+ processes; leverages cheap systems; incredibly general 
+ \item Cons: harder to program; no easy way to serialize when needed; communication latency
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Parallel Computing using MPI...and Python!}
+
+{\tt conda install mpi4py}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{...hello?}
+
+\lstinputlisting[language=Python]{../mpi/hello.py}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Jack and Jill went up the hill...}
+
+\lstinputlisting[language=Python]{../mpi/p2p.py}
+
+\end{frame}
+
 \end{document}

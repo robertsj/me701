@@ -2,7 +2,8 @@ program hello_world
 use omp_lib
 implicit none
 integer :: i, n
-real(8) :: s, s_tmp
+real(8) :: s, s_tmp, t
+t = omp_get_wtime()
 !$omp parallel private(i, s_tmp) &
 !$omp   shared(s)
 s = 0.0_8
@@ -16,5 +17,6 @@ end do
 !$omp atomic
 s = s + s_tmp
 !$omp end parallel
-write (*,"(f16.0)") s
+t = omp_get_wtime() - t
+write (*,"(f16.0, es10.2)") s, t
 end program hello_world
