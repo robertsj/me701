@@ -276,6 +276,28 @@ $^+$ Advanced Vector Extensions
 
 
 %------------------------------------------------------------------------------%
+\begin{frame}[fragile]{What Is Good Performance?}
+
+Amdahl's Law defines the ideal (maximum, theoretical) speed-up (SU) of 
+a parallel program to be
+\begin{equation*}
+ SU_{\text{ideal}}(n) = \frac{1}{s + \frac{1-s}{n}} \, ,
+\end{equation*}
+where $n$ is the number of threads, processes, or other parallel programming
+units, and $s$ is the fraction of the program that is inherently serial.
+\vfill 
+
+In practice, SU is the ratio of the serial time (one thread, one process, etc.)
+to the time when run with $n$ threads (processes, etc.):
+\begin{equation*}
+ SU(n) = \frac{t_1}{t_n} \, .
+\end{equation*}
+
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
 \begin{frame}{Parallel Computing using MPI}
 
 OpenMP (and the threading model) good for {\it shared-memory} machines, but
@@ -316,5 +338,69 @@ MPI:
 \lstinputlisting[language=Python]{../mpi/p2p.py}
 
 \end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Intermission}
+
+Just about {\bf all MPI} programs can be implemented with appropriate
+point-to-point communications!
+
+\vfill 
+
+Implementations vary (block or non-block) and other 
+functions, etc., simplify the {\it user's} code.
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Deadlock...}
+
+\lstinputlisting[language=Python]{../mpi/p2p.py}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Adding 1, 2, 3, ....}
+
+\lstinputlisting[language=Python]{../mpi/adder.py}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Collective}
+
+\lstinputlisting[language=Python]{../mpi/collective.py}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Challenge Problems}
+
+Let's try to design MPI-based algorithms for the following in class:
+\begin{itemize}
+\item Parallelize the matrix-vector product $\mathbf{y} \leftarrow \mathbf{Ax}$
+ \item Parallelize a classical Jacobi iteration for the 2-D heat equation.
+ For a fixed heat generation rate
+$\dot{Q}$ and thermal conductivity $k$, we have 
+\begin{equation}
+ \frac{T^{\text{old}}_{i+1,j} + T^{\text{old}}_{i-1,j} + 
+       T^{\text{old}}_{i,j+1} + T^{\text{old}}_{i, j-1} - 
+       4T^{\text{new}}_{i,j}}
+      {\Delta^2} = \frac{\dot{Q}}{k}
+\end{equation}
+where $x_{i+1}-x_{i} = y_{j+1}-y_{j} = \Delta$.  For simplicity,
+assume Dirichlet conditions on all four sides, e.g., on the 
+left boundary, $T_{0,j} = T_{\text{left}}$, with similar conditions
+on the right, bottom, and top boundaries. 
+\end{itemize}
+
+\vfill 
+
+Can we implement these, too?
+
+\end{frame}
+
+
 
 \end{document}
