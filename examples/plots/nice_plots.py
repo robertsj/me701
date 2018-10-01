@@ -1,7 +1,7 @@
 def init_nice_plots() :
     from matplotlib import rcParams
     rcParams['font.family'] = 'serif'
-    rcParams['font.serif'] = ['Times']
+    #rcParams['font.serif'] = ['Times']
     rcParams['xtick.direction'] = 'out'
     rcParams['ytick.direction'] = 'out'
     rcParams['xtick.labelsize'] = 18
@@ -15,4 +15,4 @@ def init_nice_plots() :
     #rcParams['axes.facecolor']  = 'white'
     rcParams['legend.fontsize'] = 16
     rcParams['figure.autolayout'] = True
-    rcParams['text.usetex'] = True
+    #rcParams['text.usetex'] = True
