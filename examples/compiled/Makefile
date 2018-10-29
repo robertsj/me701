@@ -13,8 +13,6 @@ slides:
 	pdflatex cpp_fortran.tex
 	pdflatex cpp_fortran.tex
 
-
-
 # Make a program all at once
 declaring_cc:
 	$(CXX) -o declaring_cc declaring.cc
@@ -24,6 +22,14 @@ control.o: control.cc
 	$(CXX) -c control.cc
 control_cc: control.o
 	$(CXX) -o control_cc control.o
+
+# Other programs
+basic_arrays.o: basic_arrays.cc
+	$(CXX) -c basic_arrays.cc
+basic_arrays_functions.o: basic_arrays_functions.cc
+	$(CXX) -c basic_arrays_functions.cc
+basic_arrays_cc: basic_arrays.o basic_arrays_functions.o
+	$(CXX) -o  $@ $^
 
 # Some special characters:
 #   $@ - target name
