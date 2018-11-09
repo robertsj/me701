@@ -4,6 +4,7 @@
 
 int residual(SNES snes, Vec z, Vec f, void *ctx)
 {
+  printf("residual call!\n");
   int ierr;
   const double *zz;
   double *ff;
@@ -18,7 +19,7 @@ int residual(SNES snes, Vec z, Vec f, void *ctx)
 
   // compute the residual
   ff[0] = x - y - 4; 
-  ff[1] = x*x + y - 3;
+  ff[1] = x*x + y + 3;
 
   // restore vectors
   ierr = VecRestoreArrayRead(z, &zz);
@@ -29,6 +30,7 @@ int residual(SNES snes, Vec z, Vec f, void *ctx)
 
 int jacobian(SNES snes, Vec z, Mat J, Mat B, void *ctx)
 {
+  printf("jacobian call!\n");
   int ierr;
   const double *zz;
   double J_a[4];

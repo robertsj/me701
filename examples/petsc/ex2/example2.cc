@@ -14,13 +14,14 @@ using x0=1/2 and y0=-3.
 
 int main(int argc,char **args)
 {
+  int option = 0;
 
   // Declare variables.
   SNES snes;
   KSP ksp;
   PC pc;
   Vec z, r;
-  Mat J;
+  Mat J, J_mf;
   int ierr;
 
   // Initialize PETSc.
@@ -45,7 +46,25 @@ int main(int argc,char **args)
   ierr = SNESSetFunction(snes, r,  residual, NULL);
 
   // Set the jacobian function
-  ierr = SNESSetJacobian(snes, J, J, jacobian, NULL);
+  if (option == 0)
+  {
+    // Use the explicitly created Jacobian matrix, which is computed
+    // using the function "jacobian"
+    ierr = SNESSetJacobian(snes, J, J, jacobian, NULL);
+  }
+  else
+  {
+    // Otherwise, use a matrix-free Jacobian based on finite differences.  This
+    // "fake" matrix is J_mf and is applied via J_mf*v ~ (f(z+e*v)-f(z))/e.
+    // When the system is solved using a Krylov method, we get a Jacobian-Free
+    // Newton-Krylov (JFNK) approach.  For more, see
+    //    https://www.cs.odu.edu/~keyes/papers/jfnk.pdf
+    ierr = MatCreateSNESMF(snes, &J_mf);
+    ierr = SNESSetJacobian(snes, J_mf, J, SNESComputeJacobianDefault, NULL);
+  }
+
+  // Last chance to override behavior.
+  ierr = SNESSetFromOptions(snes);
 
   // Time to solve
   ierr = SNESSolve(snes, NULL, z);
