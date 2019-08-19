@@ -98,8 +98,8 @@ Because of the material covered in ME 701, the lectures need to be rather hands-
 Grading for the course is based on the following breakdown: 
 
 - 11 homeworks [one free drop drop] (50%)
-- Three programming projects (45%)
-- Participation (5%)
+- Two programming projects (40%)
+- Participation (10%)
 
 
 Although I do not subscribe to the standard 90/80/70 rule in general, that scale has been pretty
@@ -108,7 +108,7 @@ accurate the last three semesters of my teaching this course.
 
 Each **homework** is equally weighted. Homework will be due more frequently in the early, foundational part of the course and will always be announced at least one week before its due date and time. You may drop the lowest homework score.  No homework received after grading has begun will be accepted.  Your best (and guaranteed) bet is to submit by the deadline.  Homework will be primarily an individual effort, but some assignments will require pairs of students.
 
-The **programming projects** provide an opportunity for you to sythesize the tools learned throughout the course.  The first one will cover the Python-related material, the second the C++ material, and the third, the parallel computing material.  These projects are more in depth and more open-ended than a typical homework problem.
+The **programming projects** provide an opportunity for you to sythesize the tools learned throughout the course.  The first one emphasizes Python, while the second one will emphasize C++.  These projects are more in depth and more open-ended than a typical homework problem.
 
 In a small, hands-on course like this, **participation** in lectures is essential.  Active participation, in my view, means doing any assigned reading (or other preparation) and coming to class ready to engage with the material.  Regularly be present, take notes (before, during, and after lecture), ask questions, and follow up, as needed, during office hours.  This part of the assessment is going to be a [metacognitive](https://en.wikipedia.org/wiki/Metacognition) exercise for *you*, the student.  For each lecture, you are going to summarize (briefly) how you prepared for lecture, what you contributed to lecture, and which topic is least clear.  Eventually, you will "commit" these entries to an online repository where the TA and I can review them periodically for feedback on the course.  By the end of the semester, you will have a pretty clear view of your learning throughout the course (and I will, too).
 
@@ -138,23 +138,23 @@ The following is a preliminary schedule of lectures.
 |	12	|	Mon, Sep 23	|	Linear systems and NumPy arrays.  Least squares.	|
 |	13	|	Wed, Sep 25	|	SciPy, sparse systems, and iterative solutions.	|
 |	14	|	Fri, Sep 27	|	Selected SciPy applications (or continuation).	|
-|	15	|	Mon, Sep 30	|	A survey of I/O formats (basic text, NumPy, JSON, HDF5, etc.)	|
-|	16	|	Wed, Oct 02	|	Regular expressions.	|
-|	17	|	Fri, Oct 04	|	Advanced Matplotlib (and other Python-based plotting)	|
-|	18	|	Mon, Oct 07	|	More on Matplotlib.  Publication-quality graphics.	|
-|	19	|	Wed, Oct 09	|	VisIt for visualization of large data sets. 	|
-|	20	|	Fri, Oct 11	|	Overview of objected-oriented programming in Python. Classes, objects, and methods.	|
-|	21	|	Mon, Oct 14	|	More on OOP. Inheritance.	|
-|	22	|	Wed, Oct 16	|	More on OOP.	|
-|	23	|	Fri, Oct 18	|	Applications of OOP.	|
-|	24	|	Mon, Oct 21	|	Graphical-User Interfaces (GUIs) with PyQt5	|
-|	25	|	Wed, Oct 23	|	More on GUIs	|
-|	26	|	Fri, Oct 25	|	More on GUIs	|
+|	15	|	Mon, Sep 30	|	Overview of objected-oriented programming in Python. Classes, objects, and methods.	|
+|	16	|	Wed, Oct 02	|	More on OOP. Inheritance.	|
+|	17	|	Fri, Oct 04	|	More on OOP.	|
+|	18	|	Mon, Oct 07	|	Applications of OOP.	|
+|	19	|	Wed, Oct 09	|	Graphical-User Interfaces (GUIs) with PyQt5	|
+|	20	|	Fri, Oct 11	|	More on GUIs	|
+|	21	|	Mon, Oct 14	|	More on GUIs	|
+|	22	|	Wed, Oct 16	|	A survey of I/O formats (basic text, NumPy, JSON, HDF5, etc.)	|
+|	23	|	Fri, Oct 18	|	Regular expressions.	|
+|	24	|	Mon, Oct 21	|	Advanced Matplotlib (and other Python-based plotting)	|
+|	25	|	Wed, Oct 23	|	More on Matplotlib.  Publication-quality graphics.	|
+|	26	|	Fri, Oct 25	|	VisIt for visualization of large data sets. 	|
 |	27	|	Mon, Oct 28	|	A rapid introduction to C++. Syntax overview (types, selection, and iteration).  The compiler.	|
 |	28	|	Wed, Oct 30	|	Eclipse IDE and graphical debugging.	|
 |	29	|	Fri, Nov 01	|	Functions, organizing code, and the Makefile.	|
 |	30	|	Mon, Nov 04	|	Pointers, arrays, and memory management.  Valgrind.	|
-|	31	|	Wed, Nov 06	|	Classes.  Matrices and vectors	|
+|	31	|	Wed, Nov 06	|	Classes.  	|
 |	32	|	Fri, Nov 08	|	More on Classes.	|
 |	33	|	Mon, Nov 11	|	Templates and the standard template library (STL): vectors, maps, and more.	|
 |	34	|	Wed, Nov 13	|	Using Python with C++: an overview of SWIG.	|
