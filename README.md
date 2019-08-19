@@ -108,7 +108,7 @@ accurate the last three semesters of my teaching this course.
 
 Each **homework** is equally weighted. Homework will be due more frequently in the early, foundational part of the course and will always be announced at least one week before its due date and time. You may drop the lowest homework score.  No homework received after grading has begun will be accepted.  Your best (and guaranteed) bet is to submit by the deadline.  Homework will be primarily an individual effort, but some assignments will require pairs of students.
 
-The **programming projects** provide an opportunity for you to sythesize the tools learned throughout the course.  The first one emphasizes Python, while the second one will emphasize C++.  These projects are more in depth and more open-ended than a typical homework problem.
+The **programming projects** provide an opportunity for you to sythesize the tools learned throughout the course.  The first one emphasizes Python, while the second one will emphasize C++.  These projects are more in depth and more open-ended than a typical homework problem.  More details will be announced later on.
 
 In a small, hands-on course like this, **participation** in lectures is essential.  Active participation, in my view, means doing any assigned reading (or other preparation) and coming to class ready to engage with the material.  Regularly be present, take notes (before, during, and after lecture), ask questions, and follow up, as needed, during office hours.  This part of the assessment is going to be a [metacognitive](https://en.wikipedia.org/wiki/Metacognition) exercise for *you*, the student.  For each lecture, you are going to summarize (briefly) how you prepared for lecture, what you contributed to lecture, and which topic is least clear.  Eventually, you will "commit" these entries to an online repository where the TA and I can review them periodically for feedback on the course.  By the end of the semester, you will have a pretty clear view of your learning throughout the course (and I will, too).
 
@@ -118,7 +118,7 @@ In a small, hands-on course like this, **participation** in lectures is essentia
 
 # Course Calendar
 
-The following is a preliminary schedule of lectures.
+The following is a preliminary schedule of lectures.  Some topics are subject to change.
 
 
 | Lecture   |  Date            | Topics                                                                      |
@@ -154,8 +154,8 @@ The following is a preliminary schedule of lectures.
 |	28	|	Wed, Oct 30	|	Eclipse IDE and graphical debugging.	|
 |	29	|	Fri, Nov 01	|	Functions, organizing code, and the Makefile.	|
 |	30	|	Mon, Nov 04	|	Pointers, arrays, and memory management.  Valgrind.	|
-|	31	|	Wed, Nov 06	|	Classes.  	|
-|	32	|	Fri, Nov 08	|	More on Classes.	|
+|	31	|	Wed, Nov 06	| Classes, objects, and methods: Part Deux.	|
+|	32	|	Fri, Nov 08	|	Exception-handling and defensive programming. 	|
 |	33	|	Mon, Nov 11	|	Templates and the standard template library (STL): vectors, maps, and more.	|
 |	34	|	Wed, Nov 13	|	Using Python with C++: an overview of SWIG.	|
 |	35	|	Fri, Nov 15	|	Using libraries: BLAS, LAPACK, GNU scientific library and more. 	|
