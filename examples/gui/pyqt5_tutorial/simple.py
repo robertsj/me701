@@ -12,17 +12,23 @@ Website: zetcode.com
 Last edited: August 2017
 """
 
+def print_stuff():
+    print('lalalalalalala')
+
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtWidgets import QApplication, QWidget, QLineEdit
 
 if __name__ == '__main__':
     
     app = QApplication(sys.argv)
 
-    w = QWidget()
-    w.resize(250, 150)
-    w.move(300, 300)
+    w = QLineEdit()
+    #w.resize(500, 500)
+    #w.move(100, 300)
     w.setWindowTitle('Simple')
+    w.returnPressed.connect(print_stuff)
+    
+    
     w.show()
     
     sys.exit(app.exec_())

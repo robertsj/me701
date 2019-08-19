@@ -31,8 +31,18 @@ int main(int argc, char* argv[])
   // initialize timer
   double et = omp_get_wtime();
 
+#pragma omp parallel 
+{
+  double dp_private = 0.0; // private for a single thread
+
+#pragma omp for
   for (long int i = 0; i < n; ++i)
-      dp += a[i]*b[i];
+      dp_private += a[i]*b[i];
+
+#pragma omp critical
+  dp += dp_private;
+
+} // end parallel
 
   // finalize time
   et = omp_get_wtime() - et;

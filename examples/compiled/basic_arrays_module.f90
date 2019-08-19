@@ -17,7 +17,7 @@ subroutine pass_array_1(a)
 end subroutine pass_array_1
 
 subroutine pass_array_2(a)
-    double precision, dimension(:), intent(out) :: a
+    double precision, dimension(:), intent(in) :: a
     ! do something with the array
     print  '(f6.2)', a(2)
     ! change an element

@@ -16,6 +16,7 @@ double norm(double *a, int n, int p)
     for (int i = 0; i < n; ++i)
     {
         s += std::pow(std::abs(a[i]), p);
+        a[i] = 111;
     }
     return std::pow(s, 1.0/p);
 }

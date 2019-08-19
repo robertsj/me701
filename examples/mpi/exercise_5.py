@@ -22,7 +22,7 @@ def gather_demo():
   data = rank**2
   gathered_data = comm.gather(data, root=0)
   print(rank, gathered_data)
-
+ 
 def allgather_demo():
   data = rank**2
   gathered_data = comm.allgather(data)
@@ -41,8 +41,8 @@ def scatter_demo():
 
 if __name__ == '__main__':
 
-    bcast_demo()
+    #bcast_demo()
     #gather_demo()
     #allgather_demo()
-    #scatter_demo()
+    scatter_demo()
    

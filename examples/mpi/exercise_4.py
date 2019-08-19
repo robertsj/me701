@@ -12,7 +12,13 @@ comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 size = comm.Get_size()
 
+number = None
+
 # Get the input
+if rank == 0:
+    number = int(input("Enter a number: "))
+
+number = comm.bcast(number, root=0)
 
 
 # Send to every other process

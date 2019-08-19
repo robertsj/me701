@@ -16,19 +16,34 @@ comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 size = comm.Get_size()
 
-n = 1000000
+
+
+n = 100000000
 x = np.ones(n)*2
 y = np.ones(n)*3
 
-
-
+te = time.time()
 
 # Chop up work
- 
+chunk = n // size
+start = rank*chunk
+stop = (rank+1)*chunk
+if rank == size - 1:
+   stop = n
 
 # Do the work
-
+#dp = 0.0
+#for i in range(start, stop):
+#    dp += x[i]*y[i]
+dp = np.sum(x[start:stop]*y[start:stop])
 
 # Collect the results
+dp_global = comm.gather(dp, root=0)
 
+te = time.time() - te
+
+if rank == 0:
+    dp_global = sum(dp_global)
+    print(dp_global)
+    print("time = ", te)
 

@@ -28,6 +28,7 @@ the difference.
 
 Use `send` and `recv` to spread data from rank 0 to every other rank.
 
+
 ## Exercise 5 - A Collective Study
 
 Run the exercise 5 code with 4 processes and determine what `bcast`, 

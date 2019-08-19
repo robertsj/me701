@@ -20,7 +20,7 @@ from PyQt5.QtGui import QIcon
 class Example(QWidget):
     
     def __init__(self):
-        super().__init__()
+        QWidget.__init__(self)
         
         self.initUI()
         
@@ -29,7 +29,7 @@ class Example(QWidget):
         
         self.setGeometry(300, 300, 300, 220)
         self.setWindowTitle('Icon')
-        self.setWindowIcon(QIcon('icon.png'))        
+        self.setWindowIcon(QIcon('troll.png'))        
     
         self.show()
         

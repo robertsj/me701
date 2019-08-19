@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from scipy.optimize import minimize
+from scipy.optimize import minimize, curve_fit
 
 x = np.linspace(0, 1, 100)
 y = np.sin(x)

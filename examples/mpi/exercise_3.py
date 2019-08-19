@@ -29,3 +29,14 @@ if rank == 0:
     print("Elapsed time for Send/Recv = {:12.6f} s".format(te1))
     print("Elapsed time for send/recv = {:12.6f} s".format(te2))
     print("                     Ratio = {:12.6f}".format(te2/te1))
+
+
+import numpy as np
+X = np.zeros((5, 5),dtype='int')
+if rank == 0:
+    X += 1
+    comm.Send([X[0, :], MPI.INT], dest=1, tag=123)  
+elif rank == 1:
+    comm.Recv([X[-1,:], MPI.INT], source=0, tag=123)
+print(rank, X)
+

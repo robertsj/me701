@@ -8,7 +8,7 @@ int main()
   {
     case 1:
       cout << "a=1" << endl; 
-      break;
+      //break;
     case 2:
       // do something
       break;

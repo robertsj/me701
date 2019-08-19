@@ -1,12 +1,32 @@
-# Visit 2.12.3 log file
-ScriptVersion = "2.12.3"
+# Visit 2.13.2 log file
+ScriptVersion = "2.13.2"
 if ScriptVersion != Version():
     print "This script is for VisIt %s. It may not work with version %s" % (ScriptVersion, Version())
 visit.ShowAllWindows()
 visit.ShowAllWindows()
-visit.OpenDatabase("test.vtk", 0)
+visit.OpenDatabase("/home/robertsj/opt/visit/visit_data_files/CThead_mid.silo", 0)
 # The UpdateDBPluginInfo RPC is not supported in the VisIt module so it will not be logged.
-visit.AddPlot("Pseudocolor", "scalars", 1, 1)
+visit.AddPlot("Volume", "head", 1, 1)
+visit.AddOperator("Slice", 1)
+SliceAtts = visit.SliceAttributes()
+SliceAtts.originType = SliceAtts.Intercept  # Point, Intercept, Percent, Zone, Node
+SliceAtts.originPoint = (0, 0, 0)
+SliceAtts.originIntercept = 60
+SliceAtts.originPercent = 0
+SliceAtts.originZone = 0
+SliceAtts.originNode = 0
+SliceAtts.normal = (0, 0, 1)
+SliceAtts.axisType = SliceAtts.ZAxis  # XAxis, YAxis, ZAxis, Arbitrary, ThetaPhi
+SliceAtts.upAxis = (0, 1, 0)
+SliceAtts.project2d = 1
+SliceAtts.interactive = 1
+SliceAtts.flip = 0
+SliceAtts.originZoneDomain = 0
+SliceAtts.originNodeDomain = 0
+SliceAtts.meshName = "default"
+SliceAtts.theta = 0
+SliceAtts.phi = 90
+visit.SetOperatorOptions(SliceAtts, 1)
 visit.DrawPlots()
 SaveWindowAtts = visit.SaveWindowAttributes()
 SaveWindowAtts.outputToCurrentDirectory = 1
@@ -22,31 +42,89 @@ SaveWindowAtts.quality = 80
 SaveWindowAtts.progressive = 0
 SaveWindowAtts.binary = 0
 SaveWindowAtts.stereo = 0
-SaveWindowAtts.compression = SaveWindowAtts.PackBits  # None, PackBits, Jpeg, Deflate
+SaveWindowAtts.compression = SaveWindowAtts.None  # None, PackBits, Jpeg, Deflate
 SaveWindowAtts.forceMerge = 0
 SaveWindowAtts.resConstraint = SaveWindowAtts.ScreenProportions  # NoConstraint, EqualWidthHeight, ScreenProportions
 SaveWindowAtts.advancedMultiWindowSave = 0
+SaveWindowAtts.subWindowAtts.win1.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win1.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win1.layer = 0
+SaveWindowAtts.subWindowAtts.win1.transparency = 0
+SaveWindowAtts.subWindowAtts.win1.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win2.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win2.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win2.layer = 0
+SaveWindowAtts.subWindowAtts.win2.transparency = 0
+SaveWindowAtts.subWindowAtts.win2.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win3.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win3.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win3.layer = 0
+SaveWindowAtts.subWindowAtts.win3.transparency = 0
+SaveWindowAtts.subWindowAtts.win3.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win4.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win4.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win4.layer = 0
+SaveWindowAtts.subWindowAtts.win4.transparency = 0
+SaveWindowAtts.subWindowAtts.win4.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win5.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win5.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win5.layer = 0
+SaveWindowAtts.subWindowAtts.win5.transparency = 0
+SaveWindowAtts.subWindowAtts.win5.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win6.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win6.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win6.layer = 0
+SaveWindowAtts.subWindowAtts.win6.transparency = 0
+SaveWindowAtts.subWindowAtts.win6.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win7.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win7.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win7.layer = 0
+SaveWindowAtts.subWindowAtts.win7.transparency = 0
+SaveWindowAtts.subWindowAtts.win7.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win8.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win8.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win8.layer = 0
+SaveWindowAtts.subWindowAtts.win8.transparency = 0
+SaveWindowAtts.subWindowAtts.win8.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win9.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win9.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win9.layer = 0
+SaveWindowAtts.subWindowAtts.win9.transparency = 0
+SaveWindowAtts.subWindowAtts.win9.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win10.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win10.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win10.layer = 0
+SaveWindowAtts.subWindowAtts.win10.transparency = 0
+SaveWindowAtts.subWindowAtts.win10.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win11.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win11.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win11.layer = 0
+SaveWindowAtts.subWindowAtts.win11.transparency = 0
+SaveWindowAtts.subWindowAtts.win11.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win12.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win12.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win12.layer = 0
+SaveWindowAtts.subWindowAtts.win12.transparency = 0
+SaveWindowAtts.subWindowAtts.win12.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win13.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win13.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win13.layer = 0
+SaveWindowAtts.subWindowAtts.win13.transparency = 0
+SaveWindowAtts.subWindowAtts.win13.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win14.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win14.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win14.layer = 0
+SaveWindowAtts.subWindowAtts.win14.transparency = 0
+SaveWindowAtts.subWindowAtts.win14.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win15.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win15.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win15.layer = 0
+SaveWindowAtts.subWindowAtts.win15.transparency = 0
+SaveWindowAtts.subWindowAtts.win15.omitWindow = 0
+SaveWindowAtts.subWindowAtts.win16.position = (0, 0)
+SaveWindowAtts.subWindowAtts.win16.size = (128, 128)
+SaveWindowAtts.subWindowAtts.win16.layer = 0
+SaveWindowAtts.subWindowAtts.win16.transparency = 0
+SaveWindowAtts.subWindowAtts.win16.omitWindow = 0
 visit.SetSaveWindowAttributes(SaveWindowAtts)
 visit.SaveWindow()
-# Begin spontaneous state
-View3DAtts = visit.View3DAttributes()
-View3DAtts.viewNormal = (0.264045, 0.220135, 0.939053)
-View3DAtts.focus = (1, 1, 1)
-View3DAtts.viewUp = (0.100817, 0.961974, -0.253856)
-View3DAtts.viewAngle = 30
-View3DAtts.parallelScale = 1.73205
-View3DAtts.nearPlane = -3.4641
-View3DAtts.farPlane = 3.4641
-View3DAtts.imagePan = (0, 0)
-View3DAtts.imageZoom = 1
-View3DAtts.perspective = 1
-View3DAtts.eyeAngle = 2
-View3DAtts.centerOfRotationSet = 0
-View3DAtts.centerOfRotation = (1, 1, 1)
-View3DAtts.axis3DScaleFlag = 0
-View3DAtts.axis3DScales = (1, 1, 1)
-View3DAtts.shear = (0, 0, 1)
-View3DAtts.windowValid = 1
-visit.SetView3D(View3DAtts)
-# End spontaneous state
-

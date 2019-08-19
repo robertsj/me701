@@ -1,13 +1,11 @@
 import sys
 import platform
+#
 import numpy as np
-
-#import matplotlib
-#matplotlib.use('Qt5Agg')
 
 from PyQt5.QtWidgets import (QMainWindow, QApplication, QDialog, QLineEdit, 
                              QVBoxLayout, QAction, QMessageBox,QFileDialog,
-                             QSizePolicy)
+                             QSizePolicy, QWidget)
 from PyQt5.QtCore import QT_VERSION_STR, PYQT_VERSION_STR
 
 from matplotlib.backends.backend_qt5agg import FigureCanvas
@@ -79,50 +77,10 @@ class MainWindow(QMainWindow) :
         """
         title = str(self.edit1.text())
         self.plot.axes.set_title(title)
-        self.plot.draw()
+        x = np.linspace(0, 10)
+        y = x**2
+        self.plot.redraw(x, y)
         
-        
-class Form(QDialog) :
-
-    def __init__(self, parent=None) :
-        super(Form, self).__init__(parent)
-        self.function_edit = QLineEdit("x**2")
-        self.function_edit.selectAll()
-        self.parameter_edit = QLineEdit("np.linspace(0,1,4)")
-        self.parameter_edit.selectAll()
-        self.output_edit = QLineEdit(" ")
-        self.output_edit.selectAll()
-        self.plot = MatplotlibCanvas()
-        layout = QVBoxLayout()
-        layout.addWidget(self.plot)
-        layout.addWidget(self.function_edit)
-        layout.addWidget(self.parameter_edit)     
-        layout.addWidget(self.output_edit)  
-        self.setLayout(layout)
-        self.function_edit.setFocus()
-        self.output_edit.returnPressed.connect(self.updateUi)
-        self.setWindowTitle("Function Evaluator")
-        self.x = None
-        self.f = None
-
-    def updateUi(self) :
-        #try : 
-            self.x = str(self.parameter_edit.text())
-            x = eval(self.x) 
-            if len(x) > 1 :
-                x = np.array(x)
-            # Is there a cleaner way?
-            f = eval(str(self.function_edit.text()))
-            self.f = str(f)
-            self.f = self.f.replace("[","").replace("]","")
-            self.f = ",".join(self.f.split())
-            self.output_edit.setText(self.f)
-            self.plot.redraw(x, f)
-            #self.plot.axes.plot(x, f)
-            #self.plot.draw()
-        #except :
-        #    self.output_edit.setText("error! check function or parameter.")
-                
 
 class MatplotlibCanvas(FigureCanvas) :
     """ This is borrowed heavily from the matplotlib documentation;
@@ -137,7 +95,7 @@ class MatplotlibCanvas(FigureCanvas) :
         
         # Give it some default plot (if desired).  
         x = np.arange(0.0, 3.0, 0.01)
-        y = np.sin(2*np.pi*x)
+        y = np.sin(2*np.exp(x)*x)
         self.axes.plot(x, y)
         self.axes.set_xlabel('x')
         self.axes.set_ylabel('y(x)')   

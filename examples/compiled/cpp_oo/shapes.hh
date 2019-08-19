@@ -10,6 +10,8 @@ public:
 	// Constructor
     Shape();
 
+    virtual ~Shape(){}
+
     // Return area of shape.
     double area();
 

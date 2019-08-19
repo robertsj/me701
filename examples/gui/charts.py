@@ -49,7 +49,7 @@ class TestWindow(QMainWindow):
         pen = curve.pen()
         if color is not None:
             pen.setColor(color)
-        pen.setWidthF(.5)
+        pen.setWidthF(1.5)
         curve.setPen(pen)
         curve.setUseOpenGL(True)
         curve.append(series_to_polyline(xdata, ydata))

@@ -1,5 +1,6 @@
-from PyQt5.QtWidgets import (QApplication, QMainWindow, QLineEdit, QDialog, 
-                             QVBoxLayout, QAction, QMessageBox)
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLineEdit, QDialog, \
+                             QVBoxLayout, QAction, QMessageBox, QWidget, \
+                             QFileDialog
 from PyQt5.QtCore import QT_VERSION_STR, PYQT_VERSION_STR
 import platform
 
@@ -25,18 +26,29 @@ class MainWindow(QMainWindow):
         self.menuHelp.addActions([self.actionAbout])
         
         # Setup main widget
-        widget = QDialog()
-        edit1 = QLineEdit("widget 1")
-        edit2 = QLineEdit("widget 2")
+        widget = QWidget()
+        self.edit1 = QLineEdit("widget 1")
+        self.edit2 = QLineEdit("widget 2")
+        self.edit2.returnPressed.connect(self.update_edit_2)
+
         layout = QVBoxLayout()
-        layout.addWidget(edit1)
-        layout.addWidget(edit2)  
+        layout.addWidget(self.edit1)
+        layout.addWidget(self.edit2)  
         widget.setLayout(layout)
         
         self.setCentralWidget(widget)
+
+    def update_edit_2(self):
+        text = str(self.edit1.text()).upper()
+        self.edit2.setText(text)
         
     def saveas(self) :
-        pass
+        
+        fname = QFileDialog.getSaveFileName(self, 'Save File')[0]
+        f = open(fname, 'w')
+        s = self.edit1.text()
+        f.write(s)
+        f.close()
                 
     def about(self) :
         QMessageBox.about(self, 

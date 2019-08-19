@@ -8,7 +8,7 @@ OBJ = main.o \
       shapes.o 
 
 # Rule to compile all objects
-%.o: %.c 
+%.o: %.cc 
 	$(CXX) -c -o $@ $< $(CXXFLAGS)
 
 # Main program

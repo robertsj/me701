@@ -14,7 +14,7 @@ using x0=1/2 and y0=-3.
 
 int main(int argc,char **args)
 {
-  int option = 0;
+  int option = 1;
 
   // Declare variables.
   SNES snes;
