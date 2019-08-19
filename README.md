@@ -8,7 +8,11 @@ for ME 701 - Development of Computer Applications in Mechanical Engineering,
 taught at Kansas State University.  All materials were developed by 
 Jeremy Roberts.
 
-## Course Personnel
+## Course Details
+
+### Time and Place
+
+11:30--12:20pm MWF in DU 1032
 
 
 ### Instructor
@@ -99,20 +103,13 @@ Grading for the course is based on the following breakdown:
 
 
 Although I do not subscribe to the standard 90/80/70 rule in general, that scale has been pretty
-accurate the last three semesters of my teaching this course.
+accurate the last three semesters of my teaching this course. 
 
 
-Each **homework** is equally weighted. Homework will be due more frequently in the early, foundational part of the course and will always be announced at least one week before its due date. All homework is due at the beginning of class on the due date via electronic submission. You are allowed to submit one homework up to 48 hours late for full credit; no late homework accepted thereafter unless a class-wide extension is given.  Homework is an individual effort, i.e., what you submit must be your own work. 
+Each **homework** is equally weighted. Homework will be due more frequently in the early, foundational part of the course and will always be announced at least one week before its due date and time. You may drop the lowest homework score.  No homework received after grading has begun will be accepted.  Your best (and guaranteed) bet is to submit by the deadline.  Homework will be primarily an individual effort, but some assignments will require pairs of students.
 
-The **programming projects** provide an opportunity for you to sythesize the tools learned throughout the course.  The first one will be
+The **programming projects** provide an opportunity for you to sythesize the tools learned throughout the course.  The first one will cover the Python-related material, the second the C++ material, and the third, the parallel computing material.  These projects are more in depth than a typical homework problem and have pote
 
-
-explore a topic of your choosing, which can be in support of your research. The catch is that it must be computational, and it must tie in all major elements covered in the course. Examples of past work and suggestions for new work will be provided. The project will be graded based on the following rubric (a more detailed rubric for the report will be given later):
-
-- Proposal (10%): Up to one page description of what you would like to explore with suggestions of how you will do it. I’ve set a due date, but the earlier you submit it, the earlier you can get started.
-- Draft Report (10%): 4 or 5 page report using the template provided. This should include a brief one page cover letter to the editor (i.e., me). This draft will be reviewed by at least three reviewers (including me). Although both technical and grammatical aspects will be assessed, note that this draft is only worth 10%, so just do your best to get a complete draft in place.
-- Report Reviews (10%): You get to assess two or more draft reports of your peers and provide them feedback anonymously. This gives you the chance to see how peer review works in the real world. You also get the benefit of having at least two sets of comments beyond the ones I provide.
-- Final Report (70%): The final draft should address the reviewer comments. You should also include a revised cover letter that specifies exactly how you addressed each point from the reviews. This draft should have perfect grammar, sound technical analysis, a proper bibliography, etc.
 
 > *Please note*: The programming required for both homework and projects might be very hard, especially if your
   programming skills coming into the class are weak.  However, the tasks will not be
