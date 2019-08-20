@@ -89,7 +89,7 @@ cover in the last quarter of the course, the standard references are
 
 ME 400 (Computer Applications in Mechanical Engineering) or equivalent.  In other words, you should already know how to program at a basic level.
 
-# Lectures and Laptops
+## Lectures and Laptops
 
 Because of the material covered in ME 701, the lectures need to be rather hands-on, informal tutorials. If you have a laptop, you should bring it to class to do in-class examples, ask questions about homeworks, and to write any other code when necessary. If you do not have a laptop, I may have a couple old ones available for in-class use.
 
@@ -116,7 +116,7 @@ In a small, hands-on course like this, **participation** in lectures is essentia
   programming skills coming into the class are weak.  However, the tasks will not be
   impossible if you get an early start on them!
 
-# Course Calendar
+## Course Calendar
 
 The following is a preliminary schedule of lectures.  Some topics are subject to change.
 
