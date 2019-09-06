@@ -18,12 +18,12 @@ Jeremy Roberts.
 ### Instructor
  - Jeremy Roberts
  - 137D Ward Hall
- - Office Hours by appointment; see my [calendar](https://calendar.google.com/calendar/embed?src=j.alyn.roberts%40gmail.com&ctz=America/Chicago).
+ - Office Hours 1--2:30pm F or by appointment; see my [calendar](https://calendar.google.com/calendar/embed?src=j.alyn.roberts%40gmail.com&ctz=America/Chicago).
 
 ### Teaching Assistant
  - Richard Reed
  - 133B Ward Hall
- - Office Hours TBD.
+ - Office Hours 3--6+pm T or by appointment.
 
 ## Course Description and Objectives
 
