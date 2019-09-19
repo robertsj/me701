@@ -131,46 +131,46 @@ The following is a preliminary schedule of lectures.  Some topics are subject to
 |	5	|	Fri, Sep 06	|	Basic shell scripting (using bash).	|
 |	6	|	Mon, Sep 09	|	Version control with Git.	|
 |	7	|	Wed, Sep 11	|	GitHub for version control of collaborative projects.	|
-|	8	|	Fri, Sep 13	|	Python overview and installation. Built-in types and functions.  Python as a "graphing calculator."	|
-|	9	|	Mon, Sep 16	|	The structure of Python code: conditionals, loops, and functions.  The debugger.	|
-|	10	|	Wed, Sep 18	|	Modules. Unit testing.	|
-|	11	|	Fri, Sep 20	|	Sources of numerical error.  Roundoff error.  Truncation error.	|
-|	12	|	Mon, Sep 23	|	Linear systems and NumPy arrays.  Least squares.	|
-|	13	|	Wed, Sep 25	|	SciPy, sparse systems, and iterative solutions.	|
-|	14	|	Fri, Sep 27	|	Selected SciPy applications (or continuation).	|
-|	15	|	Mon, Sep 30	|	Overview of objected-oriented programming in Python. Classes, objects, and methods.	|
-|	16	|	Wed, Oct 02	|	More on OOP. Inheritance.	|
-|	17	|	Fri, Oct 04	|	More on OOP.	|
-|	18	|	Mon, Oct 07	|	Applications of OOP.	|
-|	19	|	Wed, Oct 09	|	Graphical-User Interfaces (GUIs) with PyQt5	|
-|	20	|	Fri, Oct 11	|	More on GUIs	|
-|	21	|	Mon, Oct 14	|	More on GUIs	|
-|	22	|	Wed, Oct 16	|	A survey of I/O formats (basic text, NumPy, JSON, HDF5, etc.)	|
-|	23	|	Fri, Oct 18	|	Regular expressions.	|
-|	24	|	Mon, Oct 21	|	Advanced Matplotlib (and other Python-based plotting)	|
-|	25	|	Wed, Oct 23	|	More on Matplotlib.  Publication-quality graphics.	|
-|	26	|	Fri, Oct 25	|	VisIt for visualization of large data sets. 	|
-|	27	|	Mon, Oct 28	|	A rapid introduction to C++. Syntax overview (types, selection, and iteration).  The compiler.	|
-|	28	|	Wed, Oct 30	|	Eclipse IDE and graphical debugging.	|
-|	29	|	Fri, Nov 01	|	Functions, organizing code, and the Makefile.	|
-|	30	|	Mon, Nov 04	|	Pointers, arrays, and memory management.  Valgrind.	|
-|	31	|	Wed, Nov 06	| Classes, objects, and methods: Part Deux.	|
-|	32	|	Fri, Nov 08	|	Exception-handling and defensive programming. 	|
-|	33	|	Mon, Nov 11	|	Templates and the standard template library (STL): vectors, maps, and more.	|
-|	34	|	Wed, Nov 13	|	Using Python with C++: an overview of SWIG.	|
-|	35	|	Fri, Nov 15	|	Using libraries: BLAS, LAPACK, GNU scientific library and more. 	|
-|	36	|	Mon, Nov 18	|	Code profiling and tuning.	|
-|	37	|	Wed, Nov 20	|	Computational performance and OMILAT.	|
+|	8	|	Fri, Sep 13	|	More version control.	|
+|	9	|	Mon, Sep 16	|	More version control.  Brief introduction to Python.	|
+|	10	|	Wed, Sep 18	|	Python built-in types and functions.  Python as a "graphing calculator."	|
+|	11	|	Fri, Sep 20	|	The structure of Python code: conditionals, loops, and functions.  The debugger.	|
+|	12	|	Mon, Sep 23	|	Modules. Unit testing.	|
+|	13	|	Wed, Sep 25	|	Sources of numerical error.  Roundoff error.  Truncation error.	|
+|	14	|	Fri, Sep 27	|	Linear systems and NumPy arrays.  Least squares.	|
+|	15	|	Mon, Sep 30	|	SciPy, sparse systems, and iterative solutions.	|
+|	16	|	Wed, Oct 02	|	Selected SciPy applications (or continuation).	|
+|	17	|	Fri, Oct 04	|	Overview of objected-oriented programming in Python. Classes, objects, and methods.	|
+|	18	|	Mon, Oct 07	|	More on OOP. Inheritance.	|
+|	19	|	Wed, Oct 09	|	More on OOP.	|
+|	20	|	Fri, Oct 11	|	Applications of OOP.	|
+|	21	|	Mon, Oct 14	|	Graphical-User Interfaces (GUIs) with PyQt5	|
+|	22	|	Wed, Oct 16	|	More on GUIs	|
+|	23	|	Fri, Oct 18	|	More on GUIs	|
+|	24	|	Mon, Oct 21	|	A survey of I/O formats (basic text, NumPy, JSON, HDF5, etc.)	|
+|	25	|	Wed, Oct 23	|	Regular expressions.	|
+|	26	|	Fri, Oct 25	|	Advanced Matplotlib (and other Python-based plotting)	|
+|	27	|	Mon, Oct 28	|	More on Matplotlib.  Publication-quality graphics.	|
+|	28	|	Wed, Oct 30	|	VisIt for visualization of large data sets. 	|
+|	29	|	Fri, Nov 01	|	A rapid introduction to C++. Syntax overview (types, selection, and iteration).  The compiler.	|
+|	30	|	Mon, Nov 04	|	Eclipse IDE and graphical debugging.	|
+|	31	|	Wed, Nov 06	|	Functions, organizing code, and the Makefile.	|
+|	32	|	Fri, Nov 08	|	Pointers, arrays, and memory management.  Valgrind.	|
+|	33	|	Mon, Nov 11	|	Classes.  	|
+|	34	|	Wed, Nov 13	|	More on Classes.	|
+|	35	|	Fri, Nov 15	|	Templates and the standard template library (STL): vectors, maps, and more.	|
+|	36	|	Mon, Nov 18	|	Using Python with C++: an overview of SWIG.	|
+|	37	|	Wed, Nov 20	|	Using libraries: BLAS, LAPACK, GNU scientific library and more. 	|
 |	38	|	Fri, Nov 22	|	Overview of computer architectures and parallel computing.  Navigating Beocat.	|
 |		|	Mon, Nov 25	|	HOLIDAY	|
 |		|	Wed, Nov 27	|	HOLIDAY	|
 |		|	Fri, Nov 29	|	HOLIDAY	|
-|	39	|	Mon, Dec 02	|	Introduction to multithreaded parallelism via OpenMP.	|
-|	40	|	Wed, Dec 04	|	OpenMP continued.	|
-|	41	|	Fri, Dec 06	|	OpenMP continued.	|
-|	42	|	Mon, Dec 09	|	Introduction to parallel compution on heterogeneous systems with MPI.	|
-|	43	|	Wed, Dec 11	|	MPI continued.	|
-|	44	|	Fri, Dec 13	|	MPI continued.  Course wrapup.	|
+|	39	|	Mon, Dec 02	|	Code profiling and tuning.	|
+|	40	|	Wed, Dec 04	|	Computational performance and OMILAT.	|
+|	41	|	Fri, Dec 06	|	Parallel computing: OpenMP and MPI.	|
+|	42	|	Mon, Dec 09	|	Parallel computing: OpenMP and MPI.	|
+|	43	|	Wed, Dec 11	|	Parallel computing: OpenMP and MPI.	|
+|	44	|	Fri, Dec 13	|	Parallel computing: OpenMP and MPI.	|
       
       
       
