@@ -111,11 +111,38 @@ Each **homework** is equally weighted. Homework will be due more frequently in t
 
 The **programming projects** provide an opportunity for you to sythesize the tools learned throughout the course.  The first one emphasizes Python, while the second one will emphasize C++.  These projects are more in depth and more open-ended than a typical homework problem.  More details will be announced later on (but not too much later.)
 
-In a small, hands-on course like this, participation in "lectures" is essential. That said, COVID-19 has messed things up a bit.  In our present context, active participation means doing any assigned reading (or other preparation) and coming to recitation ready to engage with the material. Regularly be present, take notes (before, during, and after lecture), ask questions, and follow up, as needed, during office hours.  This part of the assessment is going to be a [metacognitive](https://en.wikipedia.org/wiki/Metacognition) exercise for *you*, the student.  For each "lecture", you will summarize (briefly) how you prepared for lecture, what you contributed to lecture, and which topic is least clear.  These entries should not be single sentences; rather, truly spend a few minutes to reflect on what you've done to learn.  Eventually, you will "commit" these entries to an online repository where the TA and I can review them periodically for feedback on the course.  By the end of the semester, you will have a pretty clear view of your learning throughout the course (and I will, too).
 
 > *Please note*: The programming required for both homework and projects might be very hard, especially if your
   programming skills coming into the class are weak.  However, the tasks will not be
   impossible if you get an early start on them!
+
+In a small, hands-on course like this, **participation** in "lectures" is essential. That said, COVID-19 has messed things up a bit.  In our present context, active participation means doing any assigned reading (or other preparation) and coming to recitation ready to engage with the material. Regularly be present, take notes (before, during, and after lecture), ask questions, and follow up, as needed, during office hours.  This part of the assessment is going to be a [metacognitive](https://en.wikipedia.org/wiki/Metacognition) exercise for *you*, the student.  For each "lecture", you will summarize (briefly) how you prepared for lecture, what you contributed to lecture, and which topic is least clear.  These entries should not be single sentences; rather, truly spend a few minutes to reflect on what you've done to learn.  Eventually, you will "commit" these entries to an online repository where the TA and I can review them periodically for feedback on the course.  By the end of the semester, you will have a pretty clear view of your learning throughout the course (and I will, too).
+
+Here is an example entry for a single lesson:
+
+```
+# Lesson 1
+
+## Preparation
+
+To prepare for this lesson, I logged into Canvas to see the first announcement
+and email.  I checked the syllabus and saw the basic rules (and noted some things
+still needed to be updated).
+
+## Contribution
+
+I showed up to the Zoom meeting and introduced myself.  I asked about the
+projects because little was said in the syllabus about them.  We learned
+that more information would be given out later.
+
+## Muddy Water
+
+It's just the beginning, so not much is particularly unclear yet.  I'm just
+not sure how prepared I am for the course since my goal is to learn how to be
+a better programmer, but this course seems like a lot of tough programming.
+
+```
+
 
 ## Course Calendar
 
