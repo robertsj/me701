@@ -48,6 +48,9 @@ later on for C++ development.
 
 [Installing Windows Subsystem for Linux](https://wiki.ubuntu.com/WSL)
 
+[Installing X Server for WSL](https://sourceforge.net/projects/vcxsrv/)
+
+
 [Installing Ubuntu in VirtualBox](https://itsfoss.com/install-linux-in-virtualbox/)
 
 
@@ -80,6 +83,10 @@ later on for C++ development.
 
 ## Learning Plan
 
+(FYI: This is where I will put the things that (1) we do in recitation or
+in the video, (2) that you should be doing in advance, and/or(3) that you
+should be thinking about for next time.)
+
 <!--
 List the steps in chronological order to create a timeline of what
 will occur in your lesson.
@@ -110,11 +117,45 @@ lesson if applicable:
        * What will happen next? Why?
 -->
 
+
+### Required Preparation
+
+  Students should read the class Syllabus.
+
+  Students should come to class with a suitable laptop computer or make sure
+  to follow the recorded lesson to repeat the process at home.
+
+  Students should ensure they have access to the websites listed above
+  under resources.
+
+### Live Activities
+
+  (Note, some of these may be repeated in older videos, but I intend to
+    use my live time with your to go through most of the steps.  Sometimes,
+    we'll have to explore truncated versions of planned activities.)
+
   1. Introduction to Linux (brief; video provides more detail)
   2. Navigate to instructions for the majority.  This is likely WSL.
   3. Work through the instructions linked to above with the students.  
-     Debug situations as is necessary.
+     Debug situations as is necessary.  Remember to *enable* WSL first,
+     which requires the restart.
   4. Open the Ubuntu terminal.  Update as needed or recommended.
   5. Restart, etc., as needed.
   6. Demonstrate a few applications that preview the `bash` introduction.
-  7. Debrief with students about remaining issues.
+  7. Install the `X` server to enable graphical windows (e.g., `gedit`).
+  8. Install `gedit`.
+  9. Debrief with students about remaining issues.
+
+### Videos
+
+ - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/b074b6d30eba4ef0abb4e63ffdeb698e1d)
+   and [slides](https://k-state.instructure.com/courses/95043/modules/items/2396248). Note, this video has lots of "empty" space since we're
+   all installing Linux in a more time consuming manner than WSL.  However, you can use this as a guide for a VirtualBox installation of Ubuntu or Linux Mint on either Windows or OS X.
+ - [Recitation, 08/19/2020](https://mediasite.k-state.edu/mediasite/Play/08faea2bf95d4be0848b703100bdb7651d); I think the microphone on the desk failed!
+ - [Recitation, 08/21/2020](https://mediasite.k-state.edu/mediasite/Play/56612194f4a544f99ecf297a985abf631d)
+
+## Useful Tips (To Be Updated As We Learn!)
+
+  - Type `explorer.exe .` in the terminal to launch File Explorer and
+    explore your Linux directory.  Remember, launch the terminal by finding
+    the Ubuntu app and opening it.
