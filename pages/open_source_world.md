@@ -153,6 +153,6 @@ lesson if applicable:
 ### Videos
 
  - Mediasite ate my video from last year!  
-   Here are the [slides](https://k-state.instructure.com/courses/95043/modules/items/2396250)
+   Here are the [slides](https://github.com/robertsj/me701/blob/f2019/lectures/GettingToKnowTheOpenSourceWorld.ipynb)
 
-## Useful Tips (To Be Updated As We Learn!)
+### Useful Tips (To Be Updated As We Learn!)

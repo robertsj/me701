@@ -149,12 +149,12 @@ lesson if applicable:
 ### Videos
 
  - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/b074b6d30eba4ef0abb4e63ffdeb698e1d)
-   and [slides](https://k-state.instructure.com/courses/95043/modules/items/2396248). Note, this video has lots of "empty" space since we're
+   and [slides](https://github.com/robertsj/me701/blob/f2019/lectures/GettingSetUp.ipynb). Note, this video has lots of "empty" space since we're
    all installing Linux in a more time consuming manner than WSL.  However, you can use this as a guide for a VirtualBox installation of Ubuntu or Linux Mint on either Windows or OS X.
  - [Recitation, 08/19/2020](https://mediasite.k-state.edu/mediasite/Play/08faea2bf95d4be0848b703100bdb7651d); I think the microphone on the desk failed!
  - [Recitation, 08/21/2020](https://mediasite.k-state.edu/mediasite/Play/56612194f4a544f99ecf297a985abf631d)
 
-## Useful Tips (To Be Updated As We Learn!)
+### Useful Tips (To Be Updated As We Learn!)
 
   - Type `explorer.exe .` in the terminal to launch File Explorer and
     explore your Linux directory.  Remember, launch the terminal by finding
