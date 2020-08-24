@@ -5,13 +5,16 @@ Although the page produced from this is learner-facing, some of the
 lesson plan structure
 -->
 
-# The Linux Command Line                                                                 
+# Basic Shell Scripting                                                                
 
 ## Summary
 
 <!--
 Short description of the lesson.
 -->
+
+By the end of this lecture, you will understand how to write simple programs
+in `bash`, the The Bourne again shell we are using in Linux.
 
 <!--
 ********* STAGE 1 - DESIRED RESULTS ********************************************
@@ -46,6 +49,9 @@ and so it is most useful to skim it for commands of interest (or to become aware
 of commands in the first place).  Then, students can dive in to material that is
 either less clear initially or that is of particular interest.
 
+This [bash cheat sheet](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/bash.sh)
+is quite extensive.
+
 
 <!--
 ********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
@@ -60,9 +66,11 @@ either less clear initially or that is of particular interest.
       How will students reflect and self-assess their learning?
 -->
 
-  - Students will demonstrate their knowledge of basic commands like
-    `pwd`, `cd`, `rm`, `mv`, etc.
-  - Students will reflect on their learning by completing their daily log.
+  - Students will define and use variables in `bash`
+  - Students will explain what special variables like `$1` mean in `bash`
+  - Students will write short functions in `bash` that perform simple
+    tasks
+  - Students will execute all examples provided in the lesson notebook
 
 
 <!--
@@ -104,25 +112,30 @@ lesson if applicable:
 
 ### Required Preparation
 
-  - Bring a laptop with Linux ready for use.
-  - Read Part 1 (pp. 1--124) of [The Linux Command Line](http://linuxcommand.org/tlcl.php). Note, the
-    introduction is quite useful, too.
-  - Start a "cheat sheet" of the commands that appear to be useful. You can fill
-    in details on-the-fly via recorded or in-person instruction.
+  - Skim TLC 363--494
+  - Create a comparison sheet of bash relative to your favorite programming
+    language. Most likely, `bash` (as a language) is new to all of you, and I
+    find the best way to learn a new language is to compare its
+    syntax (variables, if statements, for loops, etc.) to those of a language
+    I already know (e.g., Python).  You may find [this cheat sheet](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/bash.sh)
+    to be helpful.
+
 
 ### Live Activities
 
-  1. Open with discussion of terminals and emulators.
-  2. Launch a Linux shell and explore a number of common commands.
+  1. Brief discussion of `bash` and its origins
+  2. Demonstrate how to define variables in `bash`
+  3. Demonstrate and reinforce some command line tricks like "piping" with `|`
+  4. Demonstrate how to construct functions in `bash`
+  5. Demonstrate basic `if` statements and loops.
 
 ### Videos
 
- - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/dd1e35f377d640eabd5f6ef967ab64b11d)
-   and [slides](https://github.com/robertsj/me701/blob/f2019/lectures/TheLinuxCommandLine.ipynb).
-   Again, it seems the microphone failed, so I will add a short tutorial video.
-
- - [Quick(ish) Tutorial](https://ksu.zoom.us/rec/share/zslcFb2oqW1LQKvq6B_cer4qEt_8eaa8gyRP-vFfzRl4HlWD4kPC7UZE5LY67np2?startTime=1598035346000)
-   and [website](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) I explored.
+ - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/71e3cbcaaadf46df8134e058a538b5821d)
+   and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/BashDemo.ipynb).
+   If you want to execute the notebook, you will need to install the `bash` kernel for Jupyter.
+   That is not necessary; all commands I use can be executed directly in the terminal or
+   saved and run as scripts.
 
 ### Useful Tips (To Be Updated As We Learn!)
 

@@ -5,13 +5,16 @@ Although the page produced from this is learner-facing, some of the
 lesson plan structure
 -->
 
-# The Linux Command Line                                                                 
+# More On The Command Line                                                                 
 
 ## Summary
 
 <!--
 Short description of the lesson.
 -->
+
+In this lesson, we continue navigating the command line.  Along the way, we
+will learn about and then define environment variables.
 
 <!--
 ********* STAGE 1 - DESIRED RESULTS ********************************************
@@ -60,8 +63,9 @@ either less clear initially or that is of particular interest.
       How will students reflect and self-assess their learning?
 -->
 
-  - Students will demonstrate their knowledge of basic commands like
-    `pwd`, `cd`, `rm`, `mv`, etc.
+  - Students will be able to make directories, move files to their directories,
+    and move directories.
+  - Students will explain the basic rules for file naming in Linux.
   - Students will reflect on their learning by completing their daily log.
 
 
@@ -105,24 +109,22 @@ lesson if applicable:
 ### Required Preparation
 
   - Bring a laptop with Linux ready for use.
-  - Read Part 1 (pp. 1--124) of [The Linux Command Line](http://linuxcommand.org/tlcl.php). Note, the
-    introduction is quite useful, too.
-  - Start a "cheat sheet" of the commands that appear to be useful. You can fill
-    in details on-the-fly via recorded or in-person instruction.
+  - Read Chapters 9, 10, 11, 17, and 18 of The Linux Command Line. (Some overlap with last time)
+  - Continue your "cheat sheet" of the commands that appear to be useful.
+
 
 ### Live Activities
 
-  1. Open with discussion of terminals and emulators.
-  2. Launch a Linux shell and explore a number of common commands.
+  1. Live walk through of many commands.
+  2. Creation of first `bash` script.
 
 ### Videos
 
- - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/dd1e35f377d640eabd5f6ef967ab64b11d)
-   and [slides](https://github.com/robertsj/me701/blob/f2019/lectures/TheLinuxCommandLine.ipynb).
-   Again, it seems the microphone failed, so I will add a short tutorial video.
-
- - [Quick(ish) Tutorial](https://ksu.zoom.us/rec/share/zslcFb2oqW1LQKvq6B_cer4qEt_8eaa8gyRP-vFfzRl4HlWD4kPC7UZE5LY67np2?startTime=1598035346000)
-   and [website](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) I explored.
+ - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/1aa62d3d8d5a430dbc2bc2f4b5014b4b1d)
+   and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/MoreOnTLCL.ipynb).
+   Note, in class I used a set of two colors for "stop" and "go".  When students were done
+   with a task, they displayed "go"; otherwise, "stop" indicated to me they were still working
+   or, perhaps, had encountered a problem.
 
 ### Useful Tips (To Be Updated As We Learn!)
 
