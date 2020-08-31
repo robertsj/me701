@@ -130,7 +130,14 @@ lesson if applicable:
   2. Explain basic collaborative workflows
   3. Introduce essential `git` commands for remote work.
   4. Exercise to understand how to ensure local copies remain up-to-date.
+     - `git clone https://github.com/robertsj/me701/` (to get our content)
+     - `git checkout f2020` (to get this term's stuff)
+     - `git pull` (to get updates i've made)
   5. Exercise to understand basic mechanics of a two-person development cycle.
+  -  Head to `https://github.com/me701/homework2_teams` and *fork* it to your account
+  -  Clone https://github.com/your_github_name/homework2_teams
+  -  Find your name in the list of students and modify it following the
+     directions
 
 ### Videos
 
