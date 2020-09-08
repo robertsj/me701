@@ -139,6 +139,7 @@ lesson if applicable:
 
 ### Useful Tips (To Be Updated As We Learn!)
 
+ - Variable assignments should not have spaces (i.e., `a=123` is good but `a = 123` is bad).
 
 <!--  
 
