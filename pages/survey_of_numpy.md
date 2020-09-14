@@ -5,7 +5,7 @@ Although the page produced from this is learner-facing, some of the
 lesson plan structure
 -->
 
-# Collaborative Version Control with `git` and GitHub                                                         
+# Survey of NumPy                                                                
 
 ## Summary
 
@@ -13,10 +13,9 @@ lesson plan structure
 Short description of the lesson.
 -->
 
-By the end of this lesson, you should be able to demonstrate the
-basic, collaborative development cycle using `git` and GitHub (or
-similar repository-hosting systems).  Along the way, you will work
-with a partner to complete part of the next homework.
+NumPy (short for numerical Python) is the core component for just about
+all technical computing done with Python.  In this lesson, we examine
+its basic components with a focus on arrays and linear systems.  
 
 <!--
 ********* STAGE 1 - DESIRED RESULTS ********************************************
@@ -28,13 +27,6 @@ with a partner to complete part of the next homework.
       What course goals or outcomes will this lesson address?
 -->
 
-  - Students will be able to employ command-line tools to create, access, and
-    modify remote software repositories.
-
-  - Students will be able to write succinct messages for the repository
-    log that describe source-code modifications.
-
-  - Students will be able to select an appropriate collaborative workflow.
 
 
 ## Essential Questions
@@ -44,12 +36,6 @@ with a partner to complete part of the next homework.
       instruction?
 -->
 
-  - How can I use a `git` repository that lives on another server?
-
-  - How can my friend and I work on the same repository at the same time?
-
-  - What is a `branch` and a `fork`?
-
 ## Resources
 
 <!--
@@ -58,10 +44,8 @@ with a partner to complete part of the next homework.
       What formats are best suited to complement your course material?
 -->
 
-The [Pro Git](https://git-scm.com/book/en/v2) book is freely available and
-provides just about all one needs to dive into `git` for the first time.
-
-Atlassian provides this [nice git cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
+The [NumPy](https://numpy.org/) project provides a lot of documentation and
+support, including [this introductory tutorial](https://numpy.org/devdocs/user/quickstart.html).
 
 <!--
 ********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
@@ -76,9 +60,10 @@ Atlassian provides this [nice git cheat sheet](https://www.atlassian.com/git/tut
       How will students reflect and self-assess their learning?
 -->
 
-  - Students will clone, modify, and push changes to a remote repository.
-  - Students will fork, clone, modify, push changes to and create a pull
-    request for a remote repository.
+  - Students will install (if needed) and import NumPy.
+  - Students will construct NumPy arrays to represent vector quantities.
+  - Students will construct NumPy arrays to represent matrix quantities.
+  - Students will use NumPy to solve linear systems of the form $\mathbf{Ax}=\mathbf{b}$.
   - Students will reflect on their learning by completing their daily log.
 
 
@@ -121,40 +106,28 @@ lesson if applicable:
 
 ### Required Preparation
 
-  - Skim Pro Git chapters 5 and 6.
+  - Review [linear systems](http://robertsj.github.io/python_for_engineers/courses/pythonic_apps_2/modules/module_2/module_2.html).
+  - Review [least squares](http://robertsj.github.io/python_for_engineers/courses/pythonic_apps_2/modules/module_3/least_squares.html)
 
 
 ### Live Activities
 
-  1. Provide overview of GitHub.
-  2. Explain basic collaborative workflows
-  3. Introduce essential `git` commands for remote work.
-  4. Exercise to understand how to ensure local copies remain up-to-date.
-     - `git clone https://github.com/robertsj/me701/` (to get our content)
-     - `git checkout f2020` (to get this term's stuff)
-     - `git pull` (to get updates i've made)
-  5. Exercise to understand basic mechanics of a two-person development cycle.
-     -  Head to `https://github.com/me701/homework2_teams` and *fork* it to your account
-     -  Clone https://github.com/your_github_name/homework2_teams
-     -  Find your name in the list of students and modify it following the
-        directions
-     -  Commit and push your changes to your GitHub repository
-     -  Create a pull request for your changes back to the `me701` repository
-        that you forked.
+  1. Set up a linear system using NumPy arrays for a small heat-conduction problem.
+  2. Discuss the challenges of systems when they are not square.
 
 ### Videos
 
- - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/0b11a97836724467afc6150837ce3e9f1d)
-   and [slides](https://github.com/robertsj/me701/blob/f2019/lectures/CollaborativeVersionControl.ipynb).
+ - [Lecture, F2019](https://mediasite.k-state.edu/mediasite/Play/76c50ba7b51740188cc1a347ff7ca4b71d),
+   [slides](https://github.com/robertsj/me701/blob/f2020/lectures/LinearSystemsAndLeastSquares.ipynb),
+   and [supplementary notes](https://k-state.instructure.com/courses/95043/files/14392369/download?download_frd=1).
+
+   (Note, some of this will feel a bit advanced.  Don't worry.  I just want you to be able to set up
+   linear systems for your applications using NumPy.)
 
 
 ### Useful Tips (To Be Updated As We Learn!)
 
-  - Don't forget that you need `git add` and `git commit` before
-    `git push`
-  - Students should review pull requests by others; maybe a formal
-    assignment of who does what would be good
-  - 
+
 <!--  
 
 NOTES  

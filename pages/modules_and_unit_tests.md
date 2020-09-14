@@ -5,7 +5,7 @@ Although the page produced from this is learner-facing, some of the
 lesson plan structure
 -->
 
-# Collaborative Version Control with `git` and GitHub                                                         
+# Modules and Unit Tests                                                             
 
 ## Summary
 
@@ -13,10 +13,11 @@ lesson plan structure
 Short description of the lesson.
 -->
 
-By the end of this lesson, you should be able to demonstrate the
-basic, collaborative development cycle using `git` and GitHub (or
-similar repository-hosting systems).  Along the way, you will work
-with a partner to complete part of the next homework.
+Organizing Python code in files leads to importable *modules* that help
+us to glue together more complex programs.  With test-driven development
+and unit tests, these modules can be produced with fewer bugs and
+improved functionality.
+
 
 <!--
 ********* STAGE 1 - DESIRED RESULTS ********************************************
@@ -28,13 +29,6 @@ with a partner to complete part of the next homework.
       What course goals or outcomes will this lesson address?
 -->
 
-  - Students will be able to employ command-line tools to create, access, and
-    modify remote software repositories.
-
-  - Students will be able to write succinct messages for the repository
-    log that describe source-code modifications.
-
-  - Students will be able to select an appropriate collaborative workflow.
 
 
 ## Essential Questions
@@ -44,12 +38,6 @@ with a partner to complete part of the next homework.
       instruction?
 -->
 
-  - How can I use a `git` repository that lives on another server?
-
-  - How can my friend and I work on the same repository at the same time?
-
-  - What is a `branch` and a `fork`?
-
 ## Resources
 
 <!--
@@ -58,10 +46,11 @@ with a partner to complete part of the next homework.
       What formats are best suited to complement your course material?
 -->
 
-The [Pro Git](https://git-scm.com/book/en/v2) book is freely available and
-provides just about all one needs to dive into `git` for the first time.
+A good overview of how test-driven development has impacted scientific computing
+is given by
+[Test-Driven Development in HPC Science: A Case Study](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8452053)
 
-Atlassian provides this [nice git cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
+https://robertsj.github.io/me400_notes/lectures/Modules_and_Packages.html
 
 <!--
 ********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
@@ -76,9 +65,8 @@ Atlassian provides this [nice git cheat sheet](https://www.atlassian.com/git/tut
       How will students reflect and self-assess their learning?
 -->
 
-  - Students will clone, modify, and push changes to a remote repository.
-  - Students will fork, clone, modify, push changes to and create a pull
-    request for a remote repository.
+  - Students will clone a sample repository with a predefined module.
+  - Students will write unit tests.
   - Students will reflect on their learning by completing their daily log.
 
 
@@ -121,40 +109,27 @@ lesson if applicable:
 
 ### Required Preparation
 
-  - Skim Pro Git chapters 5 and 6.
+  - Read [Modules and Packages](https://robertsj.github.io/me400_notes/lectures/Modules_and_Packages.html).
+  - Read [Unit Tests and Defensive Programming](https://robertsj.github.io/me400_notes/lectures/Unit_Tests_and_Defensive_Programming.html).
+  - Skim [Test-Driven Development in HPC Science: A Case Study](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8452053).
+  - Execute `conda install pytest` in the terminal.
 
 
 ### Live Activities
 
-  1. Provide overview of GitHub.
-  2. Explain basic collaborative workflows
-  3. Introduce essential `git` commands for remote work.
-  4. Exercise to understand how to ensure local copies remain up-to-date.
-     - `git clone https://github.com/robertsj/me701/` (to get our content)
-     - `git checkout f2020` (to get this term's stuff)
-     - `git pull` (to get updates i've made)
-  5. Exercise to understand basic mechanics of a two-person development cycle.
-     -  Head to `https://github.com/me701/homework2_teams` and *fork* it to your account
-     -  Clone https://github.com/your_github_name/homework2_teams
-     -  Find your name in the list of students and modify it following the
-        directions
-     -  Commit and push your changes to your GitHub repository
-     -  Create a pull request for your changes back to the `me701` repository
-        that you forked.
+  1. Describe what test-driven development is.
+  2. Clone example repository.
+  3. Examine the module.
+  4. Develop unit tests for a simple function.
 
 ### Videos
 
- - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/0b11a97836724467afc6150837ce3e9f1d)
-   and [slides](https://github.com/robertsj/me701/blob/f2019/lectures/CollaborativeVersionControl.ipynb).
-
+ - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/a860b1f36f8d433ea3425c634b13f3a61d)
+   and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/ModulesAndUnitTesting.ipynb)
 
 ### Useful Tips (To Be Updated As We Learn!)
 
-  - Don't forget that you need `git add` and `git commit` before
-    `git push`
-  - Students should review pull requests by others; maybe a formal
-    assignment of who does what would be good
-  - 
+
 <!--  
 
 NOTES  
