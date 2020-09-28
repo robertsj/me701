@@ -151,28 +151,28 @@ The following is a preliminary schedule of lectures.  Some topics are subject to
 
 | Lecture   |  Date            | Topics                                                                      |
 |----|-------------------------|-----------------------------------------------------------------------------|
-|	1	|	Mon, Aug 17 |	Administrivia. Installation/configuration of Linux Mint.	|
-|	2	|	Wed, Aug 19 |	Getting to know the open-source world.	|
-|	3	|	Fri, Aug 21	|	The Linux command line and the shell; Basic commands.	|
-|	4	|	Mon, Aug 24	|	More on the command line. Environment variables, profiles, etc.	|
-|	5	|	Wed, Aug 26	|	Basic shell scripting (using bash).	|
-|	6	|	Fri, Aug 28	|	Version control with Git.	|
-|	7	|	Mon, Aug 31	|	GitHub for version control of collaborative projects.	|
-|	8	|	Wed, Sep 02	|	More version control.	|
-|	9	|	Fri, Sep 04	|	More version control.  Brief introduction to Python.	|
-|	10	|	Mon, Sep 07	|	Python built-in types and functions.  Python as a "graphing calculator."	|
-|	11	|	Wed, Sep 09	|	The structure of Python code: conditionals, loops, and functions.  The debugger.	|
-|	12	|	Fri, Sep 11	|	Modules. Unit testing.	|
-|	13	|	Mon, Sep 14	|	Sources of numerical error.  Roundoff error.  Truncation error.	|
-|	14	|	Wed, Sep 16	|	Linear systems and NumPy arrays.  Least squares.	|
-|	15	|	Fri, Sep 18	|	SciPy, sparse systems, and iterative solutions.	|
-|	16	|	Mon, Sep 21	|	Selected SciPy applications (or continuation).	|
-|	17	|	Wed, Sep 23	|	Overview of objected-oriented programming in Python. Classes, objects, and methods.	|
-|	18	|	Fri, Sep 25	|	More on OOP. Inheritance.	|
-|	19	|	Mon, Sep 28	|	More on OOP.	|
-|	20	|	Wed, Sep 30	|	Applications of OOP.	|
-|	21	|	Fri, Oct 02	|	Graphical-User Interfaces (GUIs) with PyQt5	|
-|	22	|	Mon, Oct 05	|	More on GUIs	|
+|	1	  |	M, Aug 17 |	Administrivia. Installation/configuration of Linux Mint.	|
+|	2	  |	W, Aug 19 |	Getting to know the open-source world.	|
+|	3	  |	F, Aug 21	|	The Linux command line and the shell; Basic commands.	|
+|	4	  |	M, Aug 24	|	More on the command line. Environment variables, profiles, etc.	|
+|	5	  |	W, Aug 26	|	Basic shell scripting (using bash).	|
+|	6	  |	F, Aug 28	|	Version control with Git.	|
+|	7	  |	M, Aug 31	|	GitHub for version control of collaborative projects.	|
+|	8	  |	W, Sep 02	|	More version control.	|
+|	9	  |	F, Sep 04	|	More version control.  Brief introduction to Python.	|
+|	10	|	M, Sep 07	|	Python built-in types and functions.  Python as a "graphing calculator."	|
+|	11	|	W, Sep 09	|	The structure of Python code: conditionals, loops, and functions.  The debugger.	|
+|	12	|	F, Sep 11	|	Modules. Unit testing.	|
+|	13	|	M, Sep 14	|	Sources of numerical error.  Roundoff error.  Truncation error.	|
+|	14	|	W, Sep 16	|	Linear systems and NumPy arrays.  Least squares.	|
+|	xx	|	F, Sep 18	|	...catching up...	|
+|	15	|	M, Sep 21	|	SciPy, sparse systems, and iterative solutions.	|
+|	16	|	W, Sep 23	|	Selected SciPy applications (or continuation).	|
+|	18	|	F, Sep 25	|	...catching up...and project discussions... |
+|	19	|	Mon, Sep 28	|	Overview of objected-oriented programming in Python. Classes, objects, and methods.	|
+|	20	|	Wed, Sep 30	|	More on OOP. Inheritance.	|
+|	21	|	Fri, Oct 02	|	Applications of OOP.	|
+|	22	|	Mon, Oct 05	|	Graphical-User Interfaces (GUIs) with PyQt5		|
 |	23	|	Wed, Oct 07	|	More on GUIs	|
 |	24	|	Fri, Oct 09	|	A survey of I/O formats (basic text, NumPy, JSON, HDF5, etc.)	|
 |	25	|	Mon, Oct 12	|	Regular expressions.	|
