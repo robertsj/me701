@@ -6,7 +6,7 @@ Although the page produced from this is learner-facing, some of the
 lesson plan structure
 -->
 
-# Overview of Object Oriented Programming (in Python)
+# More on OOP in Python
 
 ## Summary
 
@@ -14,10 +14,8 @@ lesson plan structure
 Short description of the lesson.
 -->
 
-The major features of object-oriented programming are discussed.  These
-are encapsulation, abstraction, inheritance, and polymorphism.
-A few simple but telling examples will be used to illustrate these ideas.
-Subsequent lessons will focus on language (Python) details.
+More details related to inheritance and abstract interfaces are
+illustrated.  
 
 <!--
 ********* STAGE 1 - DESIRED RESULTS ********************************************
@@ -39,8 +37,7 @@ techniques, and tools for use in their future work.
       instruction?
 -->
 
-  1. Why bother with objects?
-  2.
+  1. When is inheritance the right answer?
 
 ## Resources
 
@@ -54,9 +51,7 @@ The online textbook [Object-Oriented Programming in Python](https://python-textb
 is a pretty good resource for Python and, in particular, it provides a suitable
 level of supporting information for object-oriented programming.
 
-This [neat article](https://medium.com/@pratiknalage/opps-its-object-oriented-programming-533c39e4668f)
-gives a nice overview of programming history and a gentle introduction to
-some basic OO concepts.
+
 
 <!--
 ********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
@@ -73,7 +68,7 @@ some basic OO concepts.
 
   - Students will identify the four features of object-oriented programming
     in various examples.
-  - Students will define a first Python class.
+  - Students will create a simple class hierarchy.
   - Students will reflect on their learning by completing their daily log.
 
 
@@ -120,17 +115,16 @@ lesson if applicable:
   - Read the online chapters
     [Classes](https://python-textbok.readthedocs.io/en/1.0/Classes.html)
     [Object Oriented Programming](https://python-textbok.readthedocs.io/en/1.0/Object_Oriented_Programming.html).
-  - Skim this [nice article](https://medium.com/@pratiknalage/opps-its-object-oriented-programming-533c39e4668f)
 
 ### Live Activities
 
-  1. Develop a complex number class.
+  1. Develop a hierarchy of shapes.
 
 ### Videos
 
-   - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/336996e6ddb441baae26d9e98a966b271d)
+   - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/db6889724b644ab6bbab1440ce7269a61d)
       and [Slides](https://github.com/robertsj/me701/blob/f2019/lectures/ObjectOrientedProgramming.ipynb).
-
+     (Note, this lecture continues the previous one and uses the same slides.)
 
 ### Useful Tips (To Be Updated As We Learn!)
 
