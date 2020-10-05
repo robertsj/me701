@@ -165,9 +165,9 @@ The following is a preliminary schedule of lectures.  Some topics are subject to
 |	12	|	F, Sep 11	|	Modules. Unit testing.	|
 |	13	|	M, Sep 14	|	Sources of numerical error.  Roundoff error.  Truncation error.	|
 |	14	|	W, Sep 16	|	Linear systems and NumPy arrays.  Least squares.	|
-|	xx	|	F, Sep 18	|	...catching up...	|
-|	15	|	M, Sep 21	|	SciPy, sparse systems, and iterative solutions.	|
-|	16	|	W, Sep 23	|	Selected SciPy applications (or continuation).	|
+|	15	|	F, Sep 18	|	...catching up...	|
+|	16	|	M, Sep 21	|	SciPy, sparse systems, and iterative solutions.	|
+|	17	|	W, Sep 23	|	Selected SciPy applications (or continuation).	|
 |	18	|	F, Sep 25	|	...catching up...and project discussions... |
 |	19	|	Mon, Sep 28	|	Overview of objected-oriented programming in Python. Classes, objects, and methods.	|
 |	20	|	Wed, Sep 30	|	More on OOP. Inheritance.	|
