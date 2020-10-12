@@ -174,7 +174,7 @@ The following is a preliminary schedule of lectures.  Some topics are subject to
 |	21	|	Fri, Oct 02	|	Applications of OOP.	|
 |	22	|	Mon, Oct 05	|	Graphical-User Interfaces (GUIs) with PyQt5		|
 |	23	|	Wed, Oct 07	|	More on GUIs	|
-|	24	|	Fri, Oct 09	|	A survey of I/O formats (basic text, NumPy, JSON, HDF5, etc.)	|
+|	24	|	Fri, Oct 09	|	More on GUIs	|
 |	25	|	Mon, Oct 12	|	Regular expressions.	|
 |	26	|	Wed, Oct 14	|	Advanced Matplotlib (and other Python-based plotting)	|
 |	27	|	Fri, Oct 16	|	More on Matplotlib.  Publication-quality graphics.	|
