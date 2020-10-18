@@ -14,7 +14,8 @@ Short description of the lesson.
 -->
 
 In this lesson, we explore again the C++ standard library (and STL) for use
-with our classes.
+with our classes.  In particular, we explore smart pointers and containers
+for collecting multiple objects of a user-defined class hierarchy.  
 
 <!--
 ********* STAGE 1 - DESIRED RESULTS ********************************************
@@ -110,25 +111,17 @@ lesson if applicable:
 
 ### Required Preparation
 
-  - Google "C++ Pointers" for one of several short tutorials;
-    here's [one](https://gist.github.com/ericandrewlewis/720c374c29bbafadedc9)
-    that looks pretty good.  
-  - Install Valgrind: `sudo apt install valgrind`
-  - Know the difference
-    between [stack](https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/)
-    and [heap](https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/) memory allocation.
-  - Get this [repository](https://github.com/me701/cpp_pointers_and_arrays)
+  - Review pointers
+  - Clone [this repository]()
 
 ### Live Activities
 
-  1. Play with pointers.
-  2. Execute array examples.
+  1. Propose storage of our Vector class in a container.
+  2. Walk through options.
 
 ### Videos
 
-- [C++ Pointers and Arrays](tbd)
-  and [slides](https://github.com/robertsj/me701/blob/f2019/lectures/PointersArraysAndMemoryManagement.ipynb).
-  Video from 2019 had no audio again, so I'll record the examples again.
+- [OO C++ and the Standard Library](tbd)
 
 
 

@@ -30,6 +30,8 @@ not available to the user of the object.
       What course goals or outcomes will this lesson address?
 -->
 
+ - Students will be able to select the right tool for the application.
+
 
 
 ## Essential Questions
@@ -38,6 +40,10 @@ not available to the user of the object.
       What question(s) will your students be able to answer by the end of
       instruction?
 -->
+
+ - How to we make and use an object?  
+ - What is an *initialization list*?
+ - Can we have `const` member variables?
 
 ## Resources
 
@@ -52,8 +58,9 @@ free [online](http://greenteapress.com/thinkcpp/thinkCScpp.pdf) and is a nice,
 basic introduction to programming using C++ as the language.
 
 
-
-
+Bjarne Stroustrup, *A Tour of C++*, 2nd Ed., is a survey of C++ written by
+the inventor of C++.  It's a nice and short book that discusses the
+essential syntax of modern C++.
 
 <!--
 ********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
@@ -68,11 +75,10 @@ basic introduction to programming using C++ as the language.
       How will students reflect and self-assess their learning?
 -->
 
-  - Students will articulate the difference between "value", "reference",
-    and "pointer."
-  - Students will articulate the difference between "pointer" and "array."
-  - Students will articulate the difference between "stack" and "heap."
-  - Students will write a program that employs array processing.
+  - Students will define and use a class in a C++ program.
+  - Students will understand how various constructors are defined
+    and used.
+  - Students will understand how a destructor is used.
   - Students will reflect on their learning by completing their daily log.
 
 <!--
@@ -114,25 +120,22 @@ lesson if applicable:
 
 ### Required Preparation
 
-  - Google "C++ Pointers" for one of several short tutorials;
-    here's [one](https://gist.github.com/ericandrewlewis/720c374c29bbafadedc9)
-    that looks pretty good.  
-  - Install Valgrind: `sudo apt install valgrind`
-  - Know the difference
-    between [stack](https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/)
-    and [heap](https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/) memory allocation.
-  - Get this [repository](https://github.com/me701/cpp_pointers_and_arrays)
+  - Read Chapters 8, 9 and 14 of [Think C++]().
+    Note, 8 and 9 deal with C++ `struct`, which is equivalent to a class
+    with one small difference (members are by default `public`, not `private`).
+  - Review how classes and objects work in Python.
+  - Clone [this repository](https://github.com/me701/cpp_classes).
 
 ### Live Activities
 
-  1. Play with pointers.
-  2. Execute array examples.
+  1. Present basic structure of a C++ class and compare, as needed, to Python.
+  2. Walk through the `Point` class and supporting code.  
+  3. Extend the `Point` class and application program.
+  4. Define a `Vector` class similar to NumPy arrays.
 
 ### Videos
 
-- [C++ Pointers and Arrays](tbd)
-  and [slides](https://github.com/robertsj/me701/blob/f2019/lectures/PointersArraysAndMemoryManagement.ipynb).
-  Video from 2019 had no audio again, so I'll record the examples again.
+- [OO C++ Classes](tbd).
 
 
 
