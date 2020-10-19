@@ -33,7 +33,7 @@ technical computing applications: [HDF5]() and [VTK]().
 
  - Students will be able to choose the proper tool.
  - Students will be able to find, load, manipulate, and save
-   data to file.
+   data.
 
 
 ## Essential Questions
@@ -43,8 +43,8 @@ technical computing applications: [HDF5]() and [VTK]().
       instruction?
 -->
 
- - How do I find a piece of information hidden in a large file?
- - How can I read arbitrary text files and produce well organized data?
+ - How can I shared large amounts of data that another person can easily
+   use?
 
 ## Resources
 
@@ -124,18 +124,20 @@ lesson if applicable:
   - Skim [this h5py tutorial](https://docs.h5py.org/en/stable/quick.html)
   - Skim this [overview of VTK formats](https://lorensen.github.io/VTKExamples/site/VTKFileFormats/).
     Install VTK by executing `conda install -c anaconda vtk`.
-  - Download the [collection of examples]().  These are not stored on GitHub
-    because they are binary.
+
 
 ### Live Activities
 
-  1. Download
-  2. Explore using h5view, etc.
+  1. Download examples.
+  2. Explore the example file using h5view and the h5py interface.
+  3. Use h5py to create a new file.  Confirm using h5view.
+  3. Use `vtk` in Python to load the example file.  Plot data to verify.
+  4. Extend data and save to a new file for next time.
 
 ### Videos
 
-- [OO C++ and the Standard Library](tbd)
-
+- [Video](tbd)
+  and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/Binary_Formats.ipynb)
 
 
 ### Useful Tips (To Be Updated As We Learn!)

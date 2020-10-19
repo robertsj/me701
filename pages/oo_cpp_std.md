@@ -48,7 +48,8 @@ Allen Downey, *Think C++* is available for
 free [online](http://greenteapress.com/thinkcpp/thinkCScpp.pdf) and is a nice,
 basic introduction to programming using C++ as the language.
 
-
+The [C++ Reference website](https://en.cppreference.com) includes a lot of documentation, including
+an [overview](https://en.cppreference.com/w/cpp/memory/shared_ptr) of the `std::shared_ptr<T>` class.
 
 
 
@@ -65,12 +66,13 @@ basic introduction to programming using C++ as the language.
       How will students reflect and self-assess their learning?
 -->
 
-  - Students will articulate the difference between "value", "reference",
-    and "pointer."
-  - Students will articulate the difference between "pointer" and "array."
-  - Students will articulate the difference between "stack" and "heap."
-  - Students will write a program that employs array processing.
+  - Students will describe what a "smart point" is and how it
+    differs from a "dumb pointer."
+  - Students will predict and confirm how a reference-counted pointer manages
+    the memory associated with an object throughout execution of
+    a program.
   - Students will reflect on their learning by completing their daily log.
+
 
 <!--
 ********* STAGE 3 - LEARNING PLAN ****************************************
@@ -116,8 +118,9 @@ lesson if applicable:
 
 ### Live Activities
 
-  1. Propose storage of our Vector class in a container.
-  2. Walk through options.
+  1. Propose storage Vector and Shape objects in a container.
+  2. Walk through pointers and related options.
+  3. Wrap up with destruction and memory summary.
 
 ### Videos
 

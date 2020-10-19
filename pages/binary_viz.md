@@ -42,8 +42,7 @@ the computational solution to the end of underground weapons testing).
       instruction?
 -->
 
- - How do I find a piece of information hidden in a large file?
- - How can I read arbitrary text files and produce well organized data?
+ - How can I interact with data?
 
 ## Resources
 
@@ -53,10 +52,8 @@ the computational solution to the end of underground weapons testing).
       What formats are best suited to complement your course material?
 -->
 
-[VTK Book](https://lorensen.github.io/VTKExamples/site/VTKBook/00Preface/)
-
-[HDF5 Documentation](https://portal.hdfgroup.org/display/HDF5/HDF5) with a nice,
-short [tutorial](https://portal.hdfgroup.org/display/HDF5/Introduction+to+HDF5)
+The [VTK Book](https://lorensen.github.io/VTKExamples/site/VTKBook) is a good
+overview of visualization.
 
 
 <!--
@@ -72,10 +69,7 @@ short [tutorial](https://portal.hdfgroup.org/display/HDF5/Introduction+to+HDF5)
       How will students reflect and self-assess their learning?
 -->
 
-  - Students will inspect an existing HDF5 file using `h5py`.
-  - Students will create their own HDF5 file using `h5py`.
-  - Students will create a VTK file with scalar and
-    vector data for visualization in Paraview or Visit.
+  - Students will load and view data in Visit.
   - Students will reflect on their learning by completing their daily log.
 
 <!--
@@ -117,23 +111,21 @@ lesson if applicable:
 
 ### Required Preparation
 
-  - Skim [this HDF5 tutorial](https://portal.hdfgroup.org/display/HDF5/Introduction+to+HDF5)
-  - Ensure `import h5py` works in your Python environment of choice; if not,
-    execute `conda install -c anaconda h5py`.
-  - Skim [this h5py tutorial](https://docs.h5py.org/en/stable/quick.html)
-  - Skim this [overview of VTK formats](https://lorensen.github.io/VTKExamples/site/VTKFileFormats/).
-    Install VTK by executing `conda install -c anaconda vtk`.
-  - Download the [collection of examples]().  These are not stored on GitHub
-    because they are binary.
+  - [Install Visit](https://wci.llnl.gov/simulation/computer-codes/visit/executables) for your platform of choice.
+  - Review the Visit [Python API](https://visit-sphinx-github-user-manual.readthedocs.io/en/develop/cli_manual/index.html)
+  - Download the Visit [sample data](https://wci.llnl.gov/content/assets/docs/simulation/computer-codes/visit/visit_data_files.tar.gz)
 
 ### Live Activities
 
-  1. Download
-  2. Explore using h5view, etc.
+  1. Verify Visit installations
+  2. Verify demo data
+  3. Visualize data in VTK file using operators.
+  4. Automate viz using Python API.
 
 ### Videos
 
-- [OO C++ and the Standard Library](tbd)
+- [Video](tbd)
+  and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/Binary_Viz.ipynb)
 
 
 

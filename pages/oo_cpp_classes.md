@@ -131,7 +131,7 @@ lesson if applicable:
   1. Present basic structure of a C++ class and compare, as needed, to Python.
   2. Walk through the `Point` class and supporting code.  
   3. Extend the `Point` class and application program.
-  4. Define a `Vector` class similar to NumPy arrays.
+  4. Define a `Vector` class similar to NumPy arrays.  Watch the memory!
 
 ### Videos
 

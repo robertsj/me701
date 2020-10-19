@@ -143,6 +143,7 @@ lesson if applicable:
 ### Videos
 
 - [Binary Data](tbd)
+   and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/Binary_Data.ipynb)
 
 
 ### Useful Tips (To Be Updated As We Learn!)

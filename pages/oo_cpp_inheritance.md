@@ -72,7 +72,11 @@ essential syntax of modern C++.
       How will students reflect and self-assess their learning?
 -->
 
-  -
+  - Students will compile inheritance example.
+  - Students will predict and confirm the order of construction
+    when objects of derived classes are first instantiated
+  - Students will predict and confirm which methods are dispatched
+    when using objects of derived classes.
   - Students will reflect on their learning by completing their daily log.
 
 <!--
@@ -114,7 +118,7 @@ lesson if applicable:
 
 ### Required Preparation
 
-- Read Chapters 8, 9 and 14 of [Think C++]().
+- Read Chapters 8, 9 and 14 of [Think C++](http://greenteapress.com/thinkcpp/thinkCScpp.pdf).
   Note, 8 and 9 deal with C++ `struct`, which is equivalent to a class
   with one small difference (members are by default `public`, not `private`).
 - Review how classes and objects work in Python.
@@ -122,8 +126,9 @@ lesson if applicable:
 
 ### Live Activities
 
-  1. Play with pointers.
-  2. Execute array examples.
+  1. Compile and extend shape examples.
+  2. Use print statements to see the construction chain.
+  3. Illustrate  the flexibility of `Shape*`.
 
 ### Videos
 
