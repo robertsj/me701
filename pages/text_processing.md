@@ -5,7 +5,7 @@ Although the page produced from this is learner-facing, some of the
 lesson plan structure
 -->
 
-# *Object Oriented C++*: Classes and Objects                
+# Text Processing using Python `str` Methods
 
 ## Summary
 
@@ -13,12 +13,11 @@ lesson plan structure
 Short description of the lesson.
 -->
 
-In this lesson, we learn how to define *classes* that include
-a public *interface* and private *attributes*.  The public interface  
-include methods for *construction* and *destruction* of an
-object and any methods needed to access or modify data an object
-encapsulates.  Usually, this data is encapsulated, i.e., it is
-not available to the user of the object.  
+String data is all around us because it is human readable and relatively
+easy to load, process, and write.  Here, we look at the built-in
+`str` class and its methods for basic string manipulation.
+
+
 
 <!--
 ********* STAGE 1 - DESIRED RESULTS ********************************************
@@ -30,8 +29,9 @@ not available to the user of the object.
       What course goals or outcomes will this lesson address?
 -->
 
- - Students will be able to select the right tool for the application.
-
+ - Students will be able to choose the proper tool.
+ - Students will be able to find, load, manipulate, and save
+   data to file.
 
 
 ## Essential Questions
@@ -41,9 +41,7 @@ not available to the user of the object.
       instruction?
 -->
 
- - How to we make and use an object?  
- - What is an *initialization list*?
- - Can we have `const` member variables?
+ - How do I find I format numerical data as a text string?
 
 ## Resources
 
@@ -53,14 +51,8 @@ not available to the user of the object.
       What formats are best suited to complement your course material?
 -->
 
-Allen Downey, *Think C++* is available for
-free [online](http://greenteapress.com/thinkcpp/thinkCScpp.pdf) and is a nice,
-basic introduction to programming using C++ as the language.
 
 
-Bjarne Stroustrup, *A Tour of C++*, 2nd Ed., is a survey of C++ written by
-the inventor of C++.  It's a nice and short book that discusses the
-essential syntax of modern C++.
 
 <!--
 ********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
@@ -75,10 +67,11 @@ essential syntax of modern C++.
       How will students reflect and self-assess their learning?
 -->
 
-  - Students will define and use a class in a C++ program.
-  - Students will understand how various constructors are defined
-    and used.
-  - Students will understand how a destructor is used.
+  - Students will articulate the difference between "value", "reference",
+    and "pointer."
+  - Students will articulate the difference between "pointer" and "array."
+  - Students will articulate the difference between "stack" and "heap."
+  - Students will write a program that employs array processing.
   - Students will reflect on their learning by completing their daily log.
 
 <!--
@@ -120,23 +113,17 @@ lesson if applicable:
 
 ### Required Preparation
 
-  - Read Chapters 8, 9 and 14 of [Think C++]().
-    Note, 8 and 9 deal with C++ `struct`, which is equivalent to a class
-    with one small difference (members are by default `public`, not `private`).
-  - Review how classes and objects work in Python.
-  - Clone [this repository](https://github.com/me701/cpp_classes).
+  - Nothing
 
 ### Live Activities
 
-  1. Present basic structure of a C++ class and compare, as needed, to Python.
-  2. Walk through the `Point` class and supporting code.  
-  3. Extend the `Point` class and application program.
-  4. Define a `Vector` class similar to NumPy arrays.  Watch the memory!
+  1. Review `str` functions.
 
 ### Videos
 
-- [OO C++ (F 2019)](https://mediasite.k-state.edu/mediasite/Play/ade352b9618449f3b86d82b4f4f799ff1d).
-  The first half or so focuses on the `Point` class.
+- [Video](https://mediasite.k-state.edu/mediasite/Play/87ce33654ebe4faeb501ea2ce28374fe1d)
+  and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/PythonRegex.ipynb)
+  Note, only the first portion of this content applies to basic `str` processing.
 
 
 ### Useful Tips (To Be Updated As We Learn!)

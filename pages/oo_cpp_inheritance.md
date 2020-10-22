@@ -132,8 +132,10 @@ lesson if applicable:
 
 ### Videos
 
-- [OO C++ Inheritance](tbd)
-
+- [OO C++, Part 1 (F 2019)](https://mediasite.k-state.edu/mediasite/Play/ade352b9618449f3b86d82b4f4f799ff1d).
+  Second half focuses on `Shape` hierarchy.
+- [OO C++, Part 2 (F 2019)](https://mediasite.k-state.edu/mediasite/Play/234e010667f04fbbb453aa681b23910d1d)
+  More on inheritance.
 
 
 ### Useful Tips (To Be Updated As We Learn!)

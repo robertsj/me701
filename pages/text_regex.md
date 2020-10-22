@@ -5,7 +5,7 @@ Although the page produced from this is learner-facing, some of the
 lesson plan structure
 -->
 
-# *Object Oriented C++*: Classes and Objects                
+# Test Processing with Python and Regex
 
 ## Summary
 
@@ -13,12 +13,11 @@ lesson plan structure
 Short description of the lesson.
 -->
 
-In this lesson, we learn how to define *classes* that include
-a public *interface* and private *attributes*.  The public interface  
-include methods for *construction* and *destruction* of an
-object and any methods needed to access or modify data an object
-encapsulates.  Usually, this data is encapsulated, i.e., it is
-not available to the user of the object.  
+String data is all around us, but the data of interest is often
+embedded within complex structures that may be somewhat arbitrary in format (e.g.,
+the speech-to-text of a political debate) or structured but complicated
+(e.g., the output of some simulation software).  Regex is a way to
+define patterns  that can be matched to string data.
 
 <!--
 ********* STAGE 1 - DESIRED RESULTS ********************************************
@@ -30,8 +29,9 @@ not available to the user of the object.
       What course goals or outcomes will this lesson address?
 -->
 
- - Students will be able to select the right tool for the application.
-
+ - Students will be able to choose the proper tool.
+ - Students will be able to find, load, manipulate, and save
+   data.
 
 
 ## Essential Questions
@@ -41,9 +41,7 @@ not available to the user of the object.
       instruction?
 -->
 
- - How to we make and use an object?  
- - What is an *initialization list*?
- - Can we have `const` member variables?
+ - How can I search for complicated expressions in text data?
 
 ## Resources
 
@@ -53,14 +51,11 @@ not available to the user of the object.
       What formats are best suited to complement your course material?
 -->
 
-Allen Downey, *Think C++* is available for
-free [online](http://greenteapress.com/thinkcpp/thinkCScpp.pdf) and is a nice,
-basic introduction to programming using C++ as the language.
 
+The Python documentation on its [Regex module](https://docs.python.org/3/library/re.html)
 
-Bjarne Stroustrup, *A Tour of C++*, 2nd Ed., is a survey of C++ written by
-the inventor of C++.  It's a nice and short book that discusses the
-essential syntax of modern C++.
+Huff and Scopatz, ECiP, Chapter 8
+
 
 <!--
 ********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
@@ -75,10 +70,10 @@ essential syntax of modern C++.
       How will students reflect and self-assess their learning?
 -->
 
-  - Students will define and use a class in a C++ program.
-  - Students will understand how various constructors are defined
-    and used.
-  - Students will understand how a destructor is used.
+  - Students will inspect an existing HDF5 file using `h5py`.
+  - Students will create their own HDF5 file using `h5py`.
+  - Students will create a VTK file with scalar and
+    vector data for visualization in Paraview or Visit.
   - Students will reflect on their learning by completing their daily log.
 
 <!--
@@ -120,23 +115,17 @@ lesson if applicable:
 
 ### Required Preparation
 
-  - Read Chapters 8, 9 and 14 of [Think C++]().
-    Note, 8 and 9 deal with C++ `struct`, which is equivalent to a class
-    with one small difference (members are by default `public`, not `private`).
-  - Review how classes and objects work in Python.
-  - Clone [this repository](https://github.com/me701/cpp_classes).
+  - Understand basic `str` processing.
+
 
 ### Live Activities
 
-  1. Present basic structure of a C++ class and compare, as needed, to Python.
-  2. Walk through the `Point` class and supporting code.  
-  3. Extend the `Point` class and application program.
-  4. Define a `Vector` class similar to NumPy arrays.  Watch the memory!
+  1. Define and apply patterns.
 
 ### Videos
 
-- [OO C++ (F 2019)](https://mediasite.k-state.edu/mediasite/Play/ade352b9618449f3b86d82b4f4f799ff1d).
-  The first half or so focuses on the `Point` class.
+- [Video](https://mediasite.k-state.edu/mediasite/Play/87ce33654ebe4faeb501ea2ce28374fe1d)
+  and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/PythonRegex.ipynb)
 
 
 ### Useful Tips (To Be Updated As We Learn!)
