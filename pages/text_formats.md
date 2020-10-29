@@ -116,7 +116,7 @@ lesson if applicable:
 
 ### Videos
 
-- TBC
+- None.  See Recitation.
 
 ### Useful Tips (To Be Updated As We Learn!)
 
