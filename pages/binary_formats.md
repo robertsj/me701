@@ -136,7 +136,7 @@ lesson if applicable:
 
 ### Videos
 
-- [Video](tbd)
+- [Video](https://youtu.be/5jFc5DnY4wU)
   and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/Binary_Formats.ipynb)
 
 
