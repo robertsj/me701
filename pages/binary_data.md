@@ -142,7 +142,7 @@ lesson if applicable:
 
 ### Videos
 
-- [Binary Data](tbd)
+- [Binary Data](https://youtu.be/a8lBwEW_tzI)
    and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/Binary_Data.ipynb)
 
 

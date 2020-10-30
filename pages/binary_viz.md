@@ -124,7 +124,7 @@ lesson if applicable:
 
 ### Videos
 
-- [Video](tbd)
+- [Video 1](https://youtu.be/qOYZClTPygg) and [Video 2](https://youtu.be/GeB-I9mHWwI)
   and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/Binary_Viz.ipynb)
 
 
