@@ -4,12 +4,12 @@ This "lecture" or "lesson" template is adapted from the one provided here:
 Although the page produced from this is learner-facing, some of the
 lesson plan structure
 -->
-<h1 id="binary-data">Binary Data</h1>
+<h1 id="static-viz-formatting-for-excellence">Static Viz Formatting for Excellence</h1>
 <h2 id="summary">Summary</h2>
 <!--
 Short description of the lesson.
 -->
-<p>In this lesson, we review basic techniques for dealing with raw binary data in Python. Data stored in binary format require less memory and fewer operations to read, write, and process. Here, we explore how to write data directly to a binary format. We also explore a couple of built-in techniques for storing data arbitrary data to file.</p>
+<p>Good plots need to be honest and efficient. This lesson explores how to creat such graphics.</p>
 <!--
 ********* STAGE 1 - DESIRED RESULTS ********************************************
 -->
@@ -19,7 +19,7 @@ Short description of the lesson.
 -->
 <ul>
 <li>Students will be able to choose the proper tool.</li>
-<li>Students will be able to find, load, manipulate, and save data to file.</li>
+<li>Students will be able to show data graphically in static and dynamic form.</li>
 </ul>
 <h2 id="essential-questions">Essential Questions</h2>
 <!--
@@ -27,7 +27,7 @@ Short description of the lesson.
       instruction?
 -->
 <ul>
-<li>How is data actually stored on file? Is it machine dependent?</li>
+<li>What makes a plot “good?”</li>
 </ul>
 <h2 id="resources">Resources</h2>
 <!--
@@ -35,8 +35,10 @@ Short description of the lesson.
       active learning?
       What formats are best suited to complement your course material?
 -->
-<p>Binary formats are ubiquitous. One aspect of a binary format is the order in which the individual <a href="https://en.wikipedia.org/wiki/Byte">bytes</a> are stored, i.e., the file’s <a href="https://en.wikipedia.org/wiki/Endianness">endianness</a>. For most applications, we use higher-level interfaces that hide such details. However, when working with embedded systems, legacy code, and proprietary formats, an understanding of these low-level details goes a long way.</p>
-<p>The primary tools to use low-level <code>byte</code>-wise data in Python are the <code>byte</code> and <code>bytearray</code> types, the <code>struct</code> module and its <code>pack</code> function.</p>
+<ul>
+<li><a href="https://www.coursera.org/lecture/python-plotting/graphical-heuristics-data-ink-ratio-edward-tufte-qFnP9">Data-Ink Ratio</a></li>
+<li><a href="https://www.coursera.org/lecture/python-plotting/graphical-heuristics-chart-junk-edward-tufte-LCcy7">Chart Junk</a></li>
+</ul>
 <!--
 ********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
 -->
@@ -48,10 +50,7 @@ Short description of the lesson.
       How will students reflect and self-assess their learning?
 -->
 <ul>
-<li>Students will explain what is meant by “binary data”.</li>
-<li>Students will read and write numerical and other data from and to file in binary format.</li>
-<li>Students will convert a number in base-10 to a number in base-16.</li>
-<li>Students will use <code>pickle</code> to save arbitrary Python objects to file in binary format.</li>
+<li>Students will define chartjunk and data-ink.</li>
 </ul>
 <!--
 ********* STAGE 3 - LEARNING PLAN ****************************************
@@ -88,22 +87,25 @@ lesson if applicable:
 -->
 <h3 id="required-preparation">Required Preparation</h3>
 <ul>
-<li>Review how to convert 123 to binary.</li>
-<li>Review the Python <a href="https://docs.python.org/3.1/library/functions.html#bytes">bytes</a> type</li>
-<li>Review rules for using <a href="https://docs.python.org/3.1/reference/lexical_analysis.html#literals">literal values</a>.</li>
+<li>Go over the <a href="https://robertsj.github.io/me400_notes/lectures/Basic_Data_Processing_with_NumPy_and_Matplotlib.html">Lecture 3</a> and <a href="https://robertsj.github.io/me400_notes/lectures/More_on_NumPy_Arrays.html">Lecture 4</a> notes from ME 400 on Matplotlib (and NumPy)</li>
+<li>Skim the examples at the <a href="https://matplotlib.org/3.1.1/gallery/index.html">Matplotlib Gallery</a></li>
+<li>Read this short <a href="https://storybydata.medium.com/edward-tufte-data-visualization-pioneer-e70eb3a8e2f0">article</a> about Edward Tufte</li>
+<li>Learn about <a href="https://bids.github.io/colormap/">colormaps</a></li>
 </ul>
+<p>I have to point out this Coursera course: <a href="https://www.coursera.org/learn/python-plotting">Applied Plotting, Charting &amp; Data Representation in Python</a>. It’s basically the course I’m trying to distill into a single module! Two good videos for <em>this</em> lecture are these:</p>
+<ul>
+<li><a href="https://www.coursera.org/lecture/python-plotting/graphical-heuristics-data-ink-ratio-edward-tufte-qFnP9">Data-Ink Ratio</a></li>
+<li><a href="https://www.coursera.org/lecture/python-plotting/graphical-heuristics-chart-junk-edward-tufte-LCcy7">Chart Junk</a></li>
+</ul>
+<p>They are super short, so watch them!</p>
 <h3 id="live-activities">Live Activities</h3>
 <ol type="1">
-<li>Review binary representation and extend to base-16.</li>
-<li>Encoding data into byte strings.</li>
-<li>Saving byte-wise data to file.</li>
-<li>Compare text and binary formats for the same data (including <code>np.save/np.load</code> and <code>pickle.dump/pickle.load</code>).</li>
-<li>Brief illustration of how to handle binary data in C++.</li>
+<li>The Spreadsheet case study</li>
+<li>A look at RCParams</li>
+<li>Two data, colors, and printing in black and white.</li>
 </ol>
 <h3 id="videos">Videos</h3>
-<ul>
-<li><a href="https://youtu.be/a8lBwEW_tzI">Binary Data</a> and <a href="https://github.com/robertsj/me701/blob/f2020/lectures/Binary_Data.ipynb">slides</a></li>
-</ul>
+<p><a href="https://youtu.be/a8lBwEW_tzI">Graphical Excellence</a> and <a href="https://github.com/robertsj/me701/blob/f2020/lectures/GraphicalExcellence.ipynb">slides</a></p>
 <h3 id="useful-tips-to-be-updated-as-we-learn">Useful Tips (To Be Updated As We Learn!)</h3>
 <!--  
 

@@ -4,12 +4,12 @@ This "lecture" or "lesson" template is adapted from the one provided here:
 Although the page produced from this is learner-facing, some of the
 lesson plan structure
 -->
-<h1 id="binary-data">Binary Data</h1>
+<h1 id="static-viz-beyond-matplotlib">Static Viz beyond Matplotlib</h1>
 <h2 id="summary">Summary</h2>
 <!--
 Short description of the lesson.
 -->
-<p>In this lesson, we review basic techniques for dealing with raw binary data in Python. Data stored in binary format require less memory and fewer operations to read, write, and process. Here, we explore how to write data directly to a binary format. We also explore a couple of built-in techniques for storing data arbitrary data to file.</p>
+<p>This lesson is a stub for future use. I’m actually happy with the material covered so far. Other plotting software exists, e.g., <code>plot.ly</code> and <code>ggplot</code>, and <code>bokeh</code>, all available from Python and other languages. No video is made, but I have a notebook with examples linked below.</p>
 <!--
 ********* STAGE 1 - DESIRED RESULTS ********************************************
 -->
@@ -19,7 +19,7 @@ Short description of the lesson.
 -->
 <ul>
 <li>Students will be able to choose the proper tool.</li>
-<li>Students will be able to find, load, manipulate, and save data to file.</li>
+<li>Students will be able to show data graphically in static and dynamic form.</li>
 </ul>
 <h2 id="essential-questions">Essential Questions</h2>
 <!--
@@ -27,7 +27,7 @@ Short description of the lesson.
       instruction?
 -->
 <ul>
-<li>How is data actually stored on file? Is it machine dependent?</li>
+<li>TBD</li>
 </ul>
 <h2 id="resources">Resources</h2>
 <!--
@@ -35,8 +35,7 @@ Short description of the lesson.
       active learning?
       What formats are best suited to complement your course material?
 -->
-<p>Binary formats are ubiquitous. One aspect of a binary format is the order in which the individual <a href="https://en.wikipedia.org/wiki/Byte">bytes</a> are stored, i.e., the file’s <a href="https://en.wikipedia.org/wiki/Endianness">endianness</a>. For most applications, we use higher-level interfaces that hide such details. However, when working with embedded systems, legacy code, and proprietary formats, an understanding of these low-level details goes a long way.</p>
-<p>The primary tools to use low-level <code>byte</code>-wise data in Python are the <code>byte</code> and <code>bytearray</code> types, the <code>struct</code> module and its <code>pack</code> function.</p>
+<p>A <a href="https://mode.com/blog/python-data-visualization-libraries/">good list</a> of tools (a bit outdated but still relevant):</p>
 <!--
 ********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
 -->
@@ -48,10 +47,7 @@ Short description of the lesson.
       How will students reflect and self-assess their learning?
 -->
 <ul>
-<li>Students will explain what is meant by “binary data”.</li>
-<li>Students will read and write numerical and other data from and to file in binary format.</li>
-<li>Students will convert a number in base-10 to a number in base-16.</li>
-<li>Students will use <code>pickle</code> to save arbitrary Python objects to file in binary format.</li>
+<li>Students will report their learning in their logs.</li>
 </ul>
 <!--
 ********* STAGE 3 - LEARNING PLAN ****************************************
@@ -88,21 +84,15 @@ lesson if applicable:
 -->
 <h3 id="required-preparation">Required Preparation</h3>
 <ul>
-<li>Review how to convert 123 to binary.</li>
-<li>Review the Python <a href="https://docs.python.org/3.1/library/functions.html#bytes">bytes</a> type</li>
-<li>Review rules for using <a href="https://docs.python.org/3.1/reference/lexical_analysis.html#literals">literal values</a>.</li>
+<li>TBD</li>
 </ul>
 <h3 id="live-activities">Live Activities</h3>
 <ol type="1">
-<li>Review binary representation and extend to base-16.</li>
-<li>Encoding data into byte strings.</li>
-<li>Saving byte-wise data to file.</li>
-<li>Compare text and binary formats for the same data (including <code>np.save/np.load</code> and <code>pickle.dump/pickle.load</code>).</li>
-<li>Brief illustration of how to handle binary data in C++.</li>
+<li>TBC</li>
 </ol>
-<h3 id="videos">Videos</h3>
+<h3 id="materials">Materials</h3>
 <ul>
-<li><a href="https://youtu.be/a8lBwEW_tzI">Binary Data</a> and <a href="https://github.com/robertsj/me701/blob/f2020/lectures/Binary_Data.ipynb">slides</a></li>
+<li><a href="https://github.com/robertsj/me701/blob/f2020/lectures/BeyondMatplotlib.ipynb">Beyond Matplotlib</a></li>
 </ul>
 <h3 id="useful-tips-to-be-updated-as-we-learn">Useful Tips (To Be Updated As We Learn!)</h3>
 <!--  

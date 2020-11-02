@@ -30,7 +30,8 @@ lectures = [
 modules = {'basic_cpp': ['core', 'arrays', 'stl'],
            'oo_cpp': ['classes', 'inheritance', 'std'],
            'binary': ['data', 'formats', 'viz'],
-           'text': ['processing', 'regex', 'formats']}
+           'text': ['processing', 'regex', 'formats'],
+           'static_viz': ['mpl', 'format', 'beyond']}
 
 
 tmpl = 'python convert_to_canvas.py ../pages/{}.md lec{}.html'
