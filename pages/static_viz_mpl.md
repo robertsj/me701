@@ -128,7 +128,7 @@ lesson if applicable:
 
 ### Videos
 
-- [Matplotlib Case Studies](https://youtu.be/a8lBwEW_tzI)
+- [Matplotlib Case Studies](https://youtu.be/T9OrxDGE1FU)
    and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/AdvancedMatplotlibPlotting.ipynb)
 
 

@@ -4,12 +4,12 @@ This "lecture" or "lesson" template is adapted from the one provided here:
 Although the page produced from this is learner-facing, some of the
 lesson plan structure
 -->
-<h1 id="static-viz-beyond-matplotlib">Static Viz beyond Matplotlib</h1>
+<h1 id="hpc-architectures">HPC Architectures</h1>
 <h2 id="summary">Summary</h2>
 <!--
 Short description of the lesson.
 -->
-<p>This lesson is a stub for future use. I’m actually happy with the material covered so far. Other plotting software exists, e.g., <code>plot.ly</code> and <code>ggplot</code>, and <code>bokeh</code>, all available from Python and other languages. No video is made, but I have a notebook with examples linked below.</p>
+<p>The basic timing we did last time is a good tool to have, but sometimes it’s better to profile your code a bit more comprehensively. Here, we’ll look at how to use tools like <code>gprof</code> to figure out where execution bottlenecks may be hurting your program’s performance.</p>
 <!--
 ********* STAGE 1 - DESIRED RESULTS ********************************************
 -->
@@ -19,7 +19,6 @@ Short description of the lesson.
 -->
 <ul>
 <li>Students will be able to choose the proper tool.</li>
-<li>Students will be able to show data graphically in static and dynamic form.</li>
 </ul>
 <h2 id="essential-questions">Essential Questions</h2>
 <!--
@@ -27,7 +26,7 @@ Short description of the lesson.
       instruction?
 -->
 <ul>
-<li>TBD</li>
+<li>How fast can I actually go, and which things are stopping me?</li>
 </ul>
 <h2 id="resources">Resources</h2>
 <!--
@@ -35,7 +34,8 @@ Short description of the lesson.
       active learning?
       What formats are best suited to complement your course material?
 -->
-<p>A <a href="https://mode.com/blog/python-data-visualization-libraries/">good list</a> of tools (a bit outdated but still relevant):</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Gprof">gprof</a> tool is readily accessible and gives substantial information about run-time performance of programs. Googles <a href="https://gperftools.github.io/gperftools/cpuprofile.html">gperftools</a> is another great tool.</p>
+<p>There are numerous other <a href="https://en.wikipedia.org/wiki/List_of_performance_analysis_tools">performance tools</a> available. <a href="">Valgrind</a> includes <code>cachegrind</code> and <code>callgrind</code> that are useful tools for understanding execution in more detail.</p>
 <!--
 ********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
 -->
@@ -47,7 +47,8 @@ Short description of the lesson.
       How will students reflect and self-assess their learning?
 -->
 <ul>
-<li>Students will report their learning in their logs.</li>
+<li>Students will use <code>gprof</code> and <code>gperftools</code> to profile a C++ program.</li>
+<li>Students will reflect on their learning by completing their daily log.</li>
 </ul>
 <!--
 ********* STAGE 3 - LEARNING PLAN ****************************************
@@ -84,15 +85,18 @@ lesson if applicable:
 -->
 <h3 id="required-preparation">Required Preparation</h3>
 <ul>
-<li>TBD</li>
+<li>Read <a href="">Ch. 1</a> of Hager and Wellein</li>
+<li>Review <a href="https://web.eecs.umich.edu/~sugih/pointers/gprof_quick.html">this overview</a> of <code>gprof</code></li>
+<li>Install <code>gperftools</code> and read <a href="https://gperftools.github.io/gperftools/cpuprofile.html">this overview</a></li>
 </ul>
 <h3 id="live-activities">Live Activities</h3>
 <ol type="1">
-<li>Quick look at Plot.ly and Bokeh (skip TikZ)</li>
+<li>Download example code and discuss.</li>
+<li>Use <code>gprof</code> and <code>gperftools</code> to understand performance.</li>
 </ol>
-<h3 id="materials">Materials</h3>
+<h3 id="videos">Videos</h3>
 <ul>
-<li><a href="https://github.com/robertsj/me701/blob/f2020/lectures/BeyondMatplotlib.ipynb">Beyond Matplotlib</a> and <a href="https://youtu.be/s4u7LY-214E">video</a>.</li>
+<li><a href="https://youtu.be/9XbzeWaXTU8">Video</a> and <a href="https://github.com/robertsj/me701/blob/f2020/lectures/HPC_notes.ipynb">slides</a></li>
 </ul>
 <h3 id="useful-tips-to-be-updated-as-we-learn">Useful Tips (To Be Updated As We Learn!)</h3>
 <!--  

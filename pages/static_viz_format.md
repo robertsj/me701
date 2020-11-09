@@ -130,7 +130,7 @@ They are super short, so watch them!
 
 ### Videos
 
-[Graphical Excellence](https://youtu.be/a8lBwEW_tzI)
+[Graphical Excellence](https://youtu.be/iCQnHYA-lLk)
    and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/GraphicalExcellence.ipynb)
 
 

@@ -112,11 +112,11 @@ lesson if applicable:
 
 ### Live Activities
 
-  1. TBC
+  1. Quick look at Plot.ly and Bokeh (skip TikZ)
 
 ### Materials
 
-- [Beyond Matplotlib](https://github.com/robertsj/me701/blob/f2020/lectures/BeyondMatplotlib.ipynb)
+- [Beyond Matplotlib](https://github.com/robertsj/me701/blob/f2020/lectures/BeyondMatplotlib.ipynb) and [video](https://youtu.be/s4u7LY-214E).
 
 
 ### Useful Tips (To Be Updated As We Learn!)

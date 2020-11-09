@@ -4,12 +4,12 @@ This "lecture" or "lesson" template is adapted from the one provided here:
 Although the page produced from this is learner-facing, some of the
 lesson plan structure
 -->
-<h1 id="static-viz-beyond-matplotlib">Static Viz beyond Matplotlib</h1>
+<h1 id="hpc-case-study-omilat">HPC Case Study: OMILAT</h1>
 <h2 id="summary">Summary</h2>
 <!--
 Short description of the lesson.
 -->
-<p>This lesson is a stub for future use. I’m actually happy with the material covered so far. Other plotting software exists, e.g., <code>plot.ly</code> and <code>ggplot</code>, and <code>bokeh</code>, all available from Python and other languages. No video is made, but I have a notebook with examples linked below.</p>
+<p>Only masochists implement linear algebra themselves. We’ll see why that is by comparing the best code we can write in C++ to the off-the-shelf tools from the professionals.</p>
 <!--
 ********* STAGE 1 - DESIRED RESULTS ********************************************
 -->
@@ -19,7 +19,6 @@ Short description of the lesson.
 -->
 <ul>
 <li>Students will be able to choose the proper tool.</li>
-<li>Students will be able to show data graphically in static and dynamic form.</li>
 </ul>
 <h2 id="essential-questions">Essential Questions</h2>
 <!--
@@ -27,7 +26,8 @@ Short description of the lesson.
       instruction?
 -->
 <ul>
-<li>TBD</li>
+<li>How fast can I actually go?</li>
+<li>Is a library a better option?</li>
 </ul>
 <h2 id="resources">Resources</h2>
 <!--
@@ -35,7 +35,12 @@ Short description of the lesson.
       active learning?
       What formats are best suited to complement your course material?
 -->
-<p>A <a href="https://mode.com/blog/python-data-visualization-libraries/">good list</a> of tools (a bit outdated but still relevant):</p>
+<p>The <a href="https://en.wikipedia.org/wiki/BLAS">BLAS</a> specification defines a variety of low-level, vector-vector, matrix-vector, and matrix-matrix subroutines essential to many numerical computing applications.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/LAPACK">LAPACK</a> specification builds on BLAS to define solvers for linear and eigen systems, various decompositions, etc.</p>
+<p>Intel’s <a href="https://en.wikipedia.org/wiki/Math_Kernel_Library">Math Kernel Library (MKL)</a> is among the best performing implementations of BLAS/LAPACK, especially on Intel systems.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Automatically_Tuned_Linear_Algebra_Software">ATLAS</a> library is a BLAS/LAPACK implementation that uses parameterized code and numerical experiments to “tune” the final compiled code to one’s machine. A similar approach was used to produce the <a href="https://en.wikipedia.org/wiki/FFTW">FFTW</a> library that implements fast Fourier transforms.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Eigen_(C%2B%2B_library)">Eigen</a> is a template (head-only) C++ library that implements BLAS and some of LAPACK. Because it uses only headers, it is very easy to incorporate into existing code.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/LINPACK_benchmarks">LINPACK</a> benchmark is a widely used for testing the performance of large-scale compute clusters. However, it’s good for single-cove studies, too. We’ll use the <a href="https://software.intel.com/content/www/us/en/develop/documentation/mkl-windows-developer-guide/top/intel-math-kernel-library-benchmarks/intel-distribution-for-linpack-benchmark/overview-of-the-intel-distribution-for-linpack-benchmark.html">Intel implementation</a>.</p>
 <!--
 ********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
 -->
@@ -47,7 +52,9 @@ Short description of the lesson.
       How will students reflect and self-assess their learning?
 -->
 <ul>
-<li>Students will report their learning in their logs.</li>
+<li>Students will run several versions of a BLAS-driven program.</li>
+<li>Students will run the LINPACK and/or similar performance benchmarks.</li>
+<li>Students will reflect on their learning by completing their daily log.</li>
 </ul>
 <!--
 ********* STAGE 3 - LEARNING PLAN ****************************************
@@ -84,15 +91,24 @@ lesson if applicable:
 -->
 <h3 id="required-preparation">Required Preparation</h3>
 <ul>
-<li>TBD</li>
+<li>Remember how to compute <img 
+class="equation_image" 
+title="\mathbf{Ax}" 
+src="/equation_images/%255Cmathbf%257BAx%257D" 
+alt="LaTeX: \mathbf{Ax}" 
+data-equation-content="\mathbf{Ax}" 
+/>.</li>
 </ul>
 <h3 id="live-activities">Live Activities</h3>
 <ol type="1">
-<li>Quick look at Plot.ly and Bokeh (skip TikZ)</li>
+<li>Review the matrix-vector product and implement using both row- and column-wise access.</li>
+<li>Compute FLOP/S and compare to estimated peak performance.</li>
+<li>Do same but link to MKL instead and compare.</li>
+<li>Compare to HPL performance.</li>
 </ol>
-<h3 id="materials">Materials</h3>
+<h3 id="videos">Videos</h3>
 <ul>
-<li><a href="https://github.com/robertsj/me701/blob/f2020/lectures/BeyondMatplotlib.ipynb">Beyond Matplotlib</a> and <a href="https://youtu.be/s4u7LY-214E">video</a>.</li>
+<li><a href="https://youtu.be/xl1-IUT1mfk">Video</a> and <a href="https://github.com/robertsj/me701/blob/f2020/lectures/HPC_notes.ipynb">slides</a></li>
 </ul>
 <h3 id="useful-tips-to-be-updated-as-we-learn">Useful Tips (To Be Updated As We Learn!)</h3>
 <!--  

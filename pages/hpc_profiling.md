@@ -50,7 +50,7 @@ bottlenecks may be hurting your program's performance.
 
 The [gprof](https://en.wikipedia.org/wiki/Gprof) tool is readily
 accessible and gives substantial information about run-time performance
-of programs.
+of programs.  Googles [gperftools](https://gperftools.github.io/gperftools/cpuprofile.html) is another great tool.
 
 There are numerous other [performance tools](https://en.wikipedia.org/wiki/List_of_performance_analysis_tools)
 available.   [Valgrind]() includes `cachegrind` and `callgrind` that are
@@ -69,7 +69,7 @@ useful tools for understanding execution in more detail.
       How will students reflect and self-assess their learning?
 -->
 
-  - Students will use `gprof` to profile a C++ program.
+  - Students will use `gprof` and `gperftools` to profile a C++ program.
   - Students will reflect on their learning by completing their daily log.
 
 <!--
@@ -113,15 +113,16 @@ lesson if applicable:
 
   - Read [Ch. 1]() of Hager and Wellein
   - Review [this overview](https://web.eecs.umich.edu/~sugih/pointers/gprof_quick.html) of `gprof`
+  - Install `gperftools` and read [this overview](https://gperftools.github.io/gperftools/cpuprofile.html)
 
 ### Live Activities
 
   1. Download example code and discuss.
-  2. Use `gprof` to understand performance.
+  2. Use `gprof` and `gperftools` to understand performance.
 
 ### Videos
 
-- [Video](tbd)
+- [Video](https://youtu.be/9XbzeWaXTU8)
   and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/HPC_notes.ipynb)
 
 

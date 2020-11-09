@@ -136,15 +136,15 @@ lesson if applicable:
 
 ### Live Activities
 
-  1. Review the matrix-vector product and implement in C++ using both
+  1. Review the matrix-vector product and implement using both
      row- and column-wise access.
   2. Compute FLOP/S and compare to estimated peak performance.
   3. Do same but link to MKL instead and compare.
-  4. Run HPL to see true peak performance.
+  4. Compare to HPL performance.
 
 ### Videos
 
-- [Video](tbd)
+- [Video](https://youtu.be/xl1-IUT1mfk)
   and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/HPC_notes.ipynb)
 
 

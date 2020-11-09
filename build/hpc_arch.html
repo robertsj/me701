@@ -4,85 +4,57 @@ This "lecture" or "lesson" template is adapted from the one provided here:
 Although the page produced from this is learner-facing, some of the
 lesson plan structure
 -->
-
-# HPC Architectures
-
-## Summary
-
+<h1 id="hpc-architectures">HPC Architectures</h1>
+<h2 id="summary">Summary</h2>
 <!--
 Short description of the lesson.
 -->
-
-Here, we try to answer "what is a computer?" a bit more carefully than
-we might have understood it to be.  The modern cache-based computer
-is a complicated beast, with a variety of special-purpose registers
-that can greatly accelerate how much "work" we can do.  We'll start
-with the basic unit of work, the floating-point operation, and then
-try to understand what our machines should, in theory, be capable of
-doing.  We'll then show that may not be the case...ever.
-
+<p>Here, we try to answer “what is a computer?” a bit more carefully than we might have understood it to be. The modern cache-based computer is a complicated beast, with a variety of special-purpose registers that can greatly accelerate how much “work” we can do. We’ll start with the basic unit of work, the floating-point operation, and then try to understand what our machines should, in theory, be capable of doing. We’ll then show that may not be the case…ever.</p>
 <!--
 ********* STAGE 1 - DESIRED RESULTS ********************************************
 -->
-
-## Learning Outcomes
-
+<h2 id="learning-outcomes">Learning Outcomes</h2>
 <!--
       What course goals or outcomes will this lesson address?
 -->
-
- - Students will be able to choose the proper tool.
- - Students will be able to list the basic components of a modern
-   computer.
- - Students will know how to perform basic timing of their
-   programs.
-
-## Essential Questions
-
+<ul>
+<li>Students will be able to choose the proper tool.</li>
+<li>Students will be able to list the basic components of a modern computer.</li>
+<li>Students will know how to perform basic timing of their programs.</li>
+</ul>
+<h2 id="essential-questions">Essential Questions</h2>
 <!--
       What question(s) will your students be able to answer by the end of
       instruction?
 -->
-
- - How fast can I actually go?
-
-## Resources
-
+<ul>
+<li>How fast can I actually go?</li>
+</ul>
+<h2 id="resources">Resources</h2>
 <!--
       What resources can be made available to your student to support their
       active learning?
       What formats are best suited to complement your course material?
 -->
-
-Hager and Wellein, Introduction to High Performance Computing for
-Scientists and Engineers (Chapman & Hall/CRC Computational Science)
-is a great resource for performance-oriented, scientific programmers.
-
-
+<p>Hager and Wellein, Introduction to High Performance Computing for Scientists and Engineers (Chapman &amp; Hall/CRC Computational Science) is a great resource for performance-oriented, scientific programmers.</p>
 <!--
 ********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
 -->
-
-##  Evidence of Student Learning
-
+<h2 id="evidence-of-student-learning">Evidence of Student Learning</h2>
 <!--
       How will you assess students’ prior knowledge?
       What criteria will be used to assess student performance?
       What evidence will be collected to demonstrate achievement?
       How will students reflect and self-assess their learning?
 -->
-
-  - Students will describe their CPUs and memory.
-  - Students will using basic timing functions to estimate FLOPS
-    for a simple program.
-
+<ul>
+<li>Students will describe their CPUs and memory.</li>
+<li>Students will using basic timing functions to estimate FLOPS for a simple program.</li>
+</ul>
 <!--
 ********* STAGE 3 - LEARNING PLAN ****************************************
 -->
-
-
-## Learning Plan
-
+<h2 id="learning-plan">Learning Plan</h2>
 <!--
 List the steps in chronological order to create a timeline of what
 will occur in your lesson.
@@ -112,39 +84,30 @@ lesson if applicable:
        * What should students take away from this lesson?
        * What will happen next? Why?
 -->
-
-### Required Preparation
-
-  - Read [Ch. 1](https://k-state.instructure.com/files/14392374/download?download_frd=1) of Hager and Wellein.
-  - Review how to get information about your CPU and memory and find out
-    the clock speed (Ghz), total memory (GB), caches (MB?), etc.
-  - Get an account for `beocat.ksu.edu`.
-
-### Live Activities
-
+<h3 id="required-preparation">Required Preparation</h3>
+<ul>
+<li>Read <a href="https://k-state.instructure.com/files/14392374/download?download_frd=1">Ch. 1</a> of Hager and Wellein.</li>
+<li>Review how to get information about your CPU and memory and find out the clock speed (Ghz), total memory (GB), caches (MB?), etc.</li>
+<li>Get an account for <code>beocat.ksu.edu</code>.</li>
+</ul>
+<h3 id="live-activities">Live Activities</h3>
 <!--
 https://www.cse-lab.ethz.ch/wp-content/uploads/2018/09/HPCSE_I_1_Intro.pdf
   21 - why compute
   22 - flop
   51 - von neumann
 -->
-
-  1. Review the basic structure of a computer.
-  2. Consider the various enhancements that let us go beyond
-     one FLOP/cycle.
-  3. Perform simple test cases with optimization flags, etc.
-  4. Implement/use a basic timer to estimate compute FLOP/S.
-
-### Videos
-
-- [Video](https://youtu.be/l4NNZ0HpXfY)
-  and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/HPC_notes.ipynb)
-
-
-
-### Useful Tips (To Be Updated As We Learn!)
-
-
+<ol type="1">
+<li>Review the basic structure of a computer.</li>
+<li>Consider the various enhancements that let us go beyond one FLOP/cycle.</li>
+<li>Perform simple test cases with optimization flags, etc.</li>
+<li>Implement/use a basic timer to estimate compute FLOP/S.</li>
+</ol>
+<h3 id="videos">Videos</h3>
+<ul>
+<li><a href="https://youtu.be/l4NNZ0HpXfY">Video</a> and <a href="https://github.com/robertsj/me701/blob/f2020/lectures/HPC_notes.ipynb">slides</a></li>
+</ul>
+<h3 id="useful-tips-to-be-updated-as-we-learn">Useful Tips (To Be Updated As We Learn!)</h3>
 <!--  
 
 NOTES  
