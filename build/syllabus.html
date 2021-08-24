@@ -3,62 +3,26 @@
 <p>The rest of this repository contains notes, examples, and other resources for ME 701 - Development of Computer Applications in Mechanical Engineering, taught at Kansas State University. All materials were developed by Jeremy Roberts.</p>
 <h2 id="course-details">Course Details</h2>
 <h3 id="time-and-place">Time and Place</h3>
-<p>11:30am–12:20pm M via Zoom (meeting ID: 617-763-8618, which is also my cell number)</p>
-<p>11:30am–12:20pm WF in DUE 0097 for in-person recitations (half and half; optional, and will be recorded if possible)</p>
+<p>11:30am–12:20pm MWF DUE 0097</p>
 <h3 id="instructor">Instructor</h3>
 <ul>
 <li>Jeremy Roberts</li>
 <li>137D Ward Hall</li>
+<li>Zoom meeting ID: 617 763 8618 (which is also my cell number)</li>
 <li>Office Hours by appointment; see my <a href="https://calendar.google.com/calendar/embed?src=j.alyn.roberts%40gmail.com&amp;ctz=America/Chicago">calendar</a> and shoot me an email.</li>
 </ul>
-<h3 id="teaching-assistant">Teaching Assistant</h3>
-<ul>
-<li>Rabab Elzohery</li>
-<li>133B Ward Hall</li>
-<li>Office Hours TBD</li>
-</ul>
-<h2 id="course-description-and-objectives">Course Description and Objectives</h2>
-<p>This course will provide students with the skills needed to apply computation successfully in their research and professional endeavors. This begs the question, “what is computation?” In this course, all we want to do is make the computer do what we want it to do. Our approach doesn’t always have to be the fastest or most elegant—though both are admirable qualities—but it must get the right answer.</p>
-<p>Along the way, students will learn (or review) basic numerical methods and use them to solve problems typical in mechanical and nuclear engineering. Students will also be exposed to a variety of special topics, including graphical user interfaces, visualization tools, and parallel computing.</p>
-<p><strong>Students should at a minimum leave the course with (1) a basic understanding of how to do scientific work on Linux machines, (2) programming skills at a level needed for solving problems typical of engineering, and (3) the ability to select the appropriate language or tool for the job.</strong></p>
+<h2 id="course-description">Course Description</h2>
+<p>From the catalog: Nature of design, graphical user interface development to support computer-aided design, algorithms and computer graphics in computer applications, feature-based design, applications to design problems.</p>
+<h2 id="student-outcomes">Student Outcomes</h2>
+<p>Students should, at a minimum, (1) do basic technical work in a Linux or Linux-like environment machines (2) produce graphical and non-graphical programs at level needed for solving problems typical of engineering (3) select the appropriate language or tool for the job</p>
 <h2 id="textbook">Textbook</h2>
-<p>There is no perfect book for this course, and most reference material can easily be found online. In some cases, electronic materials (book excerpt, article, etc.) will be provided to the student.</p>
-<p>However, there are good books for parts of the material we’ll cover. I have several, and you’re more than welcome to borrow them to determine whether they belong on your shelf, too. When appropriate, I’ll assign excerpts as reading.</p>
-<p>A book that aligns well with much of the early content (and much of the spirit) of this course is</p>
+<p>There is no perfect book for this course, and most reference material can easily be found online. In some cases, electronic materials (book excerpt, article, etc.) will be provided to the student. The following are relevant sources in roughly the order in which they map onto the course content.</p>
 <ul>
-<li>A. Scopatz and K. Huff. Effective Computation in Physics. O’Reilly Media, (2015). ISBN: 978-1491901533</li>
-</ul>
-<p>which provides a nice overview of Python at the level (and with the pace) of this class. It also surveys other topics important to effective computing in the sciences, including the Linux command line, version control, data storage, and (some) visualization. This book is <strong>recommended</strong> for students who like a print reference.</p>
-<p>A thorough overview of the command line in Linux is given by</p>
-<ul>
-<li>W. Shotts, Jr. <em>The Linux Command Line: A Complete Introduction</em>, No Starch Press (2012). ISBN: 978-1-59327-389-7. Available free from <a href="http://linuxcommand.org/tlcl.php">http://linuxcommand.org/tlcl.php</a></li>
-</ul>
-<p>for which a free PDF version is available. Readings will be assigned from this book.</p>
-<p>Other books that present Python in a way useful to students of scientific computing include</p>
-<ul>
-<li>H. Langtangen. <em>Python Scripting for Computational Science</em>, 3rd ed. Springer, (2009). ISBN: 978-3540739159</li>
-<li>J. Stewert. <em>Python for Scientists</em>. Cambridge University Press, (2014). ISBN:978-1107686427</li>
-<li>B. Shapiro. <em>Scientific Computation: Python Hacking for Math Junkies</em>. Sherwood Forest Books, (2015). ISBN: 978-0692366936</li>
-</ul>
-<p>and, although not a full-fledged book, you might find my online Python materials for ME 400 useful:</p>
-<ul>
-<li>J. Roberts. <em>Python for Engineers</em> (2016). <a href="http://robertsj.github.io/me400_notes/index.html">http://robertsj.github.io/me400_notes/index.html</a></li>
-</ul>
-<p>Despite the utility of Python for scientific computing, there remains a need to understand a bit about compiled languages, particularly for development of high-performance code and maintenance of legacy code. In this course, C++ will be introduced and used, and some appropriate resources include:</p>
-<ul>
-<li>Allen Downey, <em>Think C++</em> [It’s available for free <a href="http://greenteapress.com/thinkcpp/thinkCScpp.pdf">online</a> and is a nice, basic introduction to programming using C++ as the language.]</li>
-<li>Francis and Whiteley, <em>Guide to Scientific Computing in C++</em>, Springer (2012). [Presents a short overview of basic C++ syntax with various applications of interest in scientific computing.]</li>
-<li>Stroustrup. A Tour of C++. Addison-Wesley Professional (2018). [An excellent survey, especially for those who already know a bit of C++ or are very experienced in another language.]</li>
-</ul>
-<p>For development of Qt-based graphical user interfaces (GUI’s) in Python, the essential reference is</p>
-<ul>
-<li>Summerfield, <em>Rapid GUI Programming with Python and Qt</em>, Prentice Hall (2007). [However, this is swiftly becoming dated since Qt has moved on to version 5, and many things are not backwards compatible. We’ll leverage existing tutorials like those <a href="http://zetcode.com/gui/pyqt5/">here</a>]</li>
-</ul>
-<p>Finally, the scope of parallel programming is large. For topics related to high-performance computing, OpenMP, and MPI we’ll cover in the last quarter of the course, the standard references are</p>
-<ul>
-<li>G. Jost and R. van der Pas. Using OpenMP: Portable Shared Memory Parallel Programming, MIT Press, (2007). ISBN: 978-0262533027</li>
-<li>W. Gropp, E. Lusk, and A. Skjellum. Using MPI: Portable Parallel Programming with the Message Passing Interface, 2nd ed. MIT Press, (1999). ISBN: 978-0262571326</li>
-<li>G. Hager and G. Wellein. Introduction to high performance computing for scientists and engineers. CRC Press (2010). [Excerpts of this book will be provided.]</li>
+<li><p>A. Scopatz and K. Huff. Effective Computation in Physics. O’Reilly Media, (2015). ISBN: 978-1491901533</p></li>
+<li><p>W. Shotts, Jr. <em>The Linux Command Line: A Complete Introduction</em>, No Starch Press (2012). ISBN: 978-1-59327-389-7. Available free from <a href="http://linuxcommand.org/tlcl.php" class="uri">http://linuxcommand.org/tlcl.php</a></p></li>
+<li><p>J. Roberts. <em>Python for Engineers</em> (2016). <a href="http://robertsj.github.io/me400_notes/index.html" class="uri">http://robertsj.github.io/me400_notes/index.html</a></p></li>
+<li><p>A. Moore, <em>Mastering GUI Programming with Python</em>,Packt Publishing, (2019). ASIN: B07S9WFD92. Online resources available at <a href="https://github.com/PacktPublishing/Mastering-GUI-Programming-with-Python" class="uri">https://github.com/PacktPublishing/Mastering-GUI-Programming-with-Python</a></p></li>
+<li><p>D. Mallow, <em>Exploring Raspberry Pi: Interfacing to the Real World with Embedded Linux</em>, (2016). ISBN-10: 1119188687</p></li>
 </ul>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>ME 400 (Computer Applications in Mechanical Engineering) or equivalent. In other words, you should already know how to program at a basic level.</p>
@@ -72,14 +36,11 @@
 <li>Participation (10%)</li>
 </ul>
 <p>Although I do not subscribe to the standard 90/80/70 rule in general, that scale has been pretty accurate the last three semesters of my teaching this course.</p>
-<p>Each <strong>homework</strong> is equally weighted. Homework will be due more frequently in the early, foundational part of the course and will always be announced at least one week before its due date and time. You may drop the lowest homework score. No homework received after grading has begun will be accepted. Your best (and guaranteed) bet is to submit by the deadline. Homework will be primarily an individual effort, but some assignments will require pairs of students.</p>
-<p>The <strong>programming projects</strong> provide an opportunity for you to sythesize the tools learned throughout the course. The first one emphasizes Python, while the second one will emphasize C++. These projects are more in depth and more open-ended than a typical homework problem. More details will be announced later on (but not too much later.)</p>
-<blockquote>
-<p><em>Please note</em>: The programming required for both homework and projects might be very hard, especially if your programming skills coming into the class are weak. However, the tasks will not be impossible if you get an early start on them!</p>
-</blockquote>
-<p>In a small, hands-on course like this, <strong>participation</strong> in “lectures” is essential. That said, COVID-19 has messed things up a bit. In our present context, active participation means doing any assigned reading (or other preparation) and coming to recitation ready to engage with the material. Regularly be present, take notes (before, during, and after lecture), ask questions, and follow up, as needed, during office hours. This part of the assessment is going to be a <a href="https://en.wikipedia.org/wiki/Metacognition">metacognitive</a> exercise for <em>you</em>, the student. For each “lecture”, you will summarize (briefly) how you prepared for lecture, what you contributed to lecture, and which topic is least clear. These entries should not be single sentences; rather, truly spend a few minutes to reflect on what you’ve done to learn. Eventually, you will “commit” these entries to an online repository where the TA and I can review them periodically for feedback on the course. By the end of the semester, you will have a pretty clear view of your learning throughout the course (and I will, too).</p>
+<p>Each <strong>homework</strong> is equally weighted. Homework will be due more frequently in the early, foundational part of the course and will always be announced at least one week before its due date and time. You may drop the lowest homework score. Homework received after grading has begun may not be accepted. Your best (and guaranteed) bet is to submit by the deadline. Homework will be primarily an individual effort, but some assignments will require pairs of students.</p>
+<p>The <strong>programming projects</strong> provide an opportunity for you to sythesize the tools learned throughout the course. The first project emphasizes use of version control and Python for solving a technical problem. The second project emphasizes the development of a graphical program based on PyQt to aid in the analysis of an engineering (or other technical) problem. These projects are more in depth and more open-ended than a typical homework problem.</p>
+<p>In a small, hands-on course like this, <strong>participation</strong> in “lectures” is essential. In our present context, active participation means doing any assigned reading (or other preparation) and coming to lecture ready to engage with the material. Regularly be present, take notes (before, during, and after lecture), ask questions, and follow up, as needed, during office hours. This part of the assessment is going to be a <a href="https://en.wikipedia.org/wiki/Metacognition">metacognitive</a> exercise for <em>you</em>, the student. For each “lecture”, you will summarize (briefly) how you prepared for lecture, what you contributed to lecture, and which topic is least clear. These entries should not be single sentences; rather, truly spend a few minutes to reflect on what you’ve done to learn. Eventually, you will “commit” these entries to an online repository where I can review them periodically for feedback on the course. By the end of the semester, you will have a pretty clear view of your learning throughout the course (and I will, too).</p>
 <p>Here is an example entry for a single lesson:</p>
-<pre><code># Lesson 1
+<pre><code># M 08/23
 
 ## Preparation
 
@@ -89,7 +50,7 @@ still needed to be updated).
 
 ## Contribution
 
-I showed up to the Zoom meeting and introduced myself.  I asked about the
+I showed up to lecture and introduced myself.  I asked about the
 projects because little was said in the syllabus about them.  We learned
 that more information would be given out later.
 
@@ -100,7 +61,7 @@ not sure how prepared I am for the course since my goal is to learn how to be
 a better programmer, but this course seems like a lot of tough programming.
 </code></pre>
 <h2 id="course-calendar">Course Calendar</h2>
-<p>The following is a preliminary schedule of lectures. Some topics are subject to change.</p>
+<p>The following is a preliminary schedule of lectures. Some topics, especially those after Lecture 24, are subject to change. Dates with asterisks are likely dates where a virtual lecture (or asynchronous instruction) will be required.</p>
 <table>
 <colgroup>
 <col style="width: 3%" />
@@ -117,235 +78,250 @@ a better programmer, but this course seems like a lot of tough programming.
 <tbody>
 <tr class="odd">
 <td>1</td>
-<td>M, Aug 17</td>
-<td>Administrivia. Installation/configuration of Linux Mint.</td>
+<td>M 08/23</td>
+<td>Administrivia. Configuring a Linux environment. WSL, etc.</td>
 </tr>
 <tr class="even">
 <td>2</td>
-<td>W, Aug 19</td>
+<td>W 08/25</td>
 <td>Getting to know the open-source world.</td>
 </tr>
 <tr class="odd">
 <td>3</td>
-<td>F, Aug 21</td>
+<td>F 08/27</td>
 <td>The Linux command line and the shell; Basic commands.</td>
 </tr>
 <tr class="even">
 <td>4</td>
-<td>M, Aug 24</td>
+<td>M 08/30</td>
 <td>More on the command line. Environment variables, profiles, etc.</td>
 </tr>
 <tr class="odd">
 <td>5</td>
-<td>W, Aug 26</td>
+<td>W 09/01</td>
 <td>Basic shell scripting (using bash).</td>
 </tr>
 <tr class="even">
-<td>6</td>
-<td>F, Aug 28</td>
+<td>6*</td>
+<td>F 09/03</td>
 <td>Version control with Git.</td>
 </tr>
 <tr class="odd">
 <td>7</td>
-<td>M, Aug 31</td>
-<td>GitHub for version control of collaborative projects.</td>
+<td>M 09/06</td>
+<td>HOLIDAY</td>
 </tr>
 <tr class="even">
 <td>8</td>
-<td>W, Sep 02</td>
-<td>More version control.</td>
+<td>W 09/08</td>
+<td>GitHub for version control of collaborative projects.</td>
 </tr>
 <tr class="odd">
 <td>9</td>
-<td>F, Sep 04</td>
-<td>More version control. Brief introduction to Python.</td>
+<td>F 09/10</td>
+<td>More version control.</td>
 </tr>
 <tr class="even">
 <td>10</td>
-<td>M, Sep 07</td>
-<td>Python built-in types and functions. Python as a “graphing calculator.”</td>
+<td>M 09/13</td>
+<td>Introduction to Python. Built-in types and functions.</td>
 </tr>
 <tr class="odd">
 <td>11</td>
-<td>W, Sep 09</td>
-<td>The structure of Python code: conditionals, loops, and functions. The debugger.</td>
+<td>W 09/15</td>
+<td>Python as a “graphing calculator.”</td>
 </tr>
 <tr class="even">
-<td>12</td>
-<td>F, Sep 11</td>
-<td>Modules. Unit testing.</td>
+<td>12*</td>
+<td>F 09/17</td>
+<td>The structure of Python code: conditionals, loops, and functions. The debugger.</td>
 </tr>
 <tr class="odd">
 <td>13</td>
-<td>M, Sep 14</td>
-<td>Sources of numerical error. Roundoff error. Truncation error.</td>
+<td>M 09/20</td>
+<td>Modules and code organization.</td>
 </tr>
 <tr class="even">
 <td>14</td>
-<td>W, Sep 16</td>
-<td>Linear systems and NumPy arrays. Least squares.</td>
+<td>W 09/22</td>
+<td>Unit testing. Test-driven development.</td>
 </tr>
 <tr class="odd">
 <td>15</td>
-<td>F, Sep 18</td>
-<td>…catching up…</td>
+<td>F 09/24</td>
+<td>Exception handling?</td>
 </tr>
 <tr class="even">
 <td>16</td>
-<td>M, Sep 21</td>
-<td>SciPy, sparse systems, and iterative solutions.</td>
+<td>M 09/27</td>
+<td>Sources of numerical error. Roundoff error. Truncation error.</td>
 </tr>
 <tr class="odd">
 <td>17</td>
-<td>W, Sep 23</td>
-<td>Selected SciPy applications (or continuation).</td>
+<td>W 09/29</td>
+<td>Linear systems and NumPy arrays. Least squares.</td>
 </tr>
 <tr class="even">
 <td>18</td>
-<td>F, Sep 25</td>
-<td>…catching up…and project discussions…</td>
+<td>F 10/01</td>
+<td>SciPy, sparse systems, and iterative solutions.</td>
 </tr>
 <tr class="odd">
 <td>19</td>
-<td>Mon, Sep 28</td>
-<td>Overview of objected-oriented programming in Python. Classes, objects, and methods.</td>
+<td>M 10/04</td>
+<td>Other Python packages for technical computing (e.g., FENICs)</td>
 </tr>
 <tr class="even">
 <td>20</td>
-<td>Wed, Sep 30</td>
-<td>More on OOP. Inheritance.</td>
+<td>W 10/06</td>
+<td>Advanced Matplotlib</td>
 </tr>
 <tr class="odd">
 <td>21</td>
-<td>Fri, Oct 02</td>
-<td>Applications of OOP.</td>
+<td>F 10/08</td>
+<td>Overview of objected-oriented programming in Python. Classes, objects, and methods.</td>
 </tr>
 <tr class="even">
 <td>22</td>
-<td>Mon, Oct 05</td>
-<td>Graphical-User Interfaces (GUIs) with PyQt5</td>
+<td>M 10/11</td>
+<td>More on OOP. Inheritance.</td>
 </tr>
 <tr class="odd">
 <td>23</td>
-<td>Wed, Oct 07</td>
-<td>More on GUIs</td>
+<td>W 10/13</td>
+<td>More on OOP.</td>
 </tr>
 <tr class="even">
-<td>24</td>
-<td>Fri, Oct 09</td>
-<td>More on GUIs</td>
+<td>24*</td>
+<td>F 10/15</td>
+<td>Reserved</td>
 </tr>
 <tr class="odd">
 <td>25</td>
-<td>Mon, Oct 12</td>
-<td>Regular expressions.</td>
+<td>M 10/18</td>
+<td>Python GUIs with PyQt5</td>
 </tr>
 <tr class="even">
 <td>26</td>
-<td>Wed, Oct 14</td>
-<td>Advanced Matplotlib (and other Python-based plotting)</td>
+<td>W 10/20</td>
+<td>Exploring QWidgets</td>
 </tr>
 <tr class="odd">
 <td>27</td>
-<td>Fri, Oct 16</td>
-<td>More on Matplotlib. Publication-quality graphics.</td>
+<td>F 10/22</td>
+<td>UI via Slots and Signals</td>
 </tr>
 <tr class="even">
 <td>28</td>
-<td>Mon, Oct 19</td>
-<td>VisIt for visualization of large data sets.</td>
+<td>M 10/25</td>
+<td>Widget layouts</td>
 </tr>
 <tr class="odd">
 <td>29</td>
-<td>Wed, Oct 21</td>
-<td>A rapid introduction to C++. Syntax overview (types, selection, and iteration). The compiler.</td>
+<td>W 10/27</td>
+<td>The QMainWindow class</td>
 </tr>
 <tr class="even">
 <td>30</td>
-<td>Fri, Oct 23</td>
-<td>Eclipse IDE and graphical debugging.</td>
+<td>F 10/29</td>
+<td>Qt Designer for WYSIWYG layouts</td>
 </tr>
 <tr class="odd">
 <td>31</td>
-<td>Mon, Oct 26</td>
-<td>Functions, organizing code, and the Makefile.</td>
+<td>M 11/01</td>
+<td>Qt Rich Text</td>
 </tr>
 <tr class="even">
 <td>32</td>
-<td>Wed, Oct 28</td>
-<td>Pointers, arrays, and memory management. Valgrind.</td>
+<td>W 11/03</td>
+<td>2-D graphics</td>
 </tr>
 <tr class="odd">
 <td>33</td>
-<td>Fri, Oct 30</td>
-<td>Classes.</td>
+<td>F 11/05</td>
+<td>2-D cont.</td>
 </tr>
 <tr class="even">
 <td>34</td>
-<td>Mon, Nov 02</td>
-<td>More on Classes.</td>
+<td>M 11/08</td>
+<td>2-D cont.</td>
 </tr>
 <tr class="odd">
 <td>35</td>
-<td>Wed, Nov 04</td>
-<td>Templates and the standard template library (STL): vectors, maps, and more.</td>
+<td>W 11/10</td>
+<td>2-D cont.</td>
 </tr>
 <tr class="even">
 <td>36</td>
-<td>Fri, Nov 06</td>
-<td>Using Python with C++: an overview of SWIG.</td>
+<td>F 11/12</td>
+<td>3-D graphics</td>
 </tr>
 <tr class="odd">
 <td>37</td>
-<td>Mon, Nov 09</td>
-<td>Using libraries: BLAS, LAPACK, GNU scientific library and more.</td>
+<td>M 11/15</td>
+<td>3-D graphics</td>
 </tr>
 <tr class="even">
 <td>38</td>
-<td>Wed, Nov 11</td>
-<td>Overview of computer architectures and parallel computing. Navigating Beocat.</td>
+<td>W 11/17</td>
+<td>3-D graphics</td>
+</tr>
+<tr class="odd">
+<td>39*</td>
+<td>F 11/19</td>
+<td>Reserved</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>M 11/22</td>
+<td>HOLIDAY</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>W 11/24</td>
+<td>HOLIDAY</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>F 11/26</td>
+<td>HOLIDAY</td>
 </tr>
 <tr class="odd">
 <td>39</td>
-<td>Fri, Nov 13</td>
-<td>Code profiling and tuning.</td>
+<td>M 11/29</td>
+<td>Embedded Linux with Raspberry Pi</td>
 </tr>
 <tr class="even">
 <td>40</td>
-<td>Mon, Nov 16</td>
-<td>Computational performance and OMILAT.</td>
+<td>W 12/01</td>
+<td>Using the GPIOs</td>
 </tr>
 <tr class="odd">
 <td>41</td>
-<td>Wed, Nov 18</td>
-<td>Parallel computing: OpenMP and MPI.</td>
+<td>F 12/03</td>
+<td>PyQt on the Pi</td>
 </tr>
 <tr class="even">
 <td>42</td>
-<td>Fri, Nov 20</td>
-<td>Parallel computing: OpenMP and MPI.</td>
+<td>M 12/06</td>
+<td>Reserved</td>
 </tr>
 <tr class="odd">
 <td>43</td>
-<td>Mon, Nov 30</td>
-<td>Parallel computing: OpenMP and MPI.</td>
+<td>W 12/08</td>
+<td>Reserved</td>
 </tr>
 <tr class="even">
 <td>44</td>
-<td>Wed, Dec 02</td>
-<td>Parallel computing: OpenMP and MPI.</td>
-</tr>
-<tr class="odd">
-<td>45</td>
-<td>Fri, Dec 04</td>
-<td>Wrap-Up / Make-Up</td>
+<td>F 12/10</td>
+<td>Reserved</td>
 </tr>
 </tbody>
 </table>
 <h2 id="academic-honesty">Academic Honesty</h2>
 <p>Kansas State University has an Honor and Integrity System based on personal integrity, which is presumed to be sufficient assurance that, in academic matters, one’s work is performed honestly and without unauthorized assistance. Undergraduate and graduate students, by registration, acknowledge the jurisdiction of the Honor and Integrity System. The policies and procedures of the Honor and Integrity System apply to all full and part-time students enrolled in undergraduate and graduate courses on-campus, off-campus, and via distance learning. A component vital to the Honor and Integrity System is the inclusion of the Honor Pledge which applies to all assignments, examinations, or other course work undertaken by students. The Honor Pledge is implied, whether or not it is stated: “On my honor, as a student, I have neither given nor received unauthorized aid on this academic work.” A grade of XF can result from a breach of academic honesty. The F indicates failure in the course; the X indicates the reason is an Honor Pledge violation.</p>
 <blockquote>
-<p><em>Please note</em>: Unlike an introductory course like ME 400 where canned solutions abound, I totally encourage your use of resources on the web and beyond. Where you apply bits of code, make sure to reference the source in a comment, etc. Posting questions to Chegg, etc., would not be okay because I might have a solver’s account and will take your money and give you the wrong answer. Actually, that would be sort of funny, but my inner compass says no. Save time and money–see me in recitation and office hours!</p>
+<p><em>Please note</em>: Unlike an introductory course like ME 400 where canned solutions abound, I totally encourage your use of resources on the web and beyond. Where you apply bits of code, make sure to reference the source in a comment, etc. Posting questions to Chegg, etc., would not be okay because I might have a solver’s account and will take your money and give you the wrong answer. Actually, that would be sort of funny, but my inner compass says no. Save time and money–see me in lecture and office hours!</p>
 </blockquote>
 <h2 id="students-with-disabilities">Students with Disabilities</h2>
 <p>Students with disabilities who need classroom accommodations, access to technology, or information about emergency building/campus evacuation processes should contact the Student Access Center and/or their instructor. Services are available to students with a wide range of disabilities including, but not limited to, physical disabilities, medical conditions, learning disabilities, attention deficit disorder, depression, and anxiety. If you are a student enrolled in campus/online courses through the Manhattan or Olathe campuses, contact the Student Access Center at accesscenter@k-state.edu, 785-532-6441; for K-State Polytechnic campus, contact Julie Rowe, Diversity, Inclusion and Access Coordinator, at jarowe@ksu.edu or call 785-826-2971.</p>
