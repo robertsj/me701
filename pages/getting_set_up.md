@@ -85,15 +85,3 @@ Mostly for reference:
   - Anything Mac users could do while waiting?...
   - GUIs sound like a hit
 
-  
-
-
-<!--
-
- - [Recitation, 08/19/2020](https://mediasite.k-state.edu/mediasite/Play/08faea2bf95d4be0848b703100bdb7651d); I think the microphone on the desk failed!
- - [Recitation, 08/21/2020](https://mediasite.k-state.edu/mediasite/Play/56612194f4a544f99ecf297a985abf631d)
- - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/b074b6d30eba4ef0abb4e63ffdeb698e1d)
-   and [slides](https://github.com/robertsj/me701/blob/f2019/lectures/GettingSetUp.ipynb). Note, this video has lots of "empty" space since we're
-   all installing Linux in a more time consuming manner than WSL.  However, you can use this as a guide for a VirtualBox installation of Ubuntu or Linux Mint on either Windows or OS X.
-
--->
