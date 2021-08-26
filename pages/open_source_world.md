@@ -77,3 +77,8 @@ be seen outside of a single company!
 
 
 ### Jeremy's Notes
+
+  - Download speeds can be an issue!  
+  - WSL site has fixes for lots of common problems
+  - We installed GWSL instead of VCXSRV.  Need to configure it to automate graphics and sound (see video)
+
