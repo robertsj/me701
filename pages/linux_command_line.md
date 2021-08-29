@@ -42,10 +42,8 @@ either less clear initially or that is of particular interest.
 
  - [Video, Lecture, 08/27/2021](https://mediasite.k-state.edu/mediasite/Play/349b5e5d24284728a486ecc75d9d53c01d)
 
-For a quick recap, I put together a short tutorial based on the linked website:
-
- - [Quick(ish) Tutorial](https://ksu.zoom.us/rec/share/zslcFb2oqW1LQKvq6B_cer4qEt_8eaa8gyRP-vFfzRl4HlWD4kPC7UZE5LY67np2?startTime=1598035346000)
-   and [website](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) I explored.
-
-
 ### Jeremy's Notes
+
+ - Some features (e.g., folder size, highlighting) differ between the default Ubuntu
+   shell and, say, the Mac OS shell.  These are not critical differences in practice,
+   but they can confuse the new learner.

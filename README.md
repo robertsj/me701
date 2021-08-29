@@ -21,9 +21,16 @@ Jeremy Roberts.
  - Office Hours by appointment; see my [calendar](https://calendar.google.com/calendar/embed?src=j.alyn.roberts%40gmail.com&ctz=America/Chicago) and shoot me an email.  
 
 
-## Course Description and Objectives
+## Course Description 
 
 From the catalog: Nature of design, graphical user interface development to support computer-aided design, algorithms and computer graphics in computer applications, feature-based design, applications to design problems.
+
+## Student Outcomes
+
+Students should, at a minimum, 
+   (1) do basic technical work in a Linux or Linux-like environment machines
+   (2) produce graphical and non-graphical programs at level needed for solving problems typical of engineering
+   (3) select the appropriate language or tool for the job
 
 ## Textbook
 
