@@ -58,8 +58,8 @@ Atlassian provides this [nice git cheat sheet](https://www.atlassian.com/git/tut
 
 ### After Lecture
 
- - [Video, Lecture, 09/03/2021](tbd)
  - [slides](https://github.com/robertsj/me701/blob/f2020/lectures/VersionControlWithGit.ipynb).
-
+   (No lecture video since we used Zoom.)
+   
 ### Jeremy's Notes
 
