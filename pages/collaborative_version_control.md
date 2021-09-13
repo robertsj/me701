@@ -59,20 +59,11 @@ Atlassian provides this [nice git cheat sheet](https://www.atlassian.com/git/tut
      - `git clone https://github.com/robertsj/me701/` (to get our content)
      - `git checkout f2021` (to get this term's stuff)
      - `git pull` (to get updates i've made)
-  5. Exercise to understand basic mechanics of a two-person development cycle.
-     -  Head to `https://github.com/me701/homework2_teams` and *fork* it to your account
-     -  Clone https://github.com/your_github_name/homework2_teams
-     -  Find your name in the list of students and modify it following the
-        directions
-     -  Commit and push your changes to your GitHub repository
-     -  Create a pull request for your changes back to the `me701` repository
-        that you forked.
 
 ### After Lecture
 
- - [Video, Lecture, 09/08/2021](tbd)
- - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/0b11a97836724467afc6150837ce3e9f1d)
-   and [slides](https://github.com/robertsj/me701/blob/f2019/lectures/CollaborativeVersionControl.ipynb).
+ - [Video, Lecture, 09/08/2021](https://mediasite.k-state.edu/mediasite/Play/ae2acbdf64eb4c5bb85792a9619bd69e1d)
+ - [slides](https://github.com/robertsj/me701/blob/f2019/lectures/CollaborativeVersionControl.ipynb).
 
 
 ### Jeremy's Notes
@@ -81,4 +72,4 @@ Atlassian provides this [nice git cheat sheet](https://www.atlassian.com/git/tut
     `git push`
   - Students should review pull requests by others; maybe a formal
     assignment of who does what would be good
-  - 
+  - Live tasks edited above to reflect what we actually did!

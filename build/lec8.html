@@ -1,116 +1,75 @@
-<!--
-This "lecture" or "lesson" template is adapted from the one provided here:
- http://www.buffalo.edu/ubcei/enhance/teaching/lesson-planning.html
-Although the page produced from this is learner-facing, some of the
-lesson plan structure
--->
 <h1 id="branches-remotes-and-conflicts">Branches, Remotes, and Conflicts</h1>
 <h2 id="summary">Summary</h2>
-<!--
-Short description of the lesson.
--->
 <p>We’ll continue with our survey of <code>git</code> and GitHub with a focus now on navigating local and remote branches. As we get further into collaborative work (including with ourselves!), <em>merge conflicts</em> will arise, and we’ll see how to handle them.</p>
 <!--
-********* STAGE 1 - DESIRED RESULTS ********************************************
--->
-<h2 id="learning-outcomes">Learning Outcomes</h2>
-<!--
-      What course goals or outcomes will this lesson address?
--->
-<ul>
-<li><p>Students will be able to create, update, and push branches.</p></li>
-<li><p>Students will be able to define remote repository locations and fetch/push updates from/to those repositories.</p></li>
-<li><p>Students will be able to recognize avoidable merge conflicts and resolve unavoidable merge conflicts</p></li>
-</ul>
-<h2 id="essential-questions">Essential Questions</h2>
-<!--
+
+## Learning Outcomes
+
+  - Students will be able to create, update, and push branches.
+
+  - Students will be able to define remote repository locations and
+    fetch/push updates from/to those repositories.
+
+  - Students will be able to recognize avoidable merge conflicts and
+    resolve unavoidable merge conflicts
+
+
+## Essential Questions
+
       What question(s) will your students be able to answer by the end of
       instruction?
+
+  - What happens if my friend and I both make a pull request into the
+    same remote branch?
+
+  - How can make a development branch on my computer and have it show up
+    on GitHub?
+
+  - What is the difference between `branch`, `clone`, and `fork`?
+
 -->
-<ul>
-<li><p>What happens if my friend and I both make a pull request into the same remote branch?</p></li>
-<li><p>How can make a development branch on my computer and have it show up on GitHub?</p></li>
-<li><p>What is the difference between <code>branch</code>, <code>clone</code>, and <code>fork</code>?</p></li>
-</ul>
 <h2 id="resources">Resources</h2>
-<!--
-      What resources can be made available to your student to support their
-      active learning?
-      What formats are best suited to complement your course material?
--->
 <p>The <a href="https://git-scm.com/book/en/v2">Pro Git</a> book is freely available and provides just about all one needs to dive into <code>git</code> for the first time.</p>
 <p>Atlassian provides this <a href="https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet">nice git cheat sheet</a></p>
-<!--
-********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
--->
 <h2 id="evidence-of-student-learning">Evidence of Student Learning</h2>
-<!--
-      How will you assess students’ prior knowledge?
-      What criteria will be used to assess student performance?
-      What evidence will be collected to demonstrate achievement?
-      How will students reflect and self-assess their learning?
--->
 <ul>
 <li>Students will clone a remote repository, make a new branch, and push changes in that branch to the remote</li>
 <li>Students will explain how to fix a merge conflict.</li>
 <li>Students will reflect on their learning by completing their daily log.</li>
 </ul>
-<!--
-********* STAGE 3 - LEARNING PLAN ****************************************
--->
 <h2 id="learning-plan">Learning Plan</h2>
-<!--
-List the steps in chronological order to create a timeline of what
-will occur in your lesson.
-
-Consider how each of the components below will be included in your
-lesson if applicable:
-
-   - Anticipatory Sets/Hooks
-       * How will you introduce the material and capture their attention?
-   - Teacher Modeling
-       * What instructional content and techniques will be incorporated
-         into this lesson?
-   - Guided Practice
-       * How will you scaffold information for your students?
-       * How will collaborative learning be used?
-   - Learning Activities
-       * How will students actively engage with the material?
-       * How will students work towards achievement of the learning outcomes?
-   - Independent Practice
-       * How will students show evidence of learning?
-   - Reflection
-       * What have you learned about your teaching and content covered in this unit?
-       * What changes or adjustments could you make?
-       * What were the strongest features of your unit?
-       * What are your overall reflections in the course to this point?
-   - Conclusion and Preview
-       * What should students take away from this lesson?
-       * What will happen next? Why?
--->
 <h3 id="required-preparation">Required Preparation</h3>
 <ul>
 <li>Skim Pro Git chapters 5 and 6.</li>
 </ul>
 <h3 id="live-activities">Live Activities</h3>
 <ol type="1">
-<li>Revisit https://github.com/me701/homework2_teams/</li>
-<li></li>
+<li>Exercise to understand basic mechanics of a two-person development cycle.
+<ul>
+<li>Head to <code>https://github.com/me701/homework2_teams</code> and <em>fork</em> it to your account</li>
+<li>Clone https://github.com/your_github_name/homework2_teams</li>
+<li>Find your name in the list of students and modify it following the directions</li>
+<li>Commit and push your changes to your GitHub repository</li>
+<li>Create a pull request for your changes back to <code>me701/homework2_teams</code> that you forked.</li>
+<li>Add one student to <code>me701/homework2_teams</code> to illustrate permissions and demonstrate how a PR is reviewed and merged.</li>
+</ul></li>
+<li>Exercise to demonstrate branches and conflicts.
+<ul>
+<li>Head to <code>https://github.com/me701/conflicted_python</code> and <em>fork</em> it.</li>
+<li>Clone it.</li>
+<li>Check <code>git log</code></li>
+<li>Switch to <code>dev</code> by typing <code>git checkout dev</code> and check the log.<br />
+</li>
+<li>Merge <code>dev</code> into <code>master</code> and push.</li>
+<li>Checkout a new branch called <code>demo</code> from <code>master</code>. Implement the Python function and push this new branch. Then, make a PR into <code>master</code> from <code>demo</code> on your Fork.</li>
+</ul></li>
 </ol>
 <h3 id="videos">Videos</h3>
 <ul>
-<li><a href="https://mediasite.k-state.edu/mediasite/Play/0b11a97836724467afc6150837ce3e9f1d">Lecture, Fall 2019</a> and <a href="https://github.com/robertsj/me701/blob/f2019/lectures/CollaborativeVersionControl.ipynb">slides</a>.</li>
+<li><a href="https://mediasite.k-state.edu/mediasite/Play/f39d464b2cd84e1981f5361a66a58a6c1d">Video, Lecture, 09/10/2021</a></li>
+<li>slides](https://github.com/robertsj/me701/blob/f2019/lectures/CollaborativeVersionControl.ipynb).</li>
 </ul>
 <h3 id="useful-tips-to-be-updated-as-we-learn">Useful Tips (To Be Updated As We Learn!)</h3>
 <ul>
-<li>Don’t forget that you need <code>git add</code> and <code>git commit</code> before <code>git push</code></li>
-<li>Students should review pull requests by others; maybe a formal assignment of who does what would be good</li>
-<li><!--  
-
-NOTES  
-
-
-
-
---></li>
+<li>Make directions clearer!</li>
 </ul>

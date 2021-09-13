@@ -8,10 +8,10 @@ lectures = [
 'more_on_the_command_line',              # 4
 'basic_shell_scripting',                 # 5
 'version_control_with_git',              # 6
-'collaborative_version_control',               # 7, 8, 9
+'collaborative_version_control',               # 7
 'branches_remotes_and_conflicts',              # 8
-'template',                                    # 9
-'working_with_python',              # 10
+'working_with_python',              # 9
+'template',                         # 10
 'python_structure',                 # 11
 'modules_and_unit_tests',           # 12
 'sources_of_numerical_error',              # 13
