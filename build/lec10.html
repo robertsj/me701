@@ -1,72 +1,37 @@
-<!--
-This "lecture" or "lesson" template is adapted from the one provided here:
- http://www.buffalo.edu/ubcei/enhance/teaching/lesson-planning.html
-Although the page produced from this is learner-facing, some of the
-lesson plan structure
--->
-<h1 id="lesson-name">Lesson Name</h1>
+<h1 id="python-as-a-calculator">Python as a Calculator</h1>
 <h2 id="summary">Summary</h2>
-<!--
-Short description of the lesson.
--->
-<!--
-********* STAGE 1 - DESIRED RESULTS ********************************************
--->
-<h2 id="learning-outcomes">Learning Outcomes</h2>
-<!--
-      What course goals or outcomes will this lesson address?
--->
-<h2 id="essential-questions">Essential Questions</h2>
-<!--
-      What question(s) will your students be able to answer by the end of
-      instruction?
--->
+<p>We’ll dive into using Python for routine calculations and analysis common to engineering course work and related applications. For this type of work, the Spyder IDE is a great choice (and is good for Python work in general). We’ll also look at use of Jupyter notebooks for integrating written analysis with computed results.</p>
 <h2 id="resources">Resources</h2>
-<!--
-      What resources can be made available to your student to support their
-      active learning?
-      What formats are best suited to complement your course material?
--->
-<!--
-********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
--->
 <h2 id="evidence-of-student-learning">Evidence of Student Learning</h2>
-<!--
-      How will you assess students’ prior knowledge?
-      What criteria will be used to assess student performance?
-      What evidence will be collected to demonstrate achievement?
-      How will students reflect and self-assess their learning?
--->
-<!--
-********* STAGE 3 - LEARNING PLAN ****************************************
--->
+<ul>
+<li>Students will clone a remote repository, make a new branch, and push changes in that branch to the remote</li>
+<li>Students will explain how to fix a merge conflict.</li>
+<li>Students will reflect on their learning by completing their daily log.</li>
+</ul>
 <h2 id="learning-plan">Learning Plan</h2>
-<!--
-List the steps in chronological order to create a timeline of what
-will occur in your lesson.
-
-Consider how each of the components below will be included in your
-lesson if applicable:
-
-   - Anticipatory Sets/Hooks
-       * How will you introduce the material and capture their attention?
-   - Teacher Modeling
-       * What instructional content and techniques will be incorporated
-         into this lesson?
-   - Guided Practice
-       * How will you scaffold information for your students?
-       * How will collaborative learning be used?
-   - Learning Activities
-       * How will students actively engage with the material?
-       * How will students work towards achievement of the learning outcomes?
-   - Independent Practice
-       * How will students show evidence of learning?
-   - Reflection
-       * What have you learned about your teaching and content covered in this unit?
-       * What changes or adjustments could you make?
-       * What were the strongest features of your unit?
-       * What are your overall reflections in the course to this point?
-   - Conclusion and Preview
-       * What should students take away from this lesson?
-       * What will happen next? Why?
--->
+<h3 id="required-preparation">Required Preparation</h3>
+<ul>
+<li>The recommended Python framework is <a href="https://www.anaconda.com/products/individual">Anaconda</a>, which comes with everything we will need by default for this part of the course.</li>
+</ul>
+<p>A fairly representative set of topics is provided by my old ME 400 notes <a href="https://robertsj.github.io/me400_notes/index.html">Python for Engineers</a>.</p>
+<h3 id="live-activities">Live Activities</h3>
+<ol type="1">
+<li><p><a href="https://www.anaconda.com/products/individual-d">Install Anaconda</a> as our WSL Linux distribution of choice. In the WSL terminal, execute</p>
+<p><code>wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh</code></p>
+<p>Mac OS folks can do</p>
+<p><code>wget https://repo.anaconda.com/archive/Anaconda3-2021.05-MacOSX-x86_64.sh</code></p>
+<p>When downloaded, everyone can run the script by executing <code>bash Ana...x86_64.sh</code>. (Fill in the file name.) This takes some time! Choose <code>yes</code> for all options unless you know better.</p></li>
+<li><p>Open VS Code. Does it find Anaconda?</p></li>
+<li><p>Open Spyder. Play with arrays and plots.</p></li>
+<li><p>Open Jupyter. To work, a browser is needed, so, e.g., <code>sudo apt install firefox</code>. Brief survey of Markdown mixed with code.</p></li>
+</ol>
+<h3 id="after-lecture">After Lecture</h3>
+<ul>
+<li><a href="https://mediasite.k-state.edu/mediasite/Play/f39d464b2cd84e1981f5361a66a58a6c1d">Video, Lecture, 09/15/2021</a></li>
+<li><a href="">Jupyter Slides</a></li>
+</ul>
+<h3 id="jeremys-notes">Jeremy’s Notes</h3>
+<ul>
+<li>Display issues took up lots of time.</li>
+<li>Ran into some issues getting Spyder to load properly.</li>
+</ul>
