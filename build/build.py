@@ -11,7 +11,7 @@ lectures = [
 'collaborative_version_control',               # 7
 'branches_remotes_and_conflicts',              # 8
 'working_with_python',              # 9
-'template',                         # 10
+'python_calculator',                # 10
 'python_structure',                 # 11
 'modules_and_unit_tests',           # 12
 'sources_of_numerical_error',              # 13
