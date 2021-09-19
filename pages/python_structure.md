@@ -58,6 +58,9 @@ the code-building experience.  The site emphasizes test-driven development.
 
 ### After Lecture
 
+ - [Zoom Lecture, 9/17/2021](https://ksu.zoom.us/rec/share/C4kSH_vojhuRjS6KtEZFvRB5Gd6qFz3_pcZNNAkT2aA_I4jXqLThiuKzt7fYE5CR.zCF3NTx21gM61eQF
+).  Note, this video primarily handles the previous lecture and related issues.
+
  - [Summary Slides](https://github.com/robertsj/me701/blob/f2020/lectures/TheStructureOfPython.ipynb).
 
 The following are my most recent ME 400 videos on the topics of `if` statements,

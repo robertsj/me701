@@ -13,8 +13,8 @@ lectures = [
 'working_with_python',              # 9
 'python_calculator',                # 10
 'python_structure',                 # 11
-'modules_and_unit_tests',           # 12
-'sources_of_numerical_error',              # 13
+'modules_and_code_organization',           # 12
+'test_driven_development',              # 13
 'survey_of_numpy',                         # 14
 'template',                         # 15
 'scipy_and_sparse_systems',                # 16

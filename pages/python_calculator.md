@@ -61,9 +61,16 @@ ME 400 notes [Python for Engineers](https://robertsj.github.io/me400_notes/index
 ### After Lecture
 
  - [Video, Lecture, 09/15/2021](https://mediasite.k-state.edu/mediasite/Play/f39d464b2cd84e1981f5361a66a58a6c1d)
- - [Jupyter Slides]()
+
+ - [Zoom Lecture, 9/17/2021](https://ksu.zoom.us/rec/share/C4kSH_vojhuRjS6KtEZFvRB5Gd6qFz3_pcZNNAkT2aA_I4jXqLThiuKzt7fYE5CR.zCF3NTx21gM61eQF
+).  
 
 ### Jeremy's Notes
 
   - Display issues took up lots of time. 
-  - Ran into some issues getting Spyder to load properly.
+  - Ran into some issues getting Spyder to load properly.  It seems a handful of 
+    machines needed `sudo apt install libxss1 libegl1-mesa` to get missing `libXss.so` and `libEGL.so`
+    into place.  Without seeing the machines, this could be an actually missing library
+    or it could be a location/naming/linking error.  Neither issue is something I can
+    easily debug without hands-on access to the machines in question.
+
