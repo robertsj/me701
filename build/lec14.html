@@ -1,111 +1,26 @@
-<!--
-This "lecture" or "lesson" template is adapted from the one provided here:
- http://www.buffalo.edu/ubcei/enhance/teaching/lesson-planning.html
-Although the page produced from this is learner-facing, some of the
-lesson plan structure
--->
-<h1 id="survey-of-numpy">Survey of NumPy</h1>
+<h1 id="exception-handling">Exception Handling</h1>
 <h2 id="summary">Summary</h2>
-<!--
-Short description of the lesson.
--->
-<p>NumPy (short for numerical Python) is the core component for just about all technical computing done with Python. In this lesson, we examine its basic components with a focus on arrays and linear systems.</p>
-<!--
-********* STAGE 1 - DESIRED RESULTS ********************************************
--->
-<h2 id="learning-outcomes">Learning Outcomes</h2>
-<!--
-      What course goals or outcomes will this lesson address?
--->
-<h2 id="essential-questions">Essential Questions</h2>
-<!--
-      What question(s) will your students be able to answer by the end of
-      instruction?
--->
+<p>Exceptions and their handling comprise one technique for managing errors at run time.</p>
 <h2 id="resources">Resources</h2>
-<!--
-      What resources can be made available to your student to support their
-      active learning?
-      What formats are best suited to complement your course material?
--->
-<p>The <a href="https://numpy.org/">NumPy</a> project provides a lot of documentation and support, including <a href="https://numpy.org/devdocs/user/quickstart.html">this introductory tutorial</a>.</p>
-<!--
-********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
--->
+<p><a href="https://docs.python.org/3/tutorial/errors.html">Python Tutorial: Errors and Exceptions</a></p>
 <h2 id="evidence-of-student-learning">Evidence of Student Learning</h2>
-<!--
-      How will you assess students’ prior knowledge?
-      What criteria will be used to assess student performance?
-      What evidence will be collected to demonstrate achievement?
-      How will students reflect and self-assess their learning?
--->
 <ul>
-<li>Students will install (if needed) and import NumPy.</li>
-<li>Students will construct NumPy arrays to represent vector quantities.</li>
-<li>Students will construct NumPy arrays to represent matrix quantities.</li>
-<li>Students will use NumPy to solve linear systems of the form <img 
-class="equation_image" 
-title="\mathbf{Ax}=\mathbf{b}" 
-src="/equation_images/%255Cmathbf%257BAx%257D%253D%255Cmathbf%257Bb%257D" 
-alt="LaTeX: \mathbf{Ax}=\mathbf{b}" 
-data-equation-content="\mathbf{Ax}=\mathbf{b}" 
-/>.</li>
-<li>Students will reflect on their learning by completing their daily log.</li>
+<li>Students will learn and raise built-in exceptions.</li>
+<li>Students will create, raise, and handle their own exception.</li>
 </ul>
-<!--
-********* STAGE 3 - LEARNING PLAN ****************************************
--->
 <h2 id="learning-plan">Learning Plan</h2>
-<!--
-List the steps in chronological order to create a timeline of what
-will occur in your lesson.
-
-Consider how each of the components below will be included in your
-lesson if applicable:
-
-   - Anticipatory Sets/Hooks
-       * How will you introduce the material and capture their attention?
-   - Teacher Modeling
-       * What instructional content and techniques will be incorporated
-         into this lesson?
-   - Guided Practice
-       * How will you scaffold information for your students?
-       * How will collaborative learning be used?
-   - Learning Activities
-       * How will students actively engage with the material?
-       * How will students work towards achievement of the learning outcomes?
-   - Independent Practice
-       * How will students show evidence of learning?
-   - Reflection
-       * What have you learned about your teaching and content covered in this unit?
-       * What changes or adjustments could you make?
-       * What were the strongest features of your unit?
-       * What are your overall reflections in the course to this point?
-   - Conclusion and Preview
-       * What should students take away from this lesson?
-       * What will happen next? Why?
--->
-<h3 id="required-preparation">Required Preparation</h3>
+<h3 id="before-lecture">Before Lecture</h3>
 <ul>
-<li>Review <a href="http://robertsj.github.io/python_for_engineers/courses/pythonic_apps_2/modules/module_2/module_2.html">linear systems</a>.</li>
-<li>Review <a href="http://robertsj.github.io/python_for_engineers/courses/pythonic_apps_2/modules/module_3/least_squares.html">least squares</a></li>
+<li>Skim <a href="https://docs.python.org/3/tutorial/errors.html">Python Tutorial: Errors and Exceptions</a></li>
 </ul>
-<h3 id="live-activities">Live Activities</h3>
+<h3 id="during-lecture">During Lecture</h3>
 <ol type="1">
-<li>Set up a linear system using NumPy arrays for a small heat-conduction problem.</li>
-<li>Discuss the challenges of systems when they are not square.</li>
+<li>Review test-driven development, <code>unittest</code>, and various “assertions”</li>
+<li>Examine built-in exceptions</li>
+<li>Create custom exception</li>
 </ol>
-<h3 id="videos">Videos</h3>
+<h3 id="after-lecture">After Lecture</h3>
 <ul>
-<li><p><a href="https://mediasite.k-state.edu/mediasite/Play/76c50ba7b51740188cc1a347ff7ca4b71d">Lecture, F2019</a>, <a href="https://github.com/robertsj/me701/blob/f2020/lectures/LinearSystemsAndLeastSquares.ipynb">slides</a>, and <a href="https://k-state.instructure.com/courses/95043/files/14392369/download?download_frd=1">supplementary notes</a>.</p>
-<p>(Note, some of this will feel a bit advanced. Don’t worry. I just want you to be able to set up linear systems for your applications using NumPy.)</p></li>
+<li><a href="https://mediasite.k-state.edu/mediasite/Play/97af3a3702784854a150e543511f56761d">Lecture, Fall, 2021</a></li>
 </ul>
-<h3 id="useful-tips-to-be-updated-as-we-learn">Useful Tips (To Be Updated As We Learn!)</h3>
-<!--  
-
-NOTES  
-
-
-
-
--->
+<h3 id="jeremys-notes">Jeremy’s Notes</h3>
