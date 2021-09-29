@@ -17,8 +17,8 @@ lectures = [
 'test_driven_development',              # 13
 'exception_handling',                   # 14
 'sources_of_numerical_error',       # 15
-'scipy_and_sparse_systems',                # 16
-'survey_of_scipy',                         # 17
+'numpy_and_linear_systems',       # 16
+'scipy_and_sparse_systems',                         # 17
 'template',                         # 18
 'object_oriented_programming',             # 19
 'more_on_oop',                      # 20
