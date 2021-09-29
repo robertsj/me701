@@ -54,7 +54,6 @@ that we do later on.
  - [Lecture, F2019](https://mediasite.k-state.edu/mediasite/Play/b88e55a077fb4690be57da00965999751d)
    and [slides](https://github.com/robertsj/me701/blob/f2020/lectures/SourcesOfNumericalError.ipynb)
 
-
-
 ### Jeremy's Notes
 
+Finite differences will drive the linear systems we construct and solve in the next two lessons.
