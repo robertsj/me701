@@ -20,8 +20,9 @@ lectures = [
 'numpy_and_linear_systems',         # 16
 'scipy_and_sparse_systems',         # 17
 'survey_of_scipy',                  # 18
-'object_oriented_programming',      # 19
-'more_on_oop',                      # 20
+'static_viz_mpl',                   # 19
+'object_oriented_programming',      # 21
+'more_on_oop',                      # 22
 'template',
 'graphical_user_interfaces',        # 22
 'gui_slots_and_signals',            # 23

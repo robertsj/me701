@@ -1,10 +1,3 @@
-<!--
-This "lecture" or "lesson" template is adapted from the one provided here:
- http://www.buffalo.edu/ubcei/enhance/teaching/lesson-planning.html
-Although the page produced from this is learner-facing, some of the
-lesson plan structure
--->
-
 # Selected SciPy Applications                                                      
 
 ## Summary
