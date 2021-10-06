@@ -14,7 +14,7 @@ Short description of the lesson.
 -->
 
 Good plots need to be honest and efficient.  This lesson
-explores how to creat such graphics.
+explores how to create such graphics.
 
 
 <!--
