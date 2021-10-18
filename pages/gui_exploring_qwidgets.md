@@ -8,6 +8,10 @@ appropriate slots and signals.
 
 ## Resources
 
+https://doc.qt.io/qt-5/widget-classes.html
+
+
+
 
 ##  Evidence of Student Learning
 
@@ -18,11 +22,14 @@ appropriate slots and signals.
 
 ### Before Lecture
 
-  - 
+  - Pick out two widget classes from the [documentation](https://doc.qt.io/qt-5/widget-classes.html) that are of particular interest.  Some widgets will require we get a but further in the course to use.
+  - Clone the [sample code](comingsoon) for this lesson.
 
 ### During Lecture
 
-  1. 
+  1. Understand the "basic" and "advanced" widgets.
+  2. Implement several small graphical programs that use
+     common widgets in standalone applications. 
 
 ### After Lecture
 
