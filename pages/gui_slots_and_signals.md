@@ -9,7 +9,6 @@ Signals are the messages that a widget (or we, the human) send.
 
 ## Resources
 
-
 ##  Evidence of Student Learning
 
   - Students will extend their example programs.
@@ -20,12 +19,13 @@ Signals are the messages that a widget (or we, the human) send.
 ### Before Lecture
 
   - Skim this overview of [slots and signals](https://www.riverbankcomputing.com/static/Docs/PyQt5/signals_slots.html)
+  - Clone the [sample code](tbd) for this lesson.  (I hope to have ready the night before!)
 
 ### During Lecture
 
-  1. Discuss when and when not to use GUIs
-  2. Compare batch programming (run-at-once) to the event loop (e.g., `while True look for input`)
-  3. Construct the minimal PyQt5 application.
+  1. Examine the sample code, which provides a simple application that will demonstrate 
+     slots and signals.
+  2. Implement the slots and signals.  
 
 ### After Lecture
 
