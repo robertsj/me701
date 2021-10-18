@@ -39,9 +39,7 @@ level of supporting information for object-oriented programming.
    - [Video, Lecture, 10/11/2021](https://mediasite.k-state.edu/mediasite/Play/6d5a8f56932c41c29559b7cd269ae9121d)  (class syntax; overloading operators)
 
 
-   - [Lecture, Fall 2019](https://mediasite.k-state.edu/mediasite/Play/db6889724b644ab6bbab1440ce7269a61d)
-      and [Slides](https://github.com/robertsj/me701/blob/f2019/lectures/ObjectOrientedProgramming.ipynb).
-     (Note, this lecture continues the previous one and uses the same slides.)
+   - [Slides](https://github.com/robertsj/me701/blob/f2019/lectures/ObjectOrientedProgramming.ipynb).
 
 ### Jeremy's Notes
 

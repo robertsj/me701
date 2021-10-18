@@ -46,10 +46,11 @@ PyQt5 videos out there!
 
 ### After Lecture
 
- - [Video, Lecture, 10/18/2021](tbd)
-
- - [Lecture, F2019](https://mediasite.k-state.edu/mediasite/Play/2754890b6f2e429eb49ba5e8a6b5e3061d) and
-   [slides](https://github.com/robertsj/me701/blob/f2020/lectures/GraphicalUserInterfaces1.ipynb).
+ - [Video, Lecture, 10/18/2021](https://mediasite.k-state.edu/mediasite/Play/6621c1494f3e463789eb3e500e01779a1d)
+ 
+ - [slides](https://github.com/robertsj/me701/blob/f2020/lectures/GraphicalUserInterfaces1.ipynb).
 
 
 ### Notes
+
+ 
