@@ -137,8 +137,8 @@ Dates with asterisks are likely dates where a virtual lecture (or asynchronous i
 |	22	|	W 10/13	|	More on OOP. Inheritance.	|
 |	23*	|	F 10/15	|	OO design.	|
 |	24	|	M 10/18	|	Python GUIs with PyQt5	|
-|	25	|	W 10/20	|	Exploring QWidgets	|
-|	26	|	F 10/22	|	UI via Slots and Signals	|
+|	25	|	W 10/20	|	UI via Slots and Signals	|
+|	26	|	F 10/22	|	Exploring QWidgets 	|
 |	27	|	M 10/25	|	Widget layouts	|
 |	28	|	W 10/27	|	The QMainWindow class	|
 |	29	|	F 10/29	|	Qt Designer for WYSIWYG layouts	|
