@@ -1,112 +1,27 @@
-<!--
-This "lecture" or "lesson" template is adapted from the one provided here:
- http://www.buffalo.edu/ubcei/enhance/teaching/lesson-planning.html
-Although the page produced from this is learner-facing, some of the
-lesson plan structure
--->
-<h1 id="slots-and-signals-in-pyqt5">Slots and Signals in PyQt5</h1>
+<h1 id="oo-design">OO Design</h1>
 <h2 id="summary">Summary</h2>
-<!--
-Short description of the lesson.
--->
-<p>Slots and signals are the basic way to connect widgets. Slots are like the entrance to a widget: we need to go inside to deliver a message.<br />
-Signals are the messages that a widget (or we, the human) send.</p>
-<!--
-********* STAGE 1 - DESIRED RESULTS ********************************************
--->
-<h2 id="learning-outcomes">Learning Outcomes</h2>
-<!--
-      What course goals or outcomes will this lesson address?
--->
-<h2 id="essential-questions">Essential Questions</h2>
-<!--
-      What question(s) will your students be able to answer by the end of
-      instruction?
--->
-<ul>
-<li>What are slots?</li>
-<li>What are signals?</li>
-</ul>
+<p>Explore how to take software specification/requirements documentation and turn it into possible classes, attributes, and methods.</p>
 <h2 id="resources">Resources</h2>
-<!--
-      What resources can be made available to your student to support their
-      active learning?
-      What formats are best suited to complement your course material?
--->
-<p><a href="http://zetcode.com/gui/pyqt5">This website</a> has lots of wonderful example code that is about as good as anything I’ve seen out there.</p>
-<p>We use <a href="https://www.riverbankcomputing.com/static/Docs/PyQt5/">PyQt5</a> for all GUIs.</p>
-<p>PyQt5 builds on Qt5, for which all the documentation is available <a href="http://www.qt.io">here</a>.</p>
-<p>An old but conceptually relevant textbook is Summerfield, <em>Rapid GUI Programming with Python and Qt</em>, Prentice Hall (2007).<br />
-However, this is swiftly becoming dated since Qt has moved on to version 5, and many things are not backwards compatible.</p>
-<p>There are <a href="https://www.youtube.com/results?search_query=pyqt5">so many</a> PyQt5 videos out there!</p>
-<!--
-********* STAGE 2 - ASSESSMENT EVIDENCE ****************************************
--->
+<p>Rebecca Wirfs-Brock, et al. <strong>Designing Object-Oriented Software</strong> (old book, but nothing quite like it. language agnostic!)</p>
 <h2 id="evidence-of-student-learning">Evidence of Student Learning</h2>
-<!--
-      How will you assess students’ prior knowledge?
-      What criteria will be used to assess student performance?
-      What evidence will be collected to demonstrate achievement?
-      How will students reflect and self-assess their learning?
--->
 <ul>
-<li>Students will extend their example programs.</li>
+<li>Students will identify classes, attributes, and methods given a software document.</li>
 <li>Students will reflect on their learning by completing their daily log.</li>
 </ul>
-<!--
-********* STAGE 3 - LEARNING PLAN ****************************************
--->
 <h2 id="learning-plan">Learning Plan</h2>
-<!--
-List the steps in chronological order to create a timeline of what
-will occur in your lesson.
-
-Consider how each of the components below will be included in your
-lesson if applicable:
-
-   - Anticipatory Sets/Hooks
-       * How will you introduce the material and capture their attention?
-   - Teacher Modeling
-       * What instructional content and techniques will be incorporated
-         into this lesson?
-   - Guided Practice
-       * How will you scaffold information for your students?
-       * How will collaborative learning be used?
-   - Learning Activities
-       * How will students actively engage with the material?
-       * How will students work towards achievement of the learning outcomes?
-   - Independent Practice
-       * How will students show evidence of learning?
-   - Reflection
-       * What have you learned about your teaching and content covered in this unit?
-       * What changes or adjustments could you make?
-       * What were the strongest features of your unit?
-       * What are your overall reflections in the course to this point?
-   - Conclusion and Preview
-       * What should students take away from this lesson?
-       * What will happen next? Why?
--->
-<h3 id="required-preparation">Required Preparation</h3>
+<h3 id="before-lecture">Before Lecture</h3>
 <ul>
-<li>Go over the <a href="http://zetcode.com/gui/pyqt5/menustoolbars/">Menus and Toolbars</a> in PyQt5</li>
-<li>Skim this overview of <a href="https://www.riverbankcomputing.com/static/Docs/PyQt5/signals_slots.html">slots and signals</a></li>
+<li>Skim Ch. 2 and (part of) Ch. 3 of <strong>Designing Object-Oriented Software</strong> (uploaded on Canvas)</li>
+<li>Get rules for Love Letter <a href="https://print-and-play.asmodee.fun/love-letter/">here</a>.</li>
 </ul>
-<h3 id="live-activities">Live Activities</h3>
+<h3 id="during-lecture">During Lecture</h3>
 <ol type="1">
-<li>Discuss when and when not to use GUIs</li>
-<li>Compare batch programming (run-at-once) to the event loop (e.g., <code>while True look for input</code>)</li>
-<li>Construct the minimal PyQt5 application.</li>
+<li>Background on OO design and the basic technique to be used.</li>
+<li>Identify potential classes and attributes by locating noun phrases</li>
+<li>Identify potential methods by noting “actions”</li>
 </ol>
-<h3 id="videos">Videos</h3>
+<h3 id="after-lecture">After Lecture</h3>
 <ul>
-<li><a href="https://mediasite.k-state.edu/mediasite/Play/004c5cb16d2547b196dd19aaca4d56641d">Lecture, F2019</a> (the audio is likely broken!) and <a href="https://github.com/robertsj/me701/blob/f2020/lectures/GraphicalUserInterfaces2.ipynb">slides</a>.</li>
+<li><a href="https://mediasite.k-state.edu/mediasite/Play/03b43bc821784ef0b964b1cb788e48c61d">Video, Lecture, 10/15/2021</a> (oo design; love letter exercise)</li>
 </ul>
-<h3 id="useful-tips-to-be-updated-as-we-learn">Useful Tips (To Be Updated As We Learn!)</h3>
-<!--  
-
-NOTES  
-
-
-
-
--->
+<h3 id="jeremys-notes">Jeremy’s Notes</h3>

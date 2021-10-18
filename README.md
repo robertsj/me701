@@ -118,42 +118,42 @@ Dates with asterisks are likely dates where a virtual lecture (or asynchronous i
 |	4	|	M 08/30	|	More on the command line. Environment variables, profiles, etc.	|
 |	5	|	W 09/01	|	Basic shell scripting (using bash).	|
 |	6*	|	F 09/03	|	Version control with Git. 	|
-|	7	|	M 09/06	|	HOLIDAY	|
-|	8	|	W 09/08	|	GitHub for version control of collaborative projects.	|
-|	9	|	F 09/10	|	More version control.	|
-|	10	|	M 09/13	|	Introduction to Python. Built-in types and functions.	|
-|	11	|	W 09/15	|	Python as a "graphing calculator."	|
-|	12*	|	F 09/17	|	The structure of Python code: conditionals, loops, and functions.  The debugger.	|
-|	13	|	M 09/20	|	Modules and code organization.	|
-|	14	|	W 09/22	|	Unit testing. Test-driven development.  	|
-|	15	|	F 09/24	|	Exception handling?	|
-|	16	|	M 09/27	|	Sources of numerical error.  Roundoff error.  Truncation error.	|
-|	17	|	W 09/29	|	Linear systems and NumPy arrays.  Least squares.	|
-|	18	|	F 10/01	|	SciPy, sparse systems, and iterative solutions.	|
-|	19	|	M 10/04	|	Other Python packages for technical computing (e.g., FENICs)	|
-|	20	|	W 10/06	|	Advanced Matplotlib	|
-|	21	|	F 10/08	|	Overview of objected-oriented programming in Python. Classes, objects, and methods.	|
-|	22	|	M 10/11	|	More on OOP. Inheritance.	|
-|	23	|	W 10/13	|	More on OOP.	|
-|	24*	|	F 10/15	|	Reserved	|
-|	25	|	M 10/18	|	Python GUIs with PyQt5	|
-|	26	|	W 10/20	|	Exploring QWidgets	|
-|	27	|	F 10/22	|	UI via Slots and Signals	|
-|	28	|	M 10/25	|	Widget layouts	|
-|	29	|	W 10/27	|	The QMainWindow class	|
-|	30	|	F 10/29	|	Qt Designer for WYSIWYG layouts	|
-|	31	|	M 11/01	|	Qt Rich Text	|
-|	32	|	W 11/03	|	2-D graphics	|
-|	33	|	F 11/05	|	2-D cont.	|
-|	34	|	M 11/08	|	2-D cont.	|
-|	35	|	W 11/10	|	2-D cont.	|
-|	36	|	F 11/12	|	3-D graphics	|
-|	37	|	M 11/15	|	3-D graphics	|
-|	38	|	W 11/17	|	3-D graphics	|
-|	39*	|	F 11/19	|	Reserved	|
-|		|	M 11/22	|	HOLIDAY	|
-|		|	W 11/24	|	HOLIDAY	|
-|		|	F 11/26	|	HOLIDAY	|
+|	 	|	M 09/06	|	HOLIDAY	|
+|	7	|	W 09/08	|	GitHub for version control of collaborative projects.	|
+|	8	|	F 09/10	|	More version control.	|
+|	9	|	M 09/13	|	Introduction to Python. Built-in types and functions.	|
+|	10	|	W 09/15	|	Python as a "graphing calculator."	|
+|	11*	|	F 09/17	|	The structure of Python code: conditionals, loops, and functions.  The debugger.	|
+|	12	|	M 09/20	|	Modules and code organization.	|
+|	13	|	W 09/22	|	Unit testing. Test-driven development.  	|
+|	14	|	F 09/24	|	Exception handling?	|
+|	15	|	M 09/27	|	Sources of numerical error.  Roundoff error.  Truncation error.	|
+|	16	|	W 09/29	|	Linear systems and NumPy arrays.  Least squares.	|
+|	17	|	F 10/01	|	SciPy, sparse systems, and iterative solutions.	|
+|	18	|	M 10/04	|	Other Python packages for technical computing (e.g., FENICs)	|
+|	19	|	W 10/06	|	Advanced Matplotlib	|
+|	20	|	F 10/08	|	Overview of objected-oriented programming in Python. Classes, objects, and methods.	|
+|	21	|	M 10/11	|	More on OOP. Methods.	|
+|	22	|	W 10/13	|	More on OOP. Inheritance.	|
+|	23*	|	F 10/15	|	OO design.	|
+|	24	|	M 10/18	|	Python GUIs with PyQt5	|
+|	25	|	W 10/20	|	Exploring QWidgets	|
+|	26	|	F 10/22	|	UI via Slots and Signals	|
+|	27	|	M 10/25	|	Widget layouts	|
+|	28	|	W 10/27	|	The QMainWindow class	|
+|	29	|	F 10/29	|	Qt Designer for WYSIWYG layouts	|
+|	30	|	M 11/01	|	Qt Rich Text	|
+|	31	|	W 11/03	|	2-D graphics	|
+|	32	|	F 11/05	|	2-D cont.	|
+|	33	|	M 11/08	|	2-D cont.	|
+|	34	|	W 11/10	|	2-D cont.	|
+|	35	|	F 11/12	|	3-D graphics	|
+|	36	|	M 11/15	|	3-D graphics	|
+|	37	|	W 11/17	|	3-D graphics	|
+|	38*	|	F 11/19	|	Reserved	|
+|	   	|	M 11/22	|	HOLIDAY	|
+|	   	|	W 11/24	|	HOLIDAY	|
+|	  	|	F 11/26	|	HOLIDAY	|
 |	39	|	M 11/29	|	Embedded Linux with Raspberry Pi	|
 |	40	|	W 12/01	|	Using the GPIOs 	|
 |	41	|	F 12/03	|	PyQt on the Pi	|
