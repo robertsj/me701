@@ -25,8 +25,9 @@ https://zetcode.com/gui/pyqt5/menustoolbars/
 
 ### During Lecture
 
+  0. Clone the [sample code](https://github.com/me701/gui_mainwindow.git) for this lesson.
   1. Identify the "features" of a main-window application.
-  2. Explore menus (and submenus)
+  2. Explore menus (and submenus).
   3. Explore other features, e.g., status bars, tool bars, pop-up menus.
 
 ### After Lecture

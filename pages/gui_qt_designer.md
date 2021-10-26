@@ -25,7 +25,7 @@ https://realpython.com/qt-designer-python/
 
 ### Before Lecture
 
-  - Install Qt Designer by executing `conda install pyqt5-tools` in the terminal.
+  - Install Qt Designer by executing `pip install pyqt5-tools` in the terminal.  
     
 
 ### During Lecture

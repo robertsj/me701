@@ -38,3 +38,5 @@ https://zetcode.com/gui/pyqt5/layout/
 
 ### Jeremy's Notes
 
+  - It seems to nest layouts requires a wrapping widget (e.g., to put a grid inside a vbox, first put the grid in its own, `QWidget` object).
+

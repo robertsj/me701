@@ -23,7 +23,6 @@ https://doc.qt.io/qt-5/widget-classes.html
 ### Before Lecture
 
   - Pick out two widget classes from the [documentation](https://doc.qt.io/qt-5/widget-classes.html) that are of particular interest.  Some widgets will require we get a but further in the course to use.
-  - Clone the [sample code](comingsoon) for this lesson.
 
 ### During Lecture
 
