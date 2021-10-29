@@ -11,9 +11,9 @@ expected).
 
 ## Resources
 
-https://doc.qt.io/qt-5/qtdesigner-manual.html
+[https://doc.qt.io/qt-5/qtdesigner-manual.html](https://doc.qt.io/qt-5/qtdesigner-manual.html)
 
-https://realpython.com/qt-designer-python/
+[https://realpython.com/qt-designer-python/](https://realpython.com/qt-designer-python/)
 
 
 ##  Evidence of Student Learning
@@ -25,19 +25,39 @@ https://realpython.com/qt-designer-python/
 
 ### Before Lecture
 
-  - Install Qt Designer by executing `pip install pyqt5-tools` in the terminal.  
-    
+  - Skim this [tutorial](https://realpython.com/qt-designer-python/) on Qt Designer.    
 
 ### During Lecture
  
-  For this lecture, you will follow along step by step with [this tutorial video]().
+  For this lecture, you will follow along step by step with [this tutorial video](https://youtu.be/xvUKkulRcHc).  
 
-  When you are done, make sure to save, add, commit, and push your changes.
+  - Install Qt Designer.  On WSL, this requires:
+
+    ```bash
+    conda create -n qt5dev python=3.8 # enter "yes"
+    conda activate qt5dev
+    pip install pyqt5-tools
+    ```
+
+    Try `qt5-tools designer`.  If you get an error related to Qt and a package
+    that cannot be loaded, then execute the following:
+
+    ```bash
+    sudo apt install libxcb-xinerama0
+    ```
+
+    (I needed this on one Windows machine but not the other, but I might already 
+    have needed this library for another application!)
+
+  - Example 1: A scroll bar with status bar indicator.
+  - Example 2: The Guessing Game
 
 ### After Lecture
 
-   No additional materials.
+   The final `.ui` and `.py` files are [here](https://github.com/me701/gui_designer.git).
 
 
 ### Jeremy's Notes
+
+  Camtasia is painfully slow to render.
 

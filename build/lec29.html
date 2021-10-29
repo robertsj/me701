@@ -2,8 +2,8 @@
 <h2 id="summary">Summary</h2>
 <p>For some applications, it <em>may</em> be easier to sketch out designs using a “what you see is what you get” interface like Qt Designer. Windows, layouts, widgets, and more can be dragged and dropped, and the starter code (in C++ or, for us, in Python) is automatically generated. Of course, slots and signals are largely left to the user to define (as might be expected).</p>
 <h2 id="resources">Resources</h2>
-<p>https://doc.qt.io/qt-5/qtdesigner-manual.html</p>
-<p>https://realpython.com/qt-designer-python/</p>
+<p><a href="https://doc.qt.io/qt-5/qtdesigner-manual.html">https://doc.qt.io/qt-5/qtdesigner-manual.html</a></p>
+<p><a href="https://realpython.com/qt-designer-python/">https://realpython.com/qt-designer-python/</a></p>
 <h2 id="evidence-of-student-learning">Evidence of Student Learning</h2>
 <ul>
 <li>Students will complete a WYSIWYG exercise to construct a main-window application.</li>
@@ -11,11 +11,22 @@
 <h2 id="learning-plan">Learning Plan</h2>
 <h3 id="before-lecture">Before Lecture</h3>
 <ul>
-<li>Install Qt Designer by executing <code>pip install pyqt5-tools</code> in the terminal.</li>
+<li>Skim this <a href="https://realpython.com/qt-designer-python/">tutorial</a> on Qt Designer.</li>
 </ul>
 <h3 id="during-lecture">During Lecture</h3>
-<p>For this lecture, you will follow along step by step with <a href="">this tutorial video</a>.</p>
-<p>When you are done, make sure to save, add, commit, and push your changes.</p>
+<p>For this lecture, you will follow along step by step with <a href="https://youtu.be/xvUKkulRcHc">this tutorial video</a>.</p>
+<ul>
+<li><p>Install Qt Designer. On WSL, this requires:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> qt5dev python=3.8 <span class="co"># enter &quot;yes&quot;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate qt5dev</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pyqt5-tools</span></code></pre></div>
+<p>Try <code>qt5-tools designer</code>. If you get an error related to Qt and a package that cannot be loaded, then execute the following:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install libxcb-xinerama0</span></code></pre></div>
+<p>(I needed this on one Windows machine but not the other, but I might already have needed this library for another application!)</p></li>
+<li><p>Example 1: A scroll bar with status bar indicator.</p></li>
+<li><p>Example 2: The Guessing Game</p></li>
+</ul>
 <h3 id="after-lecture">After Lecture</h3>
-<p>No additional materials.</p>
+<p>The final <code>.ui</code> and <code>.py</code> files are <a href="https://github.com/me701/gui_designer.git">here</a>.</p>
 <h3 id="jeremys-notes">Jeremy’s Notes</h3>
+<p>Camtasia is painfully slow to render.</p>
