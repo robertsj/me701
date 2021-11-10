@@ -33,6 +33,7 @@ lectures = [
 'gui_qt_designer',                    # 29
 'gui_formats', #30
 'gui_embedded_plots', #31
+'gui_basic_bitmaps', #32
 ]
 
 modules = {'basic_cpp': ['core', 'arrays', 'stl'],

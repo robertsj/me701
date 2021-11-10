@@ -24,7 +24,7 @@ Alan Moore, *Mastering GUO programming with Python*.
 
 ### During Lecture
 
-  0. Clone the [sample code](https://github.com/me701/gui_embedded_plots.git) for this lesson.
+  0. Clone the [sample code](https://github.com/me701/gui_2d_graphics.git) for this lesson.
   1. Review the GUI code and run as is.
   2. Incorporate the Matplotlib-based widget.  (You may wish to have the book available!)
   3. Implement the PyQtGraph-based widget.  (This may not work well for us:
