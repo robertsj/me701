@@ -34,6 +34,7 @@ lectures = [
 'gui_formats', #30
 'gui_embedded_plots', #31
 'gui_basic_bitmaps', #32
+'gui_custom_widgets', #33
 ]
 
 modules = {'basic_cpp': ['core', 'arrays', 'stl'],
