@@ -35,6 +35,7 @@ lectures = [
 'gui_embedded_plots', #31
 'gui_basic_bitmaps', #32
 'gui_custom_widgets', #33
+'gui_intro_opengl', #34
 ]
 
 modules = {'basic_cpp': ['core', 'arrays', 'stl'],
