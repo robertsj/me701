@@ -16,7 +16,7 @@
 <li>Clone the <a href="https://github.com/me701/gui_3d_graphics.git">sample code</a> for this lesson.</li>
 </ol>
 <h3 id="during-lecture">During Lecture</h3>
-<p>The instructions below are for the WSL folks. Instructions for Mac OS and Ubuntu will follow.</p>
+<p>The instructions below are for the WSL folks. For Mac OS and Linux, I <em>believe</em> you will only need to execute step 3.</p>
 <ol start="0" type="1">
 <li><p>Update the <a href="https://github.com/me701/gui_3d_graphics.git">sample code</a> for this lesson.</p></li>
 <li><p>For those developing in WSL (the majority), we are living at the “bleeding edge.” In other words, some things work as expected, but many things take some debugging. That is a theme we’ve had all semester, and I’m optimistic that the direction WSL is going will yield a much more stable environment for the future.</p>
@@ -27,10 +27,18 @@
 <p>(<em>Note that GWSL does build on VcXsrv, but it doesn’t seem to allow us to unselect the “Native opengl” option, which blocks our OpenGL access. With Windows 11 and some tweaks to Ubuntu coming, all of this X server nonsense should be eliminated within the year!</em>)</p></li>
 <li><p><strong>Verify your OpenGL Version</strong></p>
 <p>First, to use that disabled “Native opengl” option, in the terminal, execute</p>
-<pre><code>`export LIBGL_ALWAYS_INDIRECT=0`</code></pre>
+<pre><code>```
+export LIBGL_ALWAYS_INDIRECT=0
+```</code></pre>
 <p>Then, check your OpenGL version by running</p>
-<pre><code>`glxinfo | grep OpenGL version`</code></pre>
+<pre><code>```
+glxinfo | grep OpenGL version
+```</code></pre>
 <p>Your output should say something like <code>OpenGL version string: 3.1 Mesa 21.0.3</code>.</p>
+<p>If you get <code>glxinfo: command not found</code>, execute</p>
+<pre><code> ```
+ sudo apt install mesa-utils
+ ```</code></pre>
 <p>If it says <code>OpenGL version string: 1.4 ...</code>, you have a problem. Either you did not perform the export above <em>or</em> your X server is not allowing this export to have an effect (which is seemingly what GWSL was doing.) If you see the proper string, you should have a virtual hardware setup that works.</p></li>
 <li><p>In addition, the <code>(base)</code> Anaconda environment (with Qt 5.9) appears to be insufficient for everything we’d like to do. For instance, if you head to <code>gui_3d_graphics/triangle</code> and run <code>python main.py</code> while in the <code>(base)</code> environment, you might see that the line <code>self.gl.glEnable(self.gl.GL_DEPTH_TEST)</code> fails with the error <code>No module named 'PyQt5._QOpenGLFunctions_2_1'</code> even though we have <code>PyQt5</code> installed and have verified the OpenGL version.</p>
 <p>I’m <em>not sure</em> why the <code>(base)</code> versions of everything fail, but I’ve seen some accounts of the Anaconda version of <code>PyQt5</code> not being GL-enabled in past versions.</p>
