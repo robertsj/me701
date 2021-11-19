@@ -1,0 +1,57 @@
+<h1 id="getting-set-up-for-opengl-with-pyqt5">Getting Set up for OpenGL with PyQt5</h1>
+<h2 id="summary">Summary</h2>
+<p>Students will establish a computational environment that supports use of of OpenGL within PyQt5 applications. This environment may require installation of alternative X servers and Python modules.</p>
+<h2 id="resources">Resources</h2>
+<p>Alan Moore, <em>Mastering GUI programming with Python</em>.</p>
+<p><a href="http://www.opengl-tutorial.org/" class="uri">http://www.opengl-tutorial.org/</a></p>
+<p><a href="https://sourceforge.net/projects/vcxsrv/" class="uri">https://sourceforge.net/projects/vcxsrv/</a></p>
+<h2 id="evidence-of-student-learning">Evidence of Student Learning</h2>
+<ul>
+<li>Students will demonstrate a working environment by running an example.</li>
+</ul>
+<h2 id="learning-plan">Learning Plan</h2>
+<h3 id="before-lecture">Before Lecture</h3>
+<ol type="1">
+<li>Skim AM Chapter 13.</li>
+<li>Clone the <a href="https://github.com/me701/gui_3d_graphics.git">sample code</a> for this lesson.</li>
+</ol>
+<h3 id="during-lecture">During Lecture</h3>
+<p>The instructions below are for the WSL folks. Instructions for Mac OS and Ubuntu will follow.</p>
+<ol start="0" type="1">
+<li><p>Update the <a href="https://github.com/me701/gui_3d_graphics.git">sample code</a> for this lesson.</p></li>
+<li><p>For those developing in WSL (the majority), we are living at the “bleeding edge.” In other words, some things work as expected, but many things take some debugging. That is a theme we’ve had all semester, and I’m optimistic that the direction WSL is going will yield a much more stable environment for the future.</p>
+<p>In order to drive OpenGL applications on WSL, we need to be able to disable “indirect” rendering. With GWSL as our X Server, we <em>should</em> have the ability to turn this off, but it <em>seems</em> there is a bug in the current GWSL such that the option can be disabled. The solution for now is to install the tool that GWSL is actually based on: VcXsrv.</p>
+<p>Then, open VcXsrv and: 0. Quit any instances of Ubuntu and GWSL.<br />
+1. Head <a href="https://sourceforge.net/projects/vcxsrv/">here</a> and install VcXsrv. 2. Open VxXsrv to prepare the X server. 3. Keep the defaults and click Next. 4. Keep the defaults and click Next. 5. <strong>Unselect</strong> “Native opengl,” <strong>select</strong> “Disable access control,” and click Next. 6. Click Finish. 7. Open WSL as usual run <code>xclock</code> to verify the X server is running. 8. In the terminal, run <code>export LIBGL_ALWAYS_INDIRECT=0</code>.</p>
+<p>You will need to repeat steps 2-6 before running WSL with this X server.</p>
+<p>(<em>Note that GWSL does build on VcXsrv, but it doesn’t seem to allow us to unselect the “Native opengl” option, which blocks our OpenGL access. With Windows 11 and some tweaks to Ubuntu coming, all of this X server nonsense should be eliminated within the year!</em>)</p></li>
+<li><p><strong>Verify your OpenGL Version</strong></p>
+<p>First, to use that disabled “Native opengl” option, in the terminal, execute</p>
+<pre><code>`export LIBGL_ALWAYS_INDIRECT=0`</code></pre>
+<p>Then, check your OpenGL version by running</p>
+<pre><code>`glxinfo | grep OpenGL version`</code></pre>
+<p>Your output should say something like <code>OpenGL version string: 3.1 Mesa 21.0.3</code>.</p>
+<p>If it says <code>OpenGL version string: 1.4 ...</code>, you have a problem. Either you did not perform the export above <em>or</em> your X server is not allowing this export to have an effect (which is seemingly what GWSL was doing.) If you see the proper string, you should have a virtual hardware setup that works.</p></li>
+<li><p>In addition, the <code>(base)</code> Anaconda environment (with Qt 5.9) appears to be insufficient for everything we’d like to do. For instance, if you head to <code>gui_3d_graphics/triangle</code> and run <code>python main.py</code> while in the <code>(base)</code> environment, you might see that the line <code>self.gl.glEnable(self.gl.GL_DEPTH_TEST)</code> fails with the error <code>No module named 'PyQt5._QOpenGLFunctions_2_1'</code> even though we have <code>PyQt5</code> installed and have verified the OpenGL version.</p>
+<p>I’m <em>not sure</em> why the <code>(base)</code> versions of everything fail, but I’ve seen some accounts of the Anaconda version of <code>PyQt5</code> not being GL-enabled in past versions.</p>
+<p>The fix is an environment nearly identical (I think) to the one I suggested for Qt Designer:</p>
+<pre><code>conda create -n testgl Python=3.9
+conda activate testgl
+pip install pyqt5 
+pip install pyopengl #  needed for the &quot;hello example&quot;</code></pre>
+<p>(Sadly, there are no <code>conda</code>-only environments that work)</p>
+<p>Now, try the <code>gui_3d_graphics/triangle/main.py</code> again. You should see a nice, purple and gray triangle.</p></li>
+<li><p>Now, head to the <code>gui_3d_graphics/hello</code> folder and run <code>main.py</code>. You should see the <code>Qt</code> logo.</p></li>
+</ol>
+<h3 id="after-lecture">After Lecture</h3>
+<p>Videos from all week:</p>
+<ul>
+<li><p><a href="https://mediasite.k-state.edu/mediasite/Play/31edd4b4fee24a879379ace8ae6989331d">Video, Lecture, 11/15/2021</a></p></li>
+<li><p><a href="https://mediasite.k-state.edu/mediasite/Play/1abc1732811c4f86bd97e2b5021939fc1d">Video, Lecture, 11/17/2021</a></p></li>
+<li><p><a href="https://mediasite.k-state.edu/mediasite/Play/7ace6356ec974369bdb3acd2b4daf6fd1d">Video, Lecture, 11/19/2021</a></p></li>
+</ul>
+<h3 id="jeremys-notes">Jeremy’s Notes</h3>
+<ul>
+<li><p>Holy hell, this was a tough week. It’s been awhile since I was so ineffective at getting something to work out in time. Hopefully, this sets up those of you interested in OpenGL to explore a bit more using either the <code>QtOpenGL</code> widget or the <code>pyopengl</code> module.</p></li>
+<li><p>Next time I do this, I hope to organize it as day (1) on set up and test, (2) on dissecting and understanding the “triangle” or similar, and (3) a more real-world application that includes known vertices from, e.g., an STL file or other CAD-driven format. Maybe this is too much to ask from one week!</p></li>
+</ul>
