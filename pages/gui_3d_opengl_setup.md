@@ -66,23 +66,23 @@ to execute step 3.
 
     First, to use that disabled "Native opengl" option, in the terminal, execute
 
-        ```
-        export LIBGL_ALWAYS_INDIRECT=0
-        ```
+    ```
+    export LIBGL_ALWAYS_INDIRECT=0
+    ```
 
     Then, check your OpenGL version by running
 
-        ```
-        glxinfo | grep OpenGL version
-        ```
+    ```
+    glxinfo | grep OpenGL version
+    ```
     
     Your output should say something like `OpenGL version string: 3.1 Mesa 21.0.3`.
 
     If you get `glxinfo: command not found`, execute 
 
-         ```
-         sudo apt install mesa-utils
-         ```
+    ```
+    sudo apt install mesa-utils
+    ```
 
     If it says `OpenGL version string: 1.4 ...`, you have a problem.  Either you 
     did not perform the export above *or* your X server is not allowing this export
@@ -112,6 +112,8 @@ to execute step 3.
     (Sadly, there are no `conda`-only environments that work)
 
     Now, try the `gui_3d_graphics/triangle/main.py` again.  You should see a nice, purple and gray triangle.
+
+    Note, **do not run this from VS Code!  You need to do it from the terminal!**
 
 4. Now, head to the `gui_3d_graphics/hello` folder and run `main.py`.  You should see the `Qt` logo. 
 
