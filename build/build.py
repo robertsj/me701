@@ -38,6 +38,7 @@ lectures = [
 'template', # 34 
 'template', # 35
 'gui_3d_opengl_setup', #36
+'embedded_linux_rpi', #37
 ]
 
 modules = {'basic_cpp': ['core', 'arrays', 'stl'],

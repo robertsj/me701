@@ -1,0 +1,53 @@
+<h1 id="raspberry-pi-and-embedded-linux">Raspberry Pi and Embedded Linux</h1>
+<h2 id="summary">Summary</h2>
+<p>Students will connect to a Raspberry Pi preconfigured with Raspberry Pi OS and navigate the embedded Linux operating system.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>Derek Malloy, <em>Exploring Raspberry Pi: Interfacing to the Real World with Embedded Linux</em>, Wiley (2016)</li>
+<li><a href="http://exploringrpi.com/">Exploring Raspberry Pi - Companion Site</a></li>
+<li><a href="https://www.raspberrypi.com/software/">Raspberry Pi Software</a></li>
+<li>Search Youtube for Raspberry Pi</li>
+</ul>
+<h2 id="evidence-of-student-learning">Evidence of Student Learning</h2>
+<ul>
+<li>Students will connect to the Raspberry Pi via SSH and blink the LED.</li>
+<li>Students will connect to the Raspberry Pi desktop using the VNC Viewer.</li>
+</ul>
+<h2 id="learning-plan">Learning Plan</h2>
+<h3 id="before-lecture">Before Lecture</h3>
+<ul>
+<li>Watch <a href="https://www.youtube.com/watch?v=EKPobkb1N6o">this overview of Raspberry Pi</a> and this <a href="https://www.youtube.com/watch?v=p40OetppIDg">related video</a> about the differences between Rasperry Pi and Arduino. Based on your knowledge of Arduino (from ME 400, etc.) and the bit you now know about Raspberry Pi, what are the “pros” and “cons” for each board?</li>
+</ul>
+<h3 id="during-lecture">During Lecture</h3>
+<ol start="0" type="1">
+<li><p>Acquire assigned “kit” that includes:</p>
+<ul>
+<li>Raspberry Pi Zero W (RPi0)</li>
+<li>5V 2A power supply</li>
+<li>Clear case</li>
+<li>Micro SD card (and full-size adapter)</li>
+<li>Micro-USB hub (OTG)</li>
+<li>USB A (male-to-male) cable</li>
+</ul></li>
+<li><p>Install RPi0 in provided case.</p></li>
+<li><p>Connect RPi0 to laptop computer using the hub and cable. The data port (to connect to the hub) is toward the middle.</p></li>
+<li><p>Power the RPi0 with the included power supply. The power port is toward the edge.</p></li>
+<li><p>Open up a <code>bash</code> terminal. The SD card has been preconfigured to enable SSH and the “USB gadget” mode. Hence, you should be able to log onto the RPi0 by executing:</p>
+<pre><code>ssh pi@raspberrypi.local</code></pre>
+<p>The default password is <code>raspberry</code>.</p></li>
+<li><p>List the names associated with and the “triggers” available for the on-board LED by executing:</p>
+<pre><code>ls /sys/class/leds/led0/
+cat /sys/class/leds/led0/trigger</code></pre>
+<p>(Which trigger is set?)</p>
+<p>Set the trigger to <code>none</code> by executing</p>
+<pre><code>echo none |sudo tee /sys/class/leds/led0/trigger</code></pre>
+<p>Then, turn the LED on by executing</p>
+<pre><code>echo 255 |sudo tee /sys/class/leds/led0/brightness</code></pre>
+<p>To turn it off, do the same with <code>0</code> in place of <code>255</code>.</p></li>
+<li><p>Finally, install <a href="https://www.realvnc.com/en/connect/download/viewer/">VNC Viewer</a> for your system. For Windows machines, use the Windows version (not Linux). Play around a bit.</p></li>
+</ol>
+<h3 id="after-lecture">After Lecture</h3>
+<ul>
+<li><a href="https://mediasite.k-state.edu/mediasite/Play/3b2f017eec374e21b2e1ec1dc1ba89d81d">Video, Lecture, 11/29/2021</a></li>
+</ul>
+<h3 id="jeremys-notes">Jeremy’s Notes</h3>
