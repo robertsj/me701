@@ -28,11 +28,13 @@
 <li>Micro SD card (and full-size adapter)</li>
 <li>Micro-USB hub (OTG)</li>
 <li>USB A (male-to-male) cable</li>
-</ul></li>
-<li><p>Install RPi0 in provided case.</p></li>
-<li><p>Connect RPi0 to laptop computer using the hub and cable. The data port (to connect to the hub) is toward the middle.</p></li>
-<li><p>Power the RPi0 with the included power supply. The power port is toward the edge.</p></li>
-<li><p>Open up a <code>bash</code> terminal. The SD card has been preconfigured to enable SSH and the “USB gadget” mode. Hence, you should be able to log onto the RPi0 by executing:</p>
+<li>Micro-USB to USB-A cable</li>
+</ul>
+<p>Install RPi0 in the provided case before moving on.</p></li>
+<li><p>Install the latest version of the Raspberry Pi OS on the Micro SD card. Then, to enable the use of “gadget” mode, edit the two files <code>config.txt</code> and <code>cmdline.txt</code> and create the <code>ssh</code> file as described <a href="https://desertbot.io/blog/headless-pi-zero-ssh-access-over-usb-windows">here for Windows</a> and <a href="https://desertbot.io/blog/ssh-into-pi-zero-over-usb">here for Mac OS</a>. For both Windows and Mac OS, you <em>may</em> need to install the RNDIS driver to support ethernet through the USB. For Windows, <a href="https://www.factoryforward.com/pi-zero-w-headless-setup-windows10-rndis-driver-issue-resolved/">check this out</a>, and for Mac OS, <a href="https://www.joshuawise.com/horndis">try this</a>.</p></li>
+<li><p>Connect RPi0 to laptop computer using the micro-USB to USB-A cable. The data port (to connect to the hub) is toward the middle.</p></li>
+<li><p><strong>Optionally</strong>, power the RPi0 with the included power supply. The power port is toward the edge. I don’t <em>think</em> this will hurt anything, but I’ve read that two voltage sources may be bad. You definitely need the power supply for standalone deployment where the RPi0 needs access to the USB port for data, peripherals, etc.</p></li>
+<li><p>Open up a <code>bash</code> terminal. The SD card has been configured to enable SSH and the “USB gadget” mode. Hence, you should be able to log onto the RPi0 by executing:</p>
 <pre><code>ssh pi@raspberrypi.local</code></pre>
 <p>The default password is <code>raspberry</code>.</p></li>
 <li><p>List the names associated with and the “triggers” available for the on-board LED by executing:</p>
@@ -51,3 +53,4 @@ cat /sys/class/leds/led0/trigger</code></pre>
 <li><a href="https://mediasite.k-state.edu/mediasite/Play/3b2f017eec374e21b2e1ec1dc1ba89d81d">Video, Lecture, 11/29/2021</a></li>
 </ul>
 <h3 id="jeremys-notes">Jeremy’s Notes</h3>
+<p>Lots of issues, of course, but I think the revisions above should fix most problems for most folks.</p>

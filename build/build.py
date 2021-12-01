@@ -39,6 +39,7 @@ lectures = [
 'template', # 35
 'gui_3d_opengl_setup', #36
 'embedded_linux_rpi', #37
+'embedded_linux_gpio', #38
 ]
 
 modules = {'basic_cpp': ['core', 'arrays', 'stl'],

@@ -40,14 +40,25 @@ navigate the embedded Linux operating system.
      - Micro SD card (and full-size adapter)
      - Micro-USB hub (OTG)
      - USB A (male-to-male) cable
+     - Micro-USB to USB-A cable
 
-  1. Install RPi0 in provided case.
+     Install RPi0 in the provided case before moving on.
 
-  2. Connect RPi0 to laptop computer using the hub and cable.   The data port (to connect to the hub) is toward the middle.
+  1. Install the latest version of the Raspberry Pi OS on the Micro SD card.  Then, to enable the 
+     use of "gadget" mode, edit the two files `config.txt` and `cmdline.txt` and create the `ssh` file
+     as described [here for Windows](https://desertbot.io/blog/headless-pi-zero-ssh-access-over-usb-windows)
+     and [here for Mac OS](https://desertbot.io/blog/ssh-into-pi-zero-over-usb).  For both Windows and
+     Mac OS, you *may* need to install the RNDIS driver to support ethernet through the USB.  For Windows,
+     [check this out](https://www.factoryforward.com/pi-zero-w-headless-setup-windows10-rndis-driver-issue-resolved/), 
+     and for Mac OS, [try this](https://www.joshuawise.com/horndis).
 
-  3. Power the RPi0 with the included power supply.  The power port is toward the edge.
+  2. Connect RPi0 to laptop computer using the micro-USB to USB-A cable.   The data port (to connect to the hub) is toward the middle.
 
-  4. Open up a `bash` terminal.  The SD card has been preconfigured to enable SSH and the "USB gadget" mode.  Hence,
+  3. **Optionally**, power the RPi0 with the included power supply.  The power port is toward the edge.
+     I don't *think* this will hurt anything, but I've read that two voltage sources may be bad.  You definitely
+     need the power supply for standalone deployment where the RPi0 needs access to the USB port for data, peripherals, etc.
+
+  4. Open up a `bash` terminal.  The SD card has been configured to enable SSH and the "USB gadget" mode.  Hence,
      you should be able to log onto the RPi0 by executing:
 
      ```
@@ -90,4 +101,4 @@ navigate the embedded Linux operating system.
 
 ### Jeremy's Notes
 
-
+   Lots of issues, of course, but I think the revisions above should fix most problems for most folks.
