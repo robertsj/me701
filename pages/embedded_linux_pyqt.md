@@ -2,27 +2,35 @@
 
 ## Summary
 
-
+We'll explore installation of PyQt on the Pi and the deployment of
+graphical applications. 
 
 
 ## Resources
 
- - Derek Malloy, *Exploring Raspberry Pi: Interfacing to the Real World with Embedded Linux*, Wiley (2016)
- - [Exploring Raspberry Pi - Companion Site](http://exploringrpi.com/)
- - [Raspberry Pi Software](https://www.raspberrypi.com/software/)
- - Search Youtube for Raspberry Pi
+ - [Building PyQt5 from source](https://www.riverbankcomputing.com/static/Docs/PyQt5/installation.html#building-and-installing-from-source)
 
 ##  Evidence of Student Learning
 
-  - 
+  - Students will display a working PyQt5 application on a RPi0 via VNC or monitor hookup.
+
 
 ## Learning Plan
 
 
 ### Before Lecture
 
-  - 
+  This part is important and time consuming (though just for the Pi, not you).  By default, the Pi has 
+  both Python 2 and Python 3 installed.  Python 2 is the default, so we need to be careful to use
+  Python 3 by using the appropriate names.  The basic directions are summarized as follows:
 
+  ```
+  sudo apt-get install qt5-default
+  pip3 install PyQt-builder
+  pip3 install PyQt5-sip
+  sip-install
+  ```
+  
 ### During Lecture
 
 
