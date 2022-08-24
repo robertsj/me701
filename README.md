@@ -17,7 +17,6 @@ Jeremy Roberts.
 ### Instructor
  - Jeremy Roberts
  - 137D Ward Hall
- - Zoom meeting ID: 617 763 8618 (which is also my cell number)
  - Office Hours by appointment; see my [calendar](https://calendar.google.com/calendar/embed?src=j.alyn.roberts%40gmail.com&ctz=America/Chicago) and shoot me an email.  
 
 
@@ -81,7 +80,7 @@ In a small, hands-on course like this, **participation** in "lectures" is essent
 Here is an example entry for a single lesson:
 
 ```
-# M 08/23
+# M 08/22
 
 ## Preparation
 
@@ -112,54 +111,54 @@ Dates with asterisks are likely dates where a virtual lecture (or asynchronous i
 
 | Lecture   |  Date            | Topics                                                                      |
 |----|-------------------------|-----------------------------------------------------------------------------|
-|	1	|	M 08/23	|	Administrivia. Configuring a Linux environment.  WSL, etc.	|
-|	2	|	W 08/25	|	Getting to know the open-source world.	|
-|	3	|	F 08/27	|	The Linux command line and the shell; Basic commands.	|
-|	4	|	M 08/30	|	More on the command line. Environment variables, profiles, etc.	|
-|	5	|	W 09/01	|	Basic shell scripting (using bash).	|
-|	6	|	F 09/03	|	Version control with Git. 	|
-|		|	M 09/06	|	HOLIDAY	|
-|	7	|	W 09/08	|	GitHub for version control of collaborative projects.	|
-|	8	|	F 09/10	|	More version control.	|
-|	9	|	M 09/13	|	Introduction to Python. Built-in types and functions.	|
-|	10	|	W 09/15	|	Python as a "graphing calculator."	|
-|	11	|	F 09/17	|	The structure of Python code: conditionals, loops, and functions.  The debugger.	|
-|	12	|	M 09/20	|	Modules and code organization.	|
-|	13	|	W 09/22	|	Unit testing. Test-driven development.  	|
-|	14	|	F 09/24	|	Exception handling?	|
-|	15	|	M 09/27	|	Sources of numerical error.  Roundoff error.  Truncation error.	|
-|	16	|	W 09/29	|	Linear systems and NumPy arrays.  Least squares.	|
-|	17	|	F 10/01	|	SciPy, sparse systems, and iterative solutions.	|
-|	18	|	M 10/04	|	Other Python packages for technical computing (e.g., FENICs)	|
-|	19	|	W 10/06	|	Advanced Matplotlib	|
-|	20	|	F 10/08	|	Overview of objected-oriented programming in Python. Classes, objects, and methods.	|
-|	21	|	M 10/11	|	More on OOP. Inheritance.	|
-|	22	|	W 10/13	|	More on OOP.	|
-|	23	|	F 10/15	|	OO Design	|
-|	24	|	M 10/18	|	Python GUIs with PyQt5	|
-|	25	|	W 10/20	|	UI via Slots and Signals 	|
-|	26	|	F 10/22	|	Exploring QWidgets	|
-|	27	|	M 10/25	|	Widget layouts	|
-|	28	|	W 10/27	|	The QMainWindow class	|
-|	29	|	F 10/29	|	Qt Designer for WYSIWYG layouts	|
-|		|	M 11/01	|	Rest Day / Roberts Travel	|
-|	30	|	W 11/03	|	Styles and Formatting	|
-|		|	F 11/05	|	Project 1 Development Session	|
-|	31	|	M 11/08	|	Embedded Plots	|
-|	32	|	W 11/10	|	Basic Bitmaps	|
-|	33	|	F 11/12	|	Custom Widgets (Plot Digitizer)	|
-|	34	|	M 11/15	|	3-D graphics	|
-|	35	|	W 11/17	|	3-D graphics	|
-|	36	|	F 11/19	|	3-D graphics	|
-|		|	M 11/22	|	HOLIDAY	|
-|		|	W 11/24	|	HOLIDAY	|
-|		|	F 11/26	|	HOLIDAY	|
-|	37	|	M 11/29	|	Embedded Linux with Raspberry Pi	|
-|	38	|	W 12/01	|	Using the GPIOs 	|
-|	39	|	F 12/03	|	PyQt on the Pi	|
-|	40	|	M 12/06	|	Reserved	|
-|	41	|	W 12/08	|	Reserved	|
-|		|	F 12/10	|	Wrap-up and Project 2 Development Session	|
+|	1	|	M 08/22	|	Administrivia. Configuring a Linux environment.  WSL, etc.	|
+|	2	|	W 08/24	|	Getting to know the open-source world.	|
+|	3	|	F 08/26	|	The Linux command line and the shell; Basic commands.	|
+|	4	|	M 08/29	|	More on the command line. Environment variables, profiles, etc.	|
+|	5	|	W 08/31	|	Basic shell scripting (using bash).	|
+|	6	|	F 09/02	|	Version control with Git. 	|
+|		|	M 09/05	|	HOLIDAY	|
+|	7	|	W 09/07	|	GitHub for version control of collaborative projects.	|
+|	8	|	F 09/09	|	More version control.	|
+|	9	|	M 09/12	|	Introduction to Python. Built-in types and functions.	|
+|	10	|	W 09/14	|	Python as a "graphing calculator."	|
+|	11	|	F 09/16	|	The structure of Python code: conditionals, loops, and functions.  The debugger.	|
+|	12	|	M 09/19	|	Modules and code organization.	|
+|	13	|	W 09/21	|	Unit testing. Test-driven development.  	|
+|	14	|	F 09/23	|	Exception handling?	|
+|	15	|	M 09/26	|	Sources of numerical error.  Roundoff error.  Truncation error.	|
+|	16	|	W 09/28	|	Linear systems and NumPy arrays.  Least squares.	|
+|	17	|	F 09/30	|	SciPy, sparse systems, and iterative solutions.	|
+|	18	|	M 10/03	|	Other Python packages for technical computing (e.g., FENICs)	|
+|	19	|	W 10/05	|	Advanced Matplotlib	|
+|	20	|	F 10/07	|	Overview of objected-oriented programming in Python. Classes, objects, and methods.	|
+|	21	|	M 10/10	|	More on OOP. Inheritance.	|
+|	22	|	W 10/12	|	More on OOP.	|
+|	23	|	F 10/14	|	OO Design	|
+|	24	|	M 10/17	|	Python GUIs with PyQt5	|
+|	25	|	W 10/19	|	UI via Slots and Signals 	|
+|	26	|	F 10/21	|	Exploring QWidgets	|
+|	27	|	M 10/24	|	Widget layouts	|
+|	28	|	W 10/26	|	The QMainWindow class	|
+|	29	|	F 10/28	|	Qt Designer for WYSIWYG layouts	|
+|		|	M 10/31	|	Rest Day / Roberts Travel	|
+|	30	|	W 11/02	|	Styles and Formatting	|
+|		|	F 11/04	|	Project 1 Development Session	|
+|	31	|	M 11/07	|	Embedded Plots	|
+|	32	|	W 11/09	|	Basic Bitmaps	|
+|	33	|	F 11/11	|	Custom Widgets (Plot Digitizer)	|
+|	34	|	M 11/14	|	3-D graphics	|
+|	35	|	W 11/16	|	3-D graphics	|
+|	36	|	F 11/18	|	3-D graphics	|
+|		|	M 11/21	|	HOLIDAY	|
+|		|	W 11/23	|	HOLIDAY	|
+|		|	F 11/25	|	HOLIDAY	|
+|	37	|	M 11/28	|	Embedded Linux with Raspberry Pi	|
+|	38	|	W 11/30	|	Using the GPIOs 	|
+|	39	|	F 12/02	|	PyQt on the Pi	|
+|	40	|	M 12/05	|	Reserved	|
+|	41	|	W 12/07	|	Reserved	|
+|		|	F 12/09	|	Wrap-up and Project 2 Development Session	|
 
 ## Academic Honesty
 
@@ -174,11 +173,4 @@ Students with disabilities who need classroom accommodations, access to technolo
 ## Expectations for Classroom Conduct
 
 All student activities in the University, including this course, are governed by the Student Judicial Conduct Code as outlined in the Student Governing Association By Laws, Article V, Section 3, number 2. Students who engage in behavior that disrupts the learning environment may be asked to leave the class.
-
-## Wearing of Face Coverings
-
-To protect the health and safety of the K-State community, students, faculty, staff and visitors must wear face coverings over their mouths and noses while on K-State campuses in all hallways, public spaces, classrooms and other common areas of campus buildings, and when in offices or other work spaces or outdoor settings when 6-feet social distancing cannot be maintained. In addition, all students, faculty, and staff are required to take the COVID-19 and Face Mask Safety training. Employees who need reasonable accommodations and assistance related to required face coverings may contact the ADA coordinator at charlott@k-state.edu, and students needing accommodations may contact the Student Access Center at accesscenter@k-state.edu.
-
-In classrooms, faculty have the right to deny a student entry into the room if the student is not wearing a face covering. Students not wearing a face covering will be reminded to do so and offered a clean face covering, if one is available. If the student does not comply, the faculty member will ask the student to leave the space, and if available, join the class remotely.  As a last resort, campus police will be called. The faculty members will complete the Code of Conduct form and the Office of Student Life will look further into the issue and take the non-compliance with the request to leave into consideration of further accountability measures.
-
-At no point should the professor or other students put themselves into an unsafe situation while attempting to enforce the face-covering policy. Manhattan campus police: 785-532-6412
+ 
