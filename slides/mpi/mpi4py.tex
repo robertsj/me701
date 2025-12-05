@@ -35,7 +35,7 @@
 % - Keep it simple, no one is interested in your street address.
 \date
 %[CFP 2003] % (optional, should be abbreviation of conference name)
-{Fall 2015}
+{Fall 2025}
 
 
 \begin{document}
@@ -65,10 +65,104 @@
 \end{frame}
 
 %------------------------------------------------------------------------------%
+\begin{frame}{Projects}
+
+Option 1:
+\begin{enumerate}
+ \item Proposal - 10\%
+ \item Draft Report - 10\% \\
+  I'd suggest 4-5 pages (don't add fluff) \\
+  Due by 11:30 am on 12/12/2025. \\
+ \item Review - 10\% \\
+    You get two papers to review anonymously, which is a privilege you should take seriously! \\
+    Reviews due by NOON on Monday, 12/15.  (To authors by 9 PM, 12/15).
+ \item Final Report + Cover Letter - 70\% \\
+       Technical merit, grammar, etc. (50\%) \\
+       Response to reviewer remarks (20\%)
+\end{enumerate}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Reviewer Guidelines}
+
+
+\begin{enumerate}
+ \item Don't make statements about the acceptability of a paper;
+suggested revisions should be stated as such and not expressed as
+conditions of acceptance.
+ \item Organize your review so that an introductory paragraph summarizes
+the major findings of the article, gives your overall impression of the
+paper, and highlights the major shortcomings, if any.
+ \item This paragraph should be followed by specific, numbered
+comments, which, if appropriate, may be subdivided into major and
+minor points.
+ \item Criticism should be presented dispassionately; offensive remarks are
+not acceptable.
+\end{enumerate}
+\vfill 
+
+Adapted from:  http://www.journals.asm.org/site/misc/reviewguide.xhtml
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}[fragile]{(Revision) Cover Letter}
+
+\begin{verbatim}
+Date                                      Your Info
+
+My Info
+
+Dear Prof. Roberts:
+
+Please find enclosed my revised manuscript,
+``Title Goes  Here,'' which I would like to submit 
+to you as part of the course requirements of ME 701.
+
+This paper explains or shows something very cool that
+will interest everyone to infinity and beyond...
+
+(My responses to the reviewers are attached. I thank 
+you for your consideration and look forward to 
+your decision.)
+
+Sincerely,
+Your Signature
+Your Printed Name
+\end{verbatim}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}[fragile]{Handling Your Response to Reviewers}
+
+Attach to your second cover letter letter a
+ point by point response
+explains how you address each of the
+reviewer comments. Thios can be as simple as
+"(9) I agree and have made the suggested
+change."
+
+\vfill 
+
+If you disagree or otherwise do not make a
+change, explain why.
+
+\vfill 
+
+\pause
+{\large  
+{\bf Don't Take it Personally!}
+}  
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
 \begin{frame}{Getting MPI}
 It's as easy as:
 \vfill
- {\Large\bf \textcolor{blue}{\tt conda install mpi4py}}
+ {\Large\bf \textcolor{blue}{\tt mamba install -c conda-forge mpi4py}}
 \vfill
 Check that it works: open the Python interpreter and 
 try {\tt from mpi4py import MPI}. If you get no errors, you have MPI.
