@@ -1,0 +1,219 @@
+\newif\ifRELEASE
+%\RELEASEfalse
+\RELEASEtrue
+
+\documentclass[10pt]{beamer}
+
+\usepackage{amsmath,amssymb,enumerate,calc,color,ifthen,capt-of,booktabs,graphicx,listings,palatino,amsbsy,subfigure}
+
+\usefonttheme{serif}
+ 
+\definecolor{light-gray}{gray}{0.95}
+\lstset{basicstyle=\footnotesize\ttfamily,
+        %numbers=left,
+        %backgroundcolor=\color{light-gray},
+        frame=single, 
+        %rulesepcolor=\color{red},
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        stringstyle=\color[rgb]{0.627,0.126,0.941},
+        captionpos=b,
+        title=\lstname,
+        showstringspaces=false
+       }
+
+
+%---TITLE AND AUTHOR INFORMATION
+\title % (optional, use only with long paper titles)
+[OpenMP]{Introduction to OpenMP}
+\author[Roberts]{Prof.~Jeremy Roberts}
+% \institute[22.213] % (optional, but mostly needed)
+%  {}
+% - Keep it simple, no one is interested in your street address.
+\date
+%[CFP 2003] % (optional, should be abbreviation of conference name)
+{11/18/2015}
+
+
+\begin{document}
+
+% TITLE PAGE
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% What are the realities of full core, time-dependent simulations?
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Resources}
+
+\begin{itemize}
+ \item Chapman Jost, and Van Der Pas, {\it Using OpenMP}, MIT Press (2008)
+ \item ``Parallel Programming for Multicore Machines Using OpenMP and MPI''
+       as taught by Dr. Evangelinos, MIT OpenCourseWare (2010)
+       \begin{itemize}
+         \item \url{ocw.mit.edu/courses/earth-atmospheric-and-planetary-sciences/12-950-parallel-programming-for-multicore-machines-using-openmp-and-mpi-january-iap-2010/}
+       \end{itemize}
+ \item OpenMP cheat sheets for C/C++ and Fortran:
+       \begin{itemize}
+         \item \url{openmp.org/mp-documents/OpenMP-4.0-C.pdf}
+         \item \url{openmp.org/mp-documents/OpenMP-4.0-Fortran.pdf}
+       \end{itemize}
+\end{itemize}
+\vfill
+For next time: \textcolor{red}{\tt conda install mpi4py}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{OpenMP Programming Model}
+
+\begin{itemize}
+ \item OpenMP defines an application programmer interface (API) for 
+       shared-memory, parallel programming based on the ``fork-join'' model
+ \item Threads operate within the same address space (i.e., shared memory)
+ \item Coarse- and fine-grain parallelism is supported
+ \item Threads read/write shared variables (but watch out 
+       for \textcolor{red}{race conditions}!) 
+       and private variables
+\item  Long-term development and support for C/C++ and Fortran (i.e.,
+       OpenMP will be around for a long time)
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Hello World}
+
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{code/hello.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{code/hello.f90}
+  \end{column}
+\end{columns}
+\vfill 
+Watch for your first \textcolor{red}{race condition}
+in the Fortran example!
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Compiling Your First OpenMP Program}
+
+For C++, use (in the command line)
+\begin{equation*}
+ \overbrace{\tt g\!+\!+}^{\text{compiler}}~
+   \textcolor{red}{\tt{-fopenmp}}~
+   \underbrace{\tt{hello.cc}}_{\text{file to compile}}~
+     \overbrace{\tt{-o}}^{\text{output as}}~
+       \underbrace{\tt{hello\_c}}_{\text{this executable}} 
+\end{equation*}
+\vfill 
+
+For Fortran, use
+\begin{equation*}
+ \overbrace{\tt gfortran}^{\text{compiler}}~
+   \textcolor{red}{\tt{-fopenmp}}~
+   \underbrace{\tt{hello.f90}}_{\text{file to compile}}~
+     \overbrace{\tt{-o}}^{\text{output as}}~
+       \underbrace{\tt{hello\_f}}_{\text{this executable}} 
+\end{equation*}
+
+\vfill 
+The \textcolor{red}{\tt{-fopenmp}} automatically enables threading
+in your code, though you need \textcolor{red}{\tt \#include <omp.h>} or
+\textcolor{red}{\tt use omp\_lib} for use 
+of OpenMP functions.  (Note also existence of \textcolor{red}{\tt \_OPENMP}
+macro.)
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Simplest Real-World Use: Sum an Array}
+
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{code/sum_serial.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{code/sum_serial.f90}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{A N\"{a}ive Attempt...}
+
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{code/sum_thread_1.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{code/sum_thread_1.f90}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Correct, But Bad Performance!}
+
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{code/sum_thread_2.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{code/sum_thread_2.f90}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Correct, With Better Performance!}
+
+
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++,basicstyle=\tiny\ttfamily]{code/sum_thread_3.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran,basicstyle=\tiny\ttfamily]{code/sum_thread_3.f90}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Correct, With Better Performance!}
+
+
+\lstinputlisting[bash,basicstyle=\tiny\ttfamily]{code/results.sh}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Useful OpenMP Directives}
+
+\lstinputlisting[language=C++]{code/useful_directives.cc}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Useful OpenMP Functions}
+
+\lstinputlisting[language=C++]{code/useful_functions.cc}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Useful OpenMP Environment Variables}
+
+\lstinputlisting[language=bash]{code/useful_env_vars.sh}
+
+\end{frame}
+
+\end{document}

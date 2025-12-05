@@ -1,0 +1,352 @@
+\documentclass[aspectratio=1610]{beamer}
+\usepackage[T1]{fontenc}
+\usetheme{wildcat}
+\usetikzlibrary{arrows.meta,angles,quotes,calc,intersections,positioning}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{relsize}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\usepackage{array}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{jupyter}
+\usepackage{minted}
+\usepackage{xfrac}
+\usepackage{mathtools}
+
+\let\oldfootnotesize\footnotesize
+\renewcommand*{\footnotesize}{\oldfootnotesize\tiny}
+
+\def\mathdefault#1{#1}
+\everymath=\expandafter{\the\everymath\displaystyle}
+
+
+\title{Elements of Modern C++ and Fortran \\
+       {\small\it ME 701 - Phase III - Lesson 01}}
+
+\date{\input{term.txt} \\ {\footnotesize Git SHA: \input{git_sha.txt}}}
+
+\author{Jeremy Roberts}
+
+
+\definecolor{ksupurple}{HTML}{512888}
+\definecolor{orange}{HTML}{CA7C1B}
+\definecolor{skyblue}{RGB}{180,220,255}
+\definecolor{light-gray}{gray}{0.97}
+
+\usepackage{listings}
+
+\lstset{basicstyle=\fontsize{7}{8}\selectfont\ttfamily,
+        numbers=left,
+        numberstyle=\fontsize{5}{6}\selectfont\ttfamily,
+        numbersep=5pt,                  
+        backgroundcolor=\color{light-gray},
+        frame=single, 
+        %rulesepcolor=\color{red},
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        stringstyle=\color[rgb]{0.627,0.126,0.941},
+        captionpos=b,
+        title=\lstname,
+        showstringspaces=false
+       }
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+ 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Primary Objective}
+
+Students will be able to 
+
+\vfill
+
+\begin{quote}
+\textcolor{wcprimary}{recognize, understand, and apply basic programming patterns for technical computing using the C++ and Modern Fortran languages.
+}
+\end{quote}
+
+\vfill 
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{References}
+
+\begin{enumerate}
+ \item Metcalf, Michael, et al. {\bf Modern Fortran Explained: Incorporating Fortran 2023}. Oxford University Press, 2024.
+ \item Stroustrup, Bjarne. {\bf A Tour of C++}. Addison-Wesley Professional, 2022.
+ \item {\bf AMTH 483/583 High-Performance Scientific Computing} (University of Washington), \url{https://amath583.github.io/sp22/index.html}
+ \item {\bf Modern Fortran} (West Virginia University), \url{https://wvuhpc.github.io/Modern-Fortran/}
+\end{enumerate}
+
+\end{frame}
+
+
+\section{C++ and Modern Fortran Overview}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Hello World}
+
+These and other examples are in \textcolor{wcprimary}{\tt me701/examples/compiled}.
+
+
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{compiled_code/hello_world.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{compiled_code/hello_world.f90}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{VS Code Extensions for C++ and Fortran}
+
+For C++:
+\begin{itemize}
+ \item C/C++ (Microsoft)
+ \item C/C++ Extension Pack (Microsoft)
+ \item C/C++ Themes (Microsoft)
+\end{itemize}
+
+\vfill 
+
+For Fortran:
+\begin{itemize}
+ \item Modern Fortran (fortran-lang.org; unsigned, so need to click gear to install)
+ \item {\tt pip install fortls} (in your ME 701 environment)
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Compiling Your First Program}
+
+For C++, use (in the command line)
+\begin{equation*}
+ \overbrace{\tt g\!+\!+}^{\text{compiler}}~
+   \underbrace{\tt{hello\_world.cc}}_{\text{file to compile}}~
+     \overbrace{\tt{-o}}^{\text{output as}}~
+       \underbrace{\tt{hello\_world}}_{\text{this executable}} 
+\end{equation*}
+\vfill 
+
+For Fortran, use
+\begin{equation*}
+ \overbrace{\tt gfortran}^{\text{compiler}}~
+   \underbrace{\tt{hello\_world.f90}}_{\text{file to compile}}~
+     \overbrace{\tt{-o}}^{\text{output as}}~
+       \underbrace{\tt{hello\_world}}_{\text{this executable}} 
+\end{equation*}
+
+\vfill 
+Use \textcolor{wcprimary}{{\tt sudo apt-get install g++ gfortran}} to get them.
+{\bf Now try them!}
+
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Compiler Options}
+
+{\tt g++} and {\tt gfortran} are part of the GNU compiler set and share 
+several key compiler options that may (or may not) work with compilers from
+other vendors; these include:
+\begin{itemize}
+ \item {\tt -Wall} -- warn us of anything unexpected but make the executable
+ \item {\tt -Werror} -- turn any warning into an error
+ \item {\tt -O} -- (that's an ``Oh'') use optimization (or {\tt -ON} for $N=0,1,2,3$ for 
+       various levels of optimization)
+ \item {\tt -g} -- produce debugging information
+ \item {\tt -pg} -- produce profiling information
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Declaring Variables}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{compiled_code/declaring.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{compiled_code/declaring.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Simple Math}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{compiled_code/simple_math.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{compiled_code/simple_math.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Control of Program Flow -- If's}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{compiled_code/control.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{compiled_code/control.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Control of Program Flow -- Switches}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{compiled_code/control2.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{compiled_code/control2.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Loops}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{compiled_code/loops.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{compiled_code/loops.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Functions}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{compiled_code/functions.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{compiled_code/functions.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+
+
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Command Line Arguments}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{compiled_code/cl.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{compiled_code/cl.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+
+%------------------------------------------------------------------------------%
+\begin{frame}{File I/O}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{compiled_code/file_io.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{compiled_code/file_io.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{File I/O}
+\begin{columns}[c]
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=C++]{compiled_code/file_io.cc}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \lstinputlisting[language=Fortran]{compiled_code/file_io.f90}
+  \end{column}
+\end{columns}
+\end{frame}
+
+%==============================================================================%
+\section{C++ Arrays}
+%==============================================================================%
+
+%------------------------------------------------------------------------------%
+\begin{frame}[allowframebreaks]{C++ Arrays - Main Program}
+ \lstinputlisting[language=C++]{compiled_code/basic_arrays.cc}
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}[allowframebreaks]{C++ Arrays - Function Header}
+ \lstinputlisting[language=C++]{compiled_code/basic_arrays_functions.hh}
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}[allowframebreaks]{C++ Arrays - Function Definitions}
+ \lstinputlisting[language=C++]{compiled_code/basic_arrays_functions.cc}
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Compiling}
+
+ Go ahead, try {\tt g++ basic\_array.cc}.
+
+ \pause
+ 
+ \vfill
+ The error is a {\bf linking error}.  
+ 
+ \pause 
+ 
+ \vfill
+ Comment out the {\tt \#include "basic\_arrays\_functions.hh"} line 
+ in {\tt basic\_array.cc} and try compiling again.
+ 
+ \pause 
+ \vfill
+ The error is a {\bf syntactical error}---all names, including 
+ functions, need to be defined before use.
+ 
+ \pause 
+ \vfill
+ The right way (after uncommenting the {\tt .hh} file): \\
+ 
+ {\tt g++ basic\_array\_functions.cc basic\_array.cc}\\
+ 
+ (where the order matters!)
+ 
+ 
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}{Compiling with {\tt make}}
+  \lstinputlisting[language=make]{compiled_code/make_basic_arrays}
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}[allowframebreaks]{Fortran Arrays - Main Program}
+ \lstinputlisting[language=Fortran]{compiled_code/basic_arrays.f90}
+\end{frame}
+
+%------------------------------------------------------------------------------%
+\begin{frame}[allowframebreaks]{Fortran Arrays - Functions Module}
+ \lstinputlisting[language=Fortran]{compiled_code/basic_arrays_module.f90}
+\end{frame}
+
+
+
+\end{document}
+
