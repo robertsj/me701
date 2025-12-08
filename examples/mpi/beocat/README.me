@@ -1,0 +1,100 @@
+# Working with Beocat
+
+In order to deploy OpenMP- and MPI-enabled programs non-interactively requires a bit of work.
+
+Below are some template "SLURM Scripts" for OMP, MPI, and Hybrid applications.
+
+## OMP 
+
+```
+#!/bin/bash
+#SBATCH --job-name=test
+#SBATCH --account=<account_name>
+#SBATCH --partition=<partition_name>
+#SBATCH --nodes=1            # physical compute node
+#SBATCH --ntasks-per-node=1  # processes/ranks per node
+#SBATCH --cpus-per-task=4    # physical core per process (for threads)
+# Wall clock limit:
+#SBATCH --time=00:00:30
+## Command(s) to run (example):
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+./a.out
+```
+
+## MPI 
+
+```
+#!/bin/bash
+#SBATCH --job-name=test
+#SBATCH --account=<account_name>
+#SBATCH --partition=<partition_name>
+#SBATCH --ntasks=40
+#SBATCH --cpus-per-task=1
+#SBATCH --time=00:00:30
+module load foss
+mpirun ./a.out
+```
+
+## MPI (Alternative)
+
+```
+#!/bin/bash
+#SBATCH --job-name=test
+#SBATCH --account=<account_name>
+#SBATCH --partition=<partition_name>
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=20
+#SBATCH --cpus-per-task=1
+#SBATCH --time=00:00:30
+module load foss
+mpirun ./a.out
+```
+
+
+## HYBRID 
+
+```
+#!/bin/bash
+# Job name:
+#SBATCH --job-name=test
+#SBATCH --account=<account_name>
+#SBATCH --partition=<partition_name>
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=4
+#SBATCH --cpus-per-task=5
+#SBATCH --time=00:00:30
+module load foss
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+mpirun ./a.out
+```
+
+
+Suppose we have an executable named `ex1tb` with MPI and OpenMP enabled.  Define the 
+following "submit.slurm" shell script:
+
+
+```
+#!/bin/bash
+#SBATCH --job-name=ex1tb_test
+#SBATCH --nodes=2               # number of nodes (physical hardware)
+#SBATCH --ntasks-per-node=2     # MPI ranks per node (MPI processes)
+#SBATCH --cpus-per-task=4       # OpenMP threads per rank
+#SBATCH --time=00:05:00         # hh:mm:ss 
+#SBATCH --mem-per-cpu=1G        # memory per process
+#SBATCH --output=ex1tb-%j.out   # captures standard output
+
+module purge
+module load foss   # gives you GNU compilers + OpenMPI
+
+# Make OpenMP match what Slurm gave us
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export OMP_PROC_BIND=spread
+export OMP_PLACES=cores
+
+# Preferred: use srun so Slurm launches MPI ranks for you
+srun ./ex1tb
+
+
+# Alternative (less recommended, but works with OpenMPI+Slurm):
+# mpirun ./ex1tb            # no -np; it will use SLURM_NTASKS
+```
